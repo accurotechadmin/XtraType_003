@@ -1,0 +1,18 @@
+{
+  "id": "publication:example",
+  "recordType": "Publish.Publication",
+  "schemaVersion": 1,
+  "createdAt": "2026-10-01T07:10:00.000Z",
+  "updatedAt": "2026-10-01T07:10:00.000Z",
+  "ownerId": "local:owner",
+  "objectId": "object:publication",
+  "authorRef": "local:owner",
+  "body": "A reviewed publication draft.",
+  "attachments": [],
+  "links": [],
+  "tags": [],
+  "destinationIds": [
+    "destination:example"
+  ],
+  "revision": 1
+}

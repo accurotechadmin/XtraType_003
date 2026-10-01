@@ -1,0 +1,17 @@
+{
+  "id": "example:record",
+  "recordType": "Evidence.ProvenanceRecord",
+  "schemaVersion": 1,
+  "createdAt": "2026-10-01T07:10:00.000Z",
+  "updatedAt": "2026-10-01T07:10:00.000Z",
+  "ownerId": "local:owner",
+  "subjectRef": "example",
+  "action": "example",
+  "componentId": "example",
+  "componentVersion": "example",
+  "actorRef": "example",
+  "occurredAt": "2026-10-01T07:10:00.000Z",
+  "parentRefs": [],
+  "warnings": [],
+  "effectState": "none"
+}

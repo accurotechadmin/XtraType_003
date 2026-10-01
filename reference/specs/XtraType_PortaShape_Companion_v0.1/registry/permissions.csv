@@ -1,0 +1,16 @@
+ID,Permission,Owner,Scope,Boundary,Stage
+PM01,package.manage,PS,Trusted management UI only,Install/update/remove selected package,C1
+PM02,context.read,PS,Origin + document + allowed fields,No full page/field buffer by default,C1
+PM03,plugin.storage,PS,Package namespace + revision,No other plugin or XtraType repository access,C1
+PM04,page.script,SS,Revision + explicit site patterns,Shared DOM exposure; no privileged bridge initially,C2
+PM05,input.observe,DRY,Site + field category + consent,"Sensitive exclusions, TTL and pause",C2
+PM06,input.insert,DRY,Current gesture + unchanged target,No implicit submit/send,C2
+PM07,xtratype.read,XT,Selected local context resource,No implicit full corpus export,C3
+PM08,xtratype.draft,XT,User-reviewed draft,Does not authorize commit/publish,C4
+PM09,xtratype.extend,XT,Owned annotation/Object references,Sidecar validation; no v2 envelope overwrite,C3
+PM10,publish.compose,PUB,Local draft,No external write,C3
+PM11,publish.execute,PUB,Confirmed plan digest + exact destinations,Fresh account/context; no uncertain replay,C3
+PM12,connector.inspect,EXT,Selected authorized destination,No account-wide scraping,C3
+PM13,routine.run,DRY,Reviewed method + current step grants,25 steps / 120 seconds initial profile,C4
+PM14,script.bridge,SS,Trusted script/revision identity + operation,Unavailable until identity/isolation acceptance,C4
+PM15,data.export,PS,Explicit selected records/binaries,"No grants, secrets or observation buffers",C1

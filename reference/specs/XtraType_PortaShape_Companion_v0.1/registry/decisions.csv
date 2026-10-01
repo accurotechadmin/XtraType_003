@@ -1,0 +1,19 @@
+ID,Authority,Decision,Consequence,Spec
+DEC-01,USER,PortaShape is the wraparound plugin service,Supersedes target interpretation of old ADR-002,01
+DEC-02,DESIGN,Embed first host in existing extension distribution,No assumed daemon/remote service; replaceable deployment ADR,01
+DEC-03,DESIGN,Privileged module/connector code in host release catalog,Users install package state; no arbitrary worker code import,02
+DEC-04,INHERITED,Imports never transfer execution grants,Device-local authority and review,02
+DEC-05,DESIGN,Preserve annotation v2; add linked extension records,No silent incompatible envelope or database rename,04
+DEC-06,DESIGN,Module-owned finite routines and publish sequences,No omitted general runtime dependency,01/06/07
+DEC-07,USER,Script Studio and Stay D.R.Y. are plugins,Their source definitions retained within selected scope,05/06
+DEC-08,USER,Publisher is core; external platforms are plugins,No generic single mandatory platform implementation,07/08
+DEC-09,USER,Backend/API/identity/sync deferred,Local editions; blocked sharing/remote execution/continuity,10
+DEC-10,DESIGN,DRY three uses / 14 days; bounded evidence,Defaults exposed and versioned; not historical claims,06
+DEC-11,DESIGN,Confirm immutable plan; uncertain effects never blindly retried,Per-target operation identity and reconciliation,07
+DEC-12,DESIGN,Chrome 138+ userscript release floor; initial no bridge,Retains C16 proposal and verifies platform requirements,05
+DEC-13,DESIGN,Publish.Publication is canonical selected name,Resolves POSH.Publication wording inconsistency,03/07
+DEC-14,DESIGN,New portashape-local DB; old DB untouched,No cross-database atomicity claim,10
+DEC-15,USER,Web/mobile and shared glossary/registry included,No new third-party API program under deferred services,09/12
+DEC-16,DESIGN,Specific selected seams replace all-to-all graph,Omitted projects absent from active dependencies,01/12
+DEC-17,DESIGN,Registry JSON + specs are authoring source; workbook is review surface,Reconcile workbook edits in same change,12
+DEC-18,INHERITED,Two qualified live connector targets plus two labeled stubs,Source goal retained; actual platform feasibility unasserted,07/08

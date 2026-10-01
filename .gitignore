@@ -1,0 +1,16 @@
+# Development dependencies
+node_modules/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+*.swp
+*.tmp
+*.log
+
+# Runtime-uploaded media; retain only the directory placeholder
+var/media/*
+!var/media/.gitkeep
+# Runtime profile payloads (registration, invitations, contact groups, group-chat membership)
+var/profiles/*
+!var/profiles/.gitkeep

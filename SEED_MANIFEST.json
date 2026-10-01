@@ -1,0 +1,72 @@
+{
+  "product": "XtraType",
+  "repositorySeed": 1,
+  "seedLabel": "first official instantiated seed repository",
+  "seedDate": "2026-10-01",
+  "implementedRuntime": {
+    "product": "XtraType",
+    "version": "2.5.0",
+    "status": "local-first invitation multi-user prototype / stabilization candidate"
+  },
+  "wraparoundArchitecture": {
+    "name": "PortaShape",
+    "specVersion": "0.1",
+    "status": "repository-instantiated target specification; runtime host/plugins not implemented"
+  },
+  "historicalCanon": {
+    "version": "1.0 approval candidate",
+    "baseline": "XtraType v2.3 / extension 2.3.0",
+    "status": "historical audit truth"
+  },
+  "deferredServices": "A bounded owner-directed PHP/JSON account, invitation and messaging layer is implemented in 2.5.0; the broader PortaShape/cross-device identity-sync service plane remains deferred by companion DEC-09.",
+  "authority": {
+    "currentProject": "README.md + docs/SEED_00_CURRENT_TRUTH_AND_AUTHORITY.md + SEED_MANIFEST.json",
+    "currentRuntime": "root source/tests + XtraType 2.5 current-runtime docs; preserved 2.4 evidence remains historical release evidence",
+    "target": "reference/specs/XtraType_PortaShape_Companion_v0.1/",
+    "historical": "reference/canon/XtraType_Canon_v1.0_candidate/",
+    "reconciliation": "reports/XtraType_PortaShape_Coherency_Report_2026-10-01.md"
+  },
+  "sourcePackageSha256": {
+    "XtraType-2.4.0.zip": "6582239444dbe2177796bbeb5bca162e0f3890e8f5017bc02a7a5e34cc5e7537",
+    "XtraType_Canon_v1.0_Approval_Candidate.zip": "91c8136b958cc34e779d99ab53e3e43fa28317aa1f0d0a275e5dd1c610f77eeb",
+    "XtraType_PortaShape_Companion_v0.1.zip": "f17270562f080ea403395de37a7ce103e78bae9326d4571d95c90e04987332ac"
+  },
+  "targetInventoryCounts": {
+    "modules": 8,
+    "components": 60,
+    "contracts": 29,
+    "operations": 40,
+    "permissions": 15,
+    "interactions": 16,
+    "surfaces": 12,
+    "stages": 7,
+    "acceptanceCases": 52,
+    "decisions": 18
+  },
+  "companionAcceptance": "AT001-AT052 all Not run in supplied registry",
+  "recordedRuntimeVerification": {
+    "baselineVersion": "2.4.0",
+    "automatedTests": 32,
+    "passed": 32,
+    "failed": 0,
+    "skipped": 0,
+    "nativeChromeAcceptance": "not completed in preserved 2.4 evidence",
+    "realYouTubeAcceptance": "not run"
+  },
+  "checksumFile": "SHA256SUMS.txt",
+  "fileInventory": "docs/inventory/FILES.csv",
+  "componentInventory": "docs/inventory/COMPONENTS.csv",
+  "repositoryPolicy": {
+    "rootCode": "XtraType 2.5.0 current implementation",
+    "historicalCanon": "reference/canon/XtraType_Canon_v1.0_candidate/",
+    "targetSpecification": "reference/specs/XtraType_PortaShape_Companion_v0.1/",
+    "runtimeUploadedMediaIgnoredByGit": true
+  },
+  "repositoryFileCountIncludingChecksum": 260,
+  "currentPatchVerification": {
+    "selectedRunnableNodeTests": 17,
+    "passed": 17,
+    "fullJsdomFakeIndexedDBSuite": "not freshly rerun because pinned dev dependencies were unavailable",
+    "nativeChromeAcceptance": "not run"
+  }
+}

@@ -1,0 +1,193 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.portashape.invalid/companion/0.1/receipt.schema.json",
+  "title": "Host.Receipt v1",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "recordType": {
+      "const": "Host.Receipt"
+    },
+    "schemaVersion": {
+      "const": 1
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "ownerId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "requestId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "intentId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "operationId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "operationMajor": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "providerId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "providerRevision": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "startedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "endedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "enum": [
+        "succeeded",
+        "failed",
+        "cancelled",
+        "partial",
+        "blocked",
+        "unknown-outcome"
+      ]
+    },
+    "output": {
+      "type": "object"
+    },
+    "error": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "enum": [
+            "INVALID_INPUT",
+            "UNSUPPORTED_VERSION",
+            "UNAVAILABLE_HOST",
+            "MISSING_IMPLEMENTATION",
+            "DEPENDENCY_BLOCKED",
+            "PERMISSION_DENIED",
+            "CONTEXT_CHANGED",
+            "STALE_PLAN",
+            "AUTH_REQUIRED",
+            "QUOTA_EXCEEDED",
+            "DEADLINE_EXCEEDED",
+            "CANCEL_REQUESTED",
+            "CONFLICT",
+            "UNKNOWN_OUTCOME",
+            "INTERNAL_ERROR"
+          ]
+        },
+        "message": {
+          "type": "string",
+          "maxLength": 80000
+        },
+        "providerId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "stepId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "retryable": {
+          "type": "boolean"
+        },
+        "effectState": {
+          "enum": [
+            "none",
+            "committed",
+            "unknown"
+          ]
+        },
+        "userAction": {
+          "type": "string",
+          "maxLength": 80000
+        },
+        "details": {
+          "type": "object",
+          "maxProperties": 20,
+          "additionalProperties": {
+            "type": [
+              "string",
+              "number",
+              "boolean",
+              "null"
+            ]
+          }
+        }
+      },
+      "required": [
+        "code",
+        "message",
+        "providerId",
+        "retryable",
+        "effectState",
+        "userAction"
+      ],
+      "additionalProperties": false
+    },
+    "effectRefs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 512
+      },
+      "maxItems": 100
+    },
+    "provenanceRefs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 512
+      },
+      "maxItems": 100
+    }
+  },
+  "required": [
+    "id",
+    "recordType",
+    "schemaVersion",
+    "createdAt",
+    "updatedAt",
+    "ownerId",
+    "requestId",
+    "intentId",
+    "operationId",
+    "operationMajor",
+    "providerId",
+    "providerRevision",
+    "startedAt",
+    "endedAt",
+    "status",
+    "effectRefs",
+    "provenanceRefs"
+  ],
+  "additionalProperties": false
+}

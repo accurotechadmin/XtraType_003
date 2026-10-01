@@ -1,0 +1,327 @@
+{
+  "auditDate": "2026-10-01",
+  "sourcePackageVersion": "2.3",
+  "inputs": [
+    {
+      "name": "PortaShape_XtraType_SidePanel_MVP_v2.3.zip",
+      "bytes": 57858,
+      "sha256": "e7d481d95fdd716ce77ffd42e571c7c83cdb5099342b3440dea8daec84d7fc0b"
+    },
+    {
+      "name": "PortaShape_XtraType_v2.3_Codebase_Reference_fresh.md",
+      "bytes": 102787,
+      "sha256": "37620548333d4f656d0083a6860d513a704cc084d13f8ebb6b375e2dc4a24c62"
+    },
+    {
+      "name": "PortaShape_XtraType_v2.3_Reports.zip",
+      "bytes": 32069,
+      "sha256": "aa4aa6181ebd381d737094f55cbe48fb08f8df7e31345afc9207547e43091f9e"
+    }
+  ],
+  "baselineFiles": [
+    {
+      "path": "README.md",
+      "bytes": 4586,
+      "physicalLines": 92,
+      "sha256": "6545d8550af05c1fd065c8f36dd93b2763255e61160c023529d3068368644cef",
+      "concern": "C-10",
+      "role": "Legacy product/setup description; historical intent, not new canon"
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "bytes": 2882,
+      "physicalLines": 63,
+      "sha256": "769879b31e232e703d7de6e64f8c3585168a60d33b9e06a21c73b063acda529b",
+      "concern": "C-10",
+      "role": "Legacy v2.2 hierarchy/local-first/host boundary narrative"
+    },
+    {
+      "path": "docs/SCHEMAS.md",
+      "bytes": 1547,
+      "physicalLines": 49,
+      "sha256": "fe3114c00ffbfb01854463e9868a2c9c99ded5edaea0343f2375b76b78f2bad5",
+      "concern": "C-02",
+      "role": "Legacy target and custom-schema guide"
+    },
+    {
+      "path": "ext/INSTALL.txt",
+      "bytes": 1341,
+      "physicalLines": 33,
+      "sha256": "591ffa71038902d1015ef5cd0c8f1ea9335840b07647c1e4fff18d35ceccfa86",
+      "concern": "C-10",
+      "role": "Unpacked Chrome installation and site-access instructions"
+    },
+    {
+      "path": "ext/content/page-ui.js",
+      "bytes": 11459,
+      "physicalLines": 235,
+      "sha256": "edbacde374c83e4f64d71e0d507048903a62823e6f81707343d6a4d9b923ebf4",
+      "concern": "C-04",
+      "role": "On-demand Shadow DOM quick composer and recent context"
+    },
+    {
+      "path": "ext/content/youtube.js",
+      "bytes": 5380,
+      "physicalLines": 58,
+      "sha256": "b3b3e6a563e8ea00371108379c8ad2b31d1fa37dfa57363af2a94af0aa22ac69",
+      "concern": "C-09",
+      "role": "YouTube marker/card/toast projection and DOM/navigation observation"
+    },
+    {
+      "path": "ext/core/anchors.js",
+      "bytes": 4435,
+      "physicalLines": 83,
+      "sha256": "de9e16dfb6ad9d50851eac96b8cfa7515bca46a4f4bb1e9c71f100211a8e844b",
+      "concern": "C-01",
+      "role": "Pure anchor constructors, key algorithms, URL recognition and geographic matching"
+    },
+    {
+      "path": "ext/core/api.js",
+      "bytes": 2378,
+      "physicalLines": 43,
+      "sha256": "b20e54ba8c12a7e26a93c6a1a95d99e8fe1fcc41eed9e85e2df9060d10c500c4",
+      "concern": "C-06",
+      "role": "Settings and extension HTTP/multipart serialization/merge"
+    },
+    {
+      "path": "ext/core/db.js",
+      "bytes": 2717,
+      "physicalLines": 78,
+      "sha256": "b84784e1f4c48ab0c76fff5a4b3c47e965929c5c53b33b18581e7f418e2d1e06",
+      "concern": "C-05",
+      "role": "Five-store IndexedDB repository, ID/Blob/event helpers"
+    },
+    {
+      "path": "ext/core/schemas.js",
+      "bytes": 2721,
+      "physicalLines": 53,
+      "sha256": "c3a9a6271545b1b6ebf9c150a5c05cdd907ebc06d440c1bc5a1bdb8fb19714cd",
+      "concern": "C-02",
+      "role": "Compact built-ins, shallow schema normalization/value presence validation"
+    },
+    {
+      "path": "ext/manifest.json",
+      "bytes": 902,
+      "physicalLines": 41,
+      "sha256": "8573c148594afada211032f5401a4fc14817953ef11a79b532fe6f3a56910cc7",
+      "concern": "C-03",
+      "role": "MV3 permissions, version, worker/panel/content entry points"
+    },
+    {
+      "path": "ext/service-worker.js",
+      "bytes": 10727,
+      "physicalLines": 216,
+      "sha256": "c7cb425412304efe0471232b414ffeea1f8e03c5b7091f39ba7ce48e25eebd20",
+      "concern": "C-03",
+      "role": "Browser broker, runtime router, quick creation/replies and contextual reads"
+    },
+    {
+      "path": "ext/sidepanel/app.js",
+      "bytes": 25185,
+      "physicalLines": 168,
+      "sha256": "4ad4e3edac472f00978cfb36b10dbd85dac72e6067b78d47549a485d99c7f092",
+      "concern": "C-04",
+      "role": "Panel form/feed/schema/settings orchestration plus capture/diff/sync"
+    },
+    {
+      "path": "ext/sidepanel/index.html",
+      "bytes": 6829,
+      "physicalLines": 154,
+      "sha256": "de0a00c7a607588abf5d0c26f04b861d083530871430635aaf54d5c2e455b566",
+      "concern": "C-04",
+      "role": "Primary UI shell, form controls and supporting details modules"
+    },
+    {
+      "path": "ext/sidepanel/style.css",
+      "bytes": 8000,
+      "physicalLines": 35,
+      "sha256": "918c7c62fe0837ee116124eecd48baa355bf61ab59f5ffa44df77233cc487ff7",
+      "concern": "C-04",
+      "role": "Panel-specific narrow responsive layout, focus/access states"
+    },
+    {
+      "path": "server/api/annotations.php",
+      "bytes": 2451,
+      "physicalLines": 47,
+      "sha256": "7c770a4020d52336e6af1ab4a65b5baf2d3118142be6e6baf33295427b834d4b",
+      "concern": "C-07",
+      "role": "Annotation GET/filter/POST/DELETE normalization and persistence"
+    },
+    {
+      "path": "server/api/bootstrap.php",
+      "bytes": 6544,
+      "physicalLines": 155,
+      "sha256": "1a0b75822122c0d0acccccd32a62019b21bff7b936dcd17cae315d545275312d",
+      "concern": "C-07",
+      "role": "HTTP envelopes/CORS, file locks/collections and media uploads"
+    },
+    {
+      "path": "server/api/events.php",
+      "bytes": 440,
+      "physicalLines": 10,
+      "sha256": "e93ac50a08d5b798259c1227f72558bf5912d9602a89a42b0c115ab585fc1591",
+      "concern": "C-07",
+      "role": "Unconnected event GET/POST endpoint"
+    },
+    {
+      "path": "server/api/health.php",
+      "bytes": 122,
+      "physicalLines": 3,
+      "sha256": "46bf124c72e1c3c48fed7b23e2bf85b29b164ea8aedb7d5ddf0c76c2bb3efc9a",
+      "concern": "C-07",
+      "role": "Health response without non-OPTIONS method guard"
+    },
+    {
+      "path": "server/api/schemas.php",
+      "bytes": 1530,
+      "physicalLines": 32,
+      "sha256": "5a5b06d3db653b506164bb2bc7afd5ef169ad46ba60b5a15ecb2febb65682d60",
+      "concern": "C-02",
+      "role": "Disk+stored schema catalog and custom POST/DELETE"
+    },
+    {
+      "path": "server/api/snapshots.php",
+      "bytes": 1108,
+      "physicalLines": 22,
+      "sha256": "a44baef84368e0bb3faa59567ba85dd4d86829d416ee1b89828a5d22f6df6db8",
+      "concern": "C-07",
+      "role": "Snapshot GET/filter/POST and first-upload screenshot reference"
+    },
+    {
+      "path": "server/assets/app.js",
+      "bytes": 11219,
+      "physicalLines": 23,
+      "sha256": "6901cf6219a694216e787f7f3463b07f613666f8b9a5b6b10098fe70eb93b93f",
+      "concern": "C-04",
+      "role": "Web target forms/post/feed/Nearby/schema install; duplicated domain logic"
+    },
+    {
+      "path": "server/assets/style.css",
+      "bytes": 2874,
+      "physicalLines": 1,
+      "sha256": "4e9a27ecfa15ce0115473408b9c53dee824913c4b48f9cf5cbef231a374cdc61",
+      "concern": "C-04",
+      "role": "Web responsive sticky header/tabs/cards/form styles"
+    },
+    {
+      "path": "server/config.php",
+      "bytes": 206,
+      "physicalLines": 7,
+      "sha256": "3b3884ccef5169755316d13ca18df57680f5a26fd107f211da2e0a26b14f4ab1",
+      "concern": "C-07",
+      "role": "Upload/CORS/GPS defaults; no deployment environment abstraction"
+    },
+    {
+      "path": "server/data/annotations.json",
+      "bytes": 3,
+      "physicalLines": 1,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "concern": "C-07",
+      "role": "Packaged empty annotation collection; runtime mutable"
+    },
+    {
+      "path": "server/data/events.json",
+      "bytes": 3,
+      "physicalLines": 1,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "concern": "C-07",
+      "role": "Packaged empty event collection"
+    },
+    {
+      "path": "server/data/schemas.json",
+      "bytes": 3,
+      "physicalLines": 1,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "concern": "C-07",
+      "role": "Packaged empty custom-schema wrapper collection"
+    },
+    {
+      "path": "server/data/snapshots.json",
+      "bytes": 3,
+      "physicalLines": 1,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "concern": "C-07",
+      "role": "Packaged empty snapshot collection"
+    },
+    {
+      "path": "server/index.php",
+      "bytes": 2667,
+      "physicalLines": 19,
+      "sha256": "a1c2b31765bb1e18572434c24b0ee645466c4a01b37c0c87eaf13de43bab0f06",
+      "concern": "C-04",
+      "role": "Responsive web shell and config injection"
+    },
+    {
+      "path": "server/media/.gitkeep",
+      "bytes": 0,
+      "physicalLines": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "concern": "C-07",
+      "role": "Zero-byte media-directory packaging placeholder; no behavior"
+    },
+    {
+      "path": "server/schemas/example-book-anchor.schema.json",
+      "bytes": 453,
+      "physicalLines": 13,
+      "sha256": "78b07242804d237476785b0613b60a6a2c04f7e9a54825287c5539eb51f0319d",
+      "concern": "C-02",
+      "role": "Automatically served custom Book vocabulary: isbn/page/edition"
+    },
+    {
+      "path": "server/schemas/gps-anchor.schema.json",
+      "bytes": 591,
+      "physicalLines": 14,
+      "sha256": "4091a7b438860ddf655e672f7ad137fdb06974270fce4a7bcf229053b3272b0a",
+      "concern": "C-02",
+      "role": "Fuller GPS vocabulary; bounds/radius/label constraints"
+    },
+    {
+      "path": "server/schemas/url-anchor.schema.json",
+      "bytes": 962,
+      "physicalLines": 26,
+      "sha256": "f431eb2d706e1341090cdc9ed8dcf9fc1b8efcf7f51281bf14a91e3de64b5186",
+      "concern": "C-02",
+      "role": "Fuller URL vocabulary; not automatically enforced"
+    },
+    {
+      "path": "server/schemas/youtube-anchor.schema.json",
+      "bytes": 559,
+      "physicalLines": 14,
+      "sha256": "cc75f358c62b59b7346cdac34529cd8892a03e4c2ebd3aac8a904a21760d86ff",
+      "concern": "C-02",
+      "role": "Fuller video vocabulary with ID regex and nullable times"
+    },
+    {
+      "path": "start-server.bat",
+      "bytes": 90,
+      "physicalLines": 4,
+      "sha256": "09e6e8c6198debd24a6a5c4e576053dc0a6d76dd583ffa1d43cfb5b057ec75f4",
+      "concern": "C-10",
+      "role": "Windows launcher; cd project and run PHP on all interfaces"
+    },
+    {
+      "path": "start-server.sh",
+      "bytes": 122,
+      "physicalLines": 5,
+      "sha256": "7b2aef9a34f4a6edbef853bba9c4fc75b4856ab0df317d662b0ea24d4a0c0e7b",
+      "concern": "C-10",
+      "role": "POSIX launcher; cd project and exec PHP on all interfaces"
+    },
+    {
+      "path": "tests/README.md",
+      "bytes": 177,
+      "physicalLines": 7,
+      "sha256": "29f6a5e2695a0083915e935454130fb9dff8d1b0629f254f758c7cb1aa053ba0",
+      "concern": "C-10",
+      "role": "Legacy commands for anchor tests, JS syntax and PHP lint"
+    },
+    {
+      "path": "tests/anchors.mjs",
+      "bytes": 1064,
+      "physicalLines": 16,
+      "sha256": "fda0d6d33a421edbef6b5194f0ad505fd2a15ccdc46938151bec3dc9a4457bc7",
+      "concern": "C-10",
+      "role": "Six pure anchor/schema assertion calls; no browser/server integration"
+    }
+  ]
+}

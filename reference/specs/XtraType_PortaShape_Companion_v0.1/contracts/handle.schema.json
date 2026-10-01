@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.portashape.invalid/companion/0.1/handle.schema.json",
+  "title": "Core.Handle v1",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "recordType": {
+      "const": "Core.Handle"
+    },
+    "schemaVersion": {
+      "const": 1
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "ownerId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "objectId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "type": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "value": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "resolverHints": {
+      "type": "object",
+      "maxProperties": 20
+    },
+    "confidence": {
+      "enum": [
+        "asserted",
+        "verified",
+        "ambiguous"
+      ]
+    },
+    "provenanceRefs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 512
+      },
+      "maxItems": 100
+    }
+  },
+  "required": [
+    "id",
+    "recordType",
+    "schemaVersion",
+    "createdAt",
+    "updatedAt",
+    "ownerId",
+    "objectId",
+    "type",
+    "value",
+    "confidence",
+    "provenanceRefs"
+  ],
+  "additionalProperties": false
+}

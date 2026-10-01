@@ -1,0 +1,13 @@
+ID,Owner,Surface,Host,Behavior,Stage,Spec
+SF01,XT,XtraType side panel,Chrome extension,Primary annotation composer and context,C0,04
+SF02,PS,Plugin manager,Extension-owned UI,Install/permissions/effective state,C1,02
+SF03,SS,Script editor/library,Extension-owned UI,Source/revisions/fixtures/registration,C2,05
+SF04,DRY,Input assistance,Authorized browser fields,"Suggestions, variables, insertion and pause",C2,06
+SF05,PUB,Publisher composer/results,Extension-owned UI,Destination previews and per-target outcomes,C3,07
+SF06,EXT,Destination configuration,Host contribution slot,Platform fields and account status,C3,08
+SF07,XT,Anchored context overlay,Authorized page,Local resolved/ambiguous context,C3,04
+SF08,UI,Web local library,Ordinary web origin,Inert packages/helpers/drafts and available local operations,C5,09
+SF09,UI,Responsive mobile web,Mobile browser,Same local contracts; no extension privilege,C5,09
+SF10,UI,Native local share/capture,Selected future native host,Explicit shared content/location/time draft,C5,09
+SF11,PS,Activity/permissions,Host-local management,"Receipts, errors, grants and local sessions",C1,03/09
+SF12,XT,Existing PHP companion,Legacy web deployment,Existing Post/All/Nearby/schemas only,C0,09/10

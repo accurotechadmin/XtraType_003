@@ -1,0 +1,11 @@
+{
+  "id": "example:record",
+  "recordType": "Context.Message",
+  "schemaVersion": 1,
+  "createdAt": "2026-10-01T07:10:00.000Z",
+  "updatedAt": "2026-10-01T07:10:00.000Z",
+  "ownerId": "local:owner",
+  "conversationId": "example",
+  "body": "example",
+  "authorRef": "example"
+}

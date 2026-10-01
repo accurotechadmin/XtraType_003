@@ -1,0 +1,8 @@
+ID,Stage,Scope,Exit gate
+C0,Baseline protection,Existing XtraType safety/integrity prerequisites,C15 relevant stabilization gates
+C1,Host/package boundary,"Install, grants, local stores, receipts",Package/isolation/host-unavailable tests
+C2,Local assistance,Userscripts and consented text helpers,Site/IME/insertion/registration tests
+C3,Context and publishing,"Anchors, local relations, qualified connectors",Ambiguity + partial/unknown outcome recovery
+C4,Advanced selected behavior,"Typed bridges, finite routines, promotion",Identity/isolation/bounds tests
+C5,Additional local clients,Web/native local management/share,Inert import and truthful locality
+D,Service deferral,No new backend/identity/sync implementation,Requires a new owner-approved service specification

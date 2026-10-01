@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>XtraType</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="brand-block">
+        <div class="logo">XT</div>
+        <div class="brand-copy">
+          <strong>XtraType</strong>
+          <span>context attached anywhere</span>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button
+          id="snapshot-quick"
+          class="icon-button"
+          type="button"
+          title="Take a snapshot using the Capture quick-mode setting"
+        >
+          ◫
+        </button>
+        <button
+          id="launch-quick-bar"
+          class="icon-button"
+          type="button"
+          title="Open the optional quick comment bar on this page"
+        >
+          ▰
+        </button>
+        <button
+          id="refresh-context"
+          class="icon-button"
+          type="button"
+          title="Refresh page context"
+        >
+          ↻
+        </button>
+      </div>
+    </header>
+
+    <div class="context-strip" aria-live="polite">
+      <div class="context-dot"></div>
+      <div class="context-copy">
+        <strong id="context-title">Current page</strong>
+        <span id="context-url">Waiting for browser context…</span>
+      </div>
+    </div>
+
+    <main class="panel-shell">
+      <div id="primary-stack" class="primary-stack">
+      <section class="module xtratype-module" data-primary-section="author" aria-labelledby="xt-heading">
+        <div class="module-heading">
+          <div>
+            <div class="eyebrow">PRIMARY MODULE</div>
+            <h1 id="xt-heading">XtraType</h1>
+            <p>
+              Attach a note, highlighted text, and images to the thing you mean.
+            </p>
+          </div>
+          <div class="module-heading-actions">
+            <span id="sync-pill" class="pill">local-first</span>
+            <span class="drag-handle" draggable="true" tabindex="0" role="button" data-drag-section="author" aria-label="Drag author section to reorder" title="Drag to reorder author and annotations sections">⋮⋮</span>
+          </div>
+        </div>
+
+        <form id="composer" class="composer">
+          <div class="field-row target-row">
+            <label for="target-kind">Attach to</label>
+            <select id="target-kind">
+              <option value="xtratype.anchor.url@1">URL</option>
+              <option value="xtratype.anchor.time@1">Time</option>
+              <option value="xtratype.anchor.youtube@1">YouTube video</option>
+              <option value="xtratype.anchor.gps@1">GPS</option>
+            </select>
+          </div>
+
+          <div id="target-fields" class="target-fields">
+            <label>Base URL<input id="url-base" type="url" /></label>
+            <details class="target-options">
+              <summary>
+                <span><strong>Query &amp; fragment handling</strong><small>Choose how URL variables and fragments participate in matching</small></span>
+              </summary>
+              <div class="target-options-body">
+                <label>Query handling
+                  <select id="url-query-mode">
+                    <option value="ignore">Ignore all query variables</option>
+                    <option value="selected">Use selected variables</option>
+                    <option value="all">Use all variables</option>
+                  </select>
+                </label>
+                <div id="query-list"><p class="muted">No query parameters detected.</p></div>
+                <label>Fragment handling
+                  <select id="url-fragment-mode">
+                    <option value="ignore">Ignore fragment</option>
+                    <option value="include">Include fragment</option>
+                  </select>
+                </label>
+                <div class="actions"><button type="button" id="url-extract">Extract variables from URL</button></div>
+              </div>
+            </details>
+          </div>
+
+          <label for="highlighted-text">Highlighted text</label>
+          <textarea
+            id="highlighted-text"
+            rows="2"
+            maxlength="10000"
+            placeholder="Selected page text appears here when XtraType opens."
+          ></textarea>
+
+          <label for="comment">Comment</label>
+          <textarea
+            id="comment"
+            rows="4"
+            maxlength="20000"
+            required
+            placeholder="Add context…"
+          ></textarea>
+
+          <div class="attachment-row">
+            <label class="file-button"
+              >Add images<input
+                id="images"
+                type="file"
+                accept="image/png,image/jpeg,image/webp"
+                multiple
+                hidden
+            /></label>
+            <span>Up to 3 · PNG/JPEG/WebP · 8 MiB each</span>
+          </div>
+          <div id="image-previews" class="previews"></div>
+
+          <div class="composer-actions">
+            <button type="submit" class="primary grow">Post annotation</button>
+            <button type="button" id="clear-composer">Clear</button>
+          </div>
+          <p id="composer-status" class="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <details id="annotations-module" class="tool-module" data-primary-section="annotations" open>
+        <summary>
+          <span
+            ><strong id="annotations-title">Annotations:</strong
+            ><small>Notes matching the current target</small></span
+          >
+          <span class="summary-actions">
+            <button id="mark-all-old" class="inline-action" type="button">Mark all as old</button>
+            <button id="pull-annotations" class="inline-action" type="button">Sync now</button>
+            <span class="drag-handle" draggable="true" tabindex="0" role="button" data-drag-section="annotations" aria-label="Drag annotations section to reorder" title="Drag to reorder author and annotations sections">⋮⋮</span>
+          </span>
+        </summary>
+        <div class="tool-body">
+          <div id="annotation-list" class="feed"></div>
+        </div>
+      </details>
+      </div>
+
+      <details class="tool-module">
+        <summary>
+          <span
+            ><strong>Capture</strong
+            ><small>Rendered-state and full-page snapshots</small></span
+          >
+        </summary>
+        <div class="tool-body">
+          <p class="muted">
+            Capture what the browser actually rendered after scripts, lazy
+            loading, and interaction. Full-page mode scrolls and stitches
+            viewport tiles.
+          </p>
+          <label for="quick-snapshot-mode">Top snapshot button
+            <select id="quick-snapshot-mode">
+              <option value="full">Full page (default)</option>
+              <option value="visible">Visible viewport</option>
+            </select>
+          </label>
+          <div class="button-grid">
+            <button id="capture-visible" type="button">Visible snapshot</button>
+            <button id="capture-full" type="button" class="primary">
+              Full page
+            </button>
+          </div>
+          <p id="capture-status" class="status" aria-live="polite"></p>
+          <div class="subheading">Latest snapshot</div>
+          <div id="latest-snapshot" class="latest-snapshot"></div>
+        </div>
+      </details>
+
+      <details class="tool-module">
+        <summary>
+          <span
+            ><strong>Timeline & compare</strong
+            ><small>Browse prior page states and visual diffs</small></span
+          >
+        </summary>
+        <div class="tool-body">
+          <div class="toolbar-row">
+            <span class="muted">Snapshots for this page</span>
+            <button id="compare-latest" class="inline-action" type="button">
+              Compare latest two
+            </button>
+          </div>
+          <div id="snapshot-list" class="timeline"></div>
+          <div id="compare-card" class="compare-card hidden">
+            <div class="toolbar-row">
+              <strong>Visual difference</strong
+              ><span id="diff-score" class="pill"></span>
+            </div>
+            <canvas id="diff-canvas"></canvas>
+          </div>
+        </div>
+      </details>
+
+      <details class="tool-module">
+        <summary>
+          <span
+            ><strong>Anchor schemas</strong
+            ><small
+              >URL, GPS, Time, YouTube, and custom structured handles</small
+            ></span
+          >
+        </summary>
+        <div class="tool-body">
+          <p class="muted">
+            The four primary handle types are built in. Install an object-style
+            JSON Schema to add another structured thing XtraType can target.
+          </p>
+          <label class="file-button wide"
+            >Install custom schema<input
+              id="schema-file"
+              type="file"
+              accept="application/json,.json"
+              hidden
+          /></label>
+          <p id="schema-status" class="status" aria-live="polite"></p>
+          <div id="schema-list" class="schema-list"></div>
+        </div>
+      </details>
+
+      <details id="account-module" class="tool-module">
+        <summary>
+          <span><strong>Account &amp; messaging</strong><small>Invites, contacts, direct messages, group chats, and admin controls</small></span>
+        </summary>
+        <div class="tool-body">
+          <p id="account-status" class="status" aria-live="polite">Open this section to register or log in.</p>
+          <div id="account-signed-out">
+            <div class="account-grid">
+              <form id="register-form" class="mini-card">
+                <strong>Register</strong>
+                <p id="register-help" class="muted">The first account becomes the seed administrator. Later accounts require an invitation.</p>
+                <label>Username<input id="register-username" autocomplete="username" maxlength="32" required /></label>
+                <label>Display name<input id="register-display" maxlength="100" /></label>
+                <label>Password<input id="register-password" type="password" autocomplete="new-password" minlength="10" maxlength="200" required /></label>
+                <label id="register-invite-label">Invitation code<input id="register-invite" maxlength="80" /></label>
+                <button class="primary" type="submit">Register</button>
+              </form>
+              <form id="login-form" class="mini-card">
+                <strong>Log in</strong>
+                <label>Username<input id="login-username" autocomplete="username" maxlength="32" required /></label>
+                <label>Password<input id="login-password" type="password" autocomplete="current-password" maxlength="200" required /></label>
+                <button class="primary" type="submit">Log in</button>
+              </form>
+            </div>
+          </div>
+
+          <div id="account-signed-in" class="hidden">
+            <div class="toolbar-row"><div><strong id="account-name"></strong><div id="account-role" class="muted"></div></div><button id="logout" type="button">Log out</button></div>
+
+            <div class="mini-card">
+              <div class="toolbar-row"><strong>Invitations</strong><button id="create-invite" type="button">Create today’s invite</button></div>
+              <p class="muted">Single-use. One new code per account per EST calendar day.</p>
+              <div id="invite-list" class="compact-list"></div>
+            </div>
+
+            <div class="mini-card">
+              <strong>Contact groups</strong>
+              <form id="contact-group-form">
+                <label>Name<input id="contact-group-name" maxlength="100" required /></label>
+                <label>Usernames <input id="contact-group-members" placeholder="alice, bob" /></label>
+                <button type="submit">Save new group</button>
+              </form>
+              <div id="contact-group-list" class="compact-list"></div>
+            </div>
+
+            <div class="mini-card">
+              <strong>Direct messages</strong>
+              <div class="two"><label>Username<input id="dm-user" maxlength="32" /></label><div class="field-end"><button id="load-dm" type="button">Load thread</button></div></div>
+              <div id="dm-thread" class="message-thread"></div>
+              <form id="dm-form"><label>Message<textarea id="dm-body" rows="2" maxlength="20000"></textarea></label><button type="submit">Send direct message</button></form>
+            </div>
+
+            <div class="mini-card">
+              <strong>XT Group Chats</strong>
+              <form id="group-chat-create">
+                <label>Name<input id="group-chat-name" maxlength="100" placeholder="XT Group Chat" /></label>
+                <label>Initial member usernames<input id="group-chat-members" placeholder="alice, bob" /></label>
+                <button type="submit">Create group chat</button>
+              </form>
+              <div id="group-chat-list" class="compact-list"></div>
+              <div class="divider"></div>
+              <form id="group-chat-grant">
+                <div class="two"><label>Chat code<input id="group-grant-code" maxlength="5" /></label><label>Grant username<input id="group-grant-user" maxlength="32" /></label></div>
+                <button type="submit">Grant access</button>
+              </form>
+            </div>
+
+            <div id="admin-panel" class="mini-card hidden">
+              <strong>Administrator controls</strong>
+              <label class="check"><input id="admin-system-enabled" type="checkbox" /> Server use enabled for users</label>
+              <label class="check"><input id="admin-invites-enabled" type="checkbox" /> Invitation creation enabled globally</label>
+              <div id="admin-user-list" class="compact-list"></div>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="tool-module">
+        <summary>
+          <span
+            ><strong>Settings</strong
+            ><small
+              >Launch behavior, sync, identity, and local data</small
+            ></span
+          >
+        </summary>
+        <div class="tool-body">
+          <form id="settings-form">
+            <div class="setting-callout">
+              <strong>Toolbar button</strong
+              ><span
+                >Toggles the full XtraType side panel. Use the header
+                button or page context menu when you want the optional quick
+                bar.</span
+              >
+            </div>
+
+            <div class="setting-callout">
+              <strong>Keyboard &amp; omnibox</strong
+              ><span
+                ><kbd>Ctrl+Q</kbd> toggles the XtraType side panel. In Chrome's
+                address bar, type <kbd>xt</kbd>, press Space, optionally type your comment, then Enter. XtraType opens the sidebar, copies the current page selection, and transfers the omnibox text into the comment box.</span
+              >
+            </div>
+
+            <label for="api-base">PHP API base</label>
+            <input
+              id="api-base"
+              type="url"
+              placeholder="http://localhost:8787/api"
+            />
+
+            <label for="author">Display name</label>
+            <input id="author" type="text" maxlength="100" />
+
+            <label for="gps-radius">Saved GPS preference (meters)</label>
+            <input id="gps-radius" type="number" min="1" max="100000" />
+            <p class="muted">
+              This saved preference is not currently applied. Annotation matching
+              uses exact GPS keys. Web Nearby uses the server default.
+            </p>
+
+            <label class="check"
+              ><input id="auto-sync" type="checkbox" /> Sync automatically after
+              local save</label
+            >
+
+            <div class="button-grid settings-buttons">
+              <button type="submit" class="primary">Save settings</button>
+              <button type="button" id="test-server">Test server</button>
+            </div>
+            <p id="settings-status" class="status" aria-live="polite"></p>
+          </form>
+
+          <div class="divider"></div>
+          <div class="subheading">Local data</div>
+          <button id="export-local" type="button">Export JSON metadata</button>
+          <p class="muted">
+            Image and screenshot blobs stay in IndexedDB. The export contains
+            portable metadata and blob references.
+          </p>
+        </div>
+      </details>
+    </main>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

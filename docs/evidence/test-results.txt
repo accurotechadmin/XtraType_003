@@ -1,0 +1,47 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> xtratype@2.4.0 test
+> node --test tests/*.test.mjs
+
+✔ sidepanel DOM: initialization, offline save, draft cleanup, invalid target and stale context (334.79802ms)
+✔ quick bar retains input on failure and reports local-only sync error truthfully (59.614706ms)
+✔ YouTube fixture: null time excluded, zero marker retained, bounded rerender and reply failure (40.809517ms)
+✔ capture failure restores scroll and closes decoded tiles (243.139671ms)
+✔ web DOM: existing surfaces, typed custom enum, GPS blank rejection, escaped feed, retained failed draft (62.825958ms)
+anchor/schema tests passed
+✔ baseline anchor/schema assertions (3.678863ms)
+✔ whole-video remains distinct from zero seconds (0.230045ms)
+✔ reject blank GPS and spoofed YouTube host; retain shorts/subdomains (0.163916ms)
+✔ all-empty queries match only empty queries, selected duplicates count (0.296976ms)
+✔ stable key retains baseline fragment/query semantics (6.906387ms)
+✔ custom types, required, bounds, enum and unsupported semantics (0.542174ms)
+✔ tile positions include edges without duplicate last tile (0.954724ms)
+✔ protected merge retains dirty local record and reconciles blobs by attachment ID (0.190927ms)
+✔ atomic annotation includes blobs and event; aborted aggregate leaves no partial record (19.572501ms)
+✔ reject empty/oversize replies before local writes (0.850346ms)
+✔ pull cannot overwrite pending or error local records (8.827812ms)
+✔ missing binary rejects sync before fetch and keeps note (2.920905ms)
+✔ image upload preserves attachment ID and local Blob linkage (3.996319ms)
+✔ server destination change with existing data is blocked (0.75336ms)
+✔ web and extension use identical anchor/schema sources (7.36875ms)
+▶ PHP HTTP and JSON repository integration
+  ✔ retained URL/GPS/YouTube/custom routes and key contracts (80.99196ms)
+  ✔ invalid inputs, wrong key, reserved kinds and unsupported schema rejected (15.54141ms)
+  ✔ malformed JSON, CSRF origin, missing client header, DNS host rejection (14.001068ms)
+  ✔ image upload, stable retry, valid media delivery and no raw data exposure (31.358909ms)
+  ✔ concurrent requests retain all records; events and deletion retained (58.613863ms)
+  ✔ corrupt JSON refuses writes without replacing bytes (16.179442ms)
+✔ PHP HTTP and JSON repository integration (350.389464ms)
+✔ JSON repository serializes independent writer processes without lost updates (169.54054ms)
+✔ worker denies untrusted caller and page-origin capture privilege (1.016445ms)
+✔ worker reply validates body and honors disabled autosync (7.877095ms)
+✔ worker rejects stale quick-save document and cross-video reads (0.548614ms)
+✔ worker capture pins active tab/document and serializes rate limit (602.453497ms)
+ℹ tests 32
+ℹ suites 0
+ℹ pass 32
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1239.802317

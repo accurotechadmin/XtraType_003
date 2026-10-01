@@ -1,0 +1,31 @@
+XtraType 2.5.1 — Chrome extension
+
+Read README.md and docs/UPGRADE_AND_RECOVERY.md at the package root first.
+
+1. Run start-server.sh or start-server.bat from the complete extracted package.
+   Do not use the old PHP command without the supplied router.
+2. Open chrome://extensions, enable Developer mode, choose Load unpacked.
+3. Choose ext/ from this package. Pin XtraType; the toolbar opens the native panel.
+4. Settings defaults to http://localhost:8787/api. Use Test server.
+5. Open an ordinary HTTP(S) page and compose a note. The optional quick bar is
+   available from the panel or page context menu; it does not open automatically.
+
+UPGRADING: preserve the previous unpacked path/extension identity and profile.
+Do not remove the existing extension or clear site data before backing it up.
+A new extension ID has a separate IndexedDB origin and will appear empty.
+
+Existing all-sites permission is retained for contextual annotation and capture.
+Chrome site-access controls can restrict injection on particular sites. Protected
+browser pages and the Chrome Web Store cannot be injected into. URL anchors
+support HTTP(S), not file:// pages. YouTube projection matches www.youtube.com.
+
+Turning automatic sync off keeps new extension notes/images/schemas local.
+Explicit Sync now and Test server still use the server. The web UI is online-only.
+Chrome 116 is the declared minimum, not a freshly certified compatibility result.
+See docs/VERIFICATION.md for actual tests and remaining native Chrome checks.
+
+Shortcuts: Ctrl+Q is bound to Chrome's native extension action and toggles the side panel.
+After loading/reloading the extension, open chrome://extensions/shortcuts and verify
+Ctrl+Q is assigned to XtraType; assign it manually if Chrome did not accept the
+suggested shortcut. In the omnibox type xt, press Space, type optional comment
+text, then Enter to begin an annotation with that text prefilled.

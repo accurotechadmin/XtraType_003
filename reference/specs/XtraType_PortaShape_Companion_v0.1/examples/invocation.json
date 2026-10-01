@@ -1,0 +1,16 @@
+{
+  "id": "example:record",
+  "recordType": "Host.Invocation",
+  "schemaVersion": 1,
+  "createdAt": "2026-10-01T07:10:00.000Z",
+  "updatedAt": "2026-10-01T07:10:00.000Z",
+  "ownerId": "local:owner",
+  "requestId": "example",
+  "operationId": "example",
+  "operationMajor": 1,
+  "providerId": "example",
+  "providerRevision": "example",
+  "input": {},
+  "deadlineAt": "2026-10-01T07:10:00.000Z",
+  "intentId": "example"
+}

@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.portashape.invalid/companion/0.1/grant.schema.json",
+  "title": "Host.Grant v1",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "recordType": {
+      "const": "Host.Grant"
+    },
+    "schemaVersion": {
+      "const": 1
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "ownerId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "principalId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "packageId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "revisionDigest": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "operationIds": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 512
+      },
+      "maxItems": 100
+    },
+    "siteMatches": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 512
+      },
+      "maxItems": 100
+    },
+    "resourceRefs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 512
+      },
+      "maxItems": 100
+    },
+    "approvedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "expiresAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "revokedAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "id",
+    "recordType",
+    "schemaVersion",
+    "createdAt",
+    "updatedAt",
+    "ownerId",
+    "principalId",
+    "packageId",
+    "revisionDigest",
+    "operationIds",
+    "siteMatches",
+    "resourceRefs",
+    "approvedAt"
+  ],
+  "additionalProperties": false
+}

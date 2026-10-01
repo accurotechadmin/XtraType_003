@@ -1,0 +1,17 @@
+{
+  "id": "example:record",
+  "recordType": "Host.Event",
+  "schemaVersion": 1,
+  "createdAt": "2026-10-01T07:10:00.000Z",
+  "updatedAt": "2026-10-01T07:10:00.000Z",
+  "ownerId": "local:owner",
+  "eventId": "example",
+  "eventType": "plugin.installed",
+  "eventVersion": 1,
+  "occurredAt": "2026-10-01T07:10:00.000Z",
+  "sourceId": "example",
+  "sourceRevision": "example",
+  "subjectId": "example",
+  "sequence": 1,
+  "data": {}
+}

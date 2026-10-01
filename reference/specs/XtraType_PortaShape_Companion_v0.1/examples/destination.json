@@ -1,0 +1,16 @@
+{
+  "id": "destination:example",
+  "recordType": "Publish.Destination",
+  "schemaVersion": 1,
+  "createdAt": "2026-10-01T07:10:00.000Z",
+  "updatedAt": "2026-10-01T07:10:00.000Z",
+  "ownerId": "local:owner",
+  "platformId": "connector.example",
+  "connectorRevision": "1.0.0",
+  "accountLabel": "Example account",
+  "accountRef": "session:example",
+  "presets": {},
+  "operations": [
+    "create"
+  ]
+}

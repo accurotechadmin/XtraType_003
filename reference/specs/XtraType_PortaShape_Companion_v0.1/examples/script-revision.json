@@ -1,0 +1,22 @@
+{
+  "id": "script-revision:example",
+  "recordType": "Script.Revision",
+  "schemaVersion": 1,
+  "createdAt": "2026-10-01T07:10:00.000Z",
+  "updatedAt": "2026-10-01T07:10:00.000Z",
+  "ownerId": "local:owner",
+  "scriptId": "script:example",
+  "source": "document.documentElement.dataset.example = \"enabled\";",
+  "sourceHash": "1a90766f9517967668faadee0132d7308de711efc63fe4903f841ea77483d449",
+  "version": "1.0.0",
+  "matches": [
+    "https://example.com/*"
+  ],
+  "excludeMatches": [],
+  "profile": "userscript-initial-v1",
+  "runAt": "document_idle",
+  "world": "USER_SCRIPT",
+  "allFrames": false,
+  "permissions": [],
+  "fixtureRefs": []
+}

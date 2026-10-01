@@ -1,0 +1,16 @@
+{
+  "id": "example:record",
+  "recordType": "Evidence.FidelityReport",
+  "schemaVersion": 1,
+  "createdAt": "2026-10-01T07:10:00.000Z",
+  "updatedAt": "2026-10-01T07:10:00.000Z",
+  "ownerId": "local:owner",
+  "transformId": "example",
+  "transformVersion": "example",
+  "sourceDigest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "targetDigest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "preserves": [],
+  "approximates": [],
+  "drops": [],
+  "requires": []
+}

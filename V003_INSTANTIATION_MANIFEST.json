@@ -1,0 +1,46 @@
+{
+  "schema": "xtratype.v003.instantiation-manifest@1",
+  "canonicalProjectVersion": "v.003",
+  "instantiatedAt": "2026-10-01T17:26:00-04:00",
+  "applicationCodeChanged": true,
+  "applicationTechnicalVersion": "2.5.1",
+  "changeClass": "corrective client behavior",
+  "primaryChange": "Ctrl+Q restored to Chrome native _execute_action side-panel toggle; toolbar uses the same native action path",
+  "minimumChromeVersion": "116",
+  "predecessor": {
+    "canonicalProjectVersion": "v.002",
+    "technicalVersion": "2.5.0"
+  },
+  "current": {
+    "startHere": "00_V003_START_HERE.md",
+    "status": "docs/v003/00_CURRENT_STATUS_2026-10-01T172600-0400.md",
+    "ssot": "reference/ssot/README.md",
+    "bootPrompt": "EXPERT_SESSION_BOOT_PROMPT.md",
+    "pointers": "reference/ssot/CURRENT_POINTERS.json",
+    "decisionRegister": "reference/ssot/decisions/CURRENT_DECISION_REGISTER.md"
+  },
+  "implementation": {
+    "manifestCommand": "_execute_action",
+    "shortcut": "Ctrl+Q",
+    "toolbarBehavior": "Chrome native openPanelOnActionClick toggle",
+    "keyboardBehavior": "Chrome reserved _execute_action -> native extension action -> openPanelOnActionClick",
+    "removedOrphanPath": "toggle-xtratype + runtime.getContexts(SIDE_PANEL) + sidePanel.close/open"
+  },
+  "verification": {
+    "staticRegressionCoverageUpdated": true,
+    "nativeChromeAcceptance": "pending owner-side Chrome verification",
+    "fullNodePhpSuites": "full npm test not completed because dev dependencies were absent and install did not complete in this environment",
+    "selectedRunnableTests": 17,
+    "selectedRunnableTestsPassed": 17,
+    "evidence": "docs/evidence/v003-native-ctrlq-test-results.txt"
+  },
+  "integrity": {
+    "packageResealed": true,
+    "checksums": [
+      "SHA256SUMS.txt",
+      "V003_SHA256SUMS.txt"
+    ],
+    "note": "Current package checksums regenerated after the native-action repair; checksum manifest files are excluded from recursive checksum coverage."
+  },
+  "correctedAt": "2026-10-01T18:20:00-04:00"
+}

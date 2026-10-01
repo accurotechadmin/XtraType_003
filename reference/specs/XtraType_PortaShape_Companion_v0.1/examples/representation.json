@@ -1,0 +1,18 @@
+{
+  "id": "example:record",
+  "recordType": "Publish.Representation",
+  "schemaVersion": 1,
+  "createdAt": "2026-10-01T07:10:00.000Z",
+  "updatedAt": "2026-10-01T07:10:00.000Z",
+  "ownerId": "local:owner",
+  "publicationId": "example",
+  "objectId": "example",
+  "destinationId": "example",
+  "connectorId": "example",
+  "connectorRevision": "example",
+  "operationId": "example",
+  "status": "pending",
+  "payloadDigest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "fidelityRef": "example",
+  "receiptRefs": []
+}

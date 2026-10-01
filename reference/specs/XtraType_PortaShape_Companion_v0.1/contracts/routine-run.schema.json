@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.portashape.invalid/companion/0.1/routine-run.schema.json",
+  "title": "Procedure.Run v1",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "recordType": {
+      "const": "Procedure.Run"
+    },
+    "schemaVersion": {
+      "const": 1
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "ownerId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "routineId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "routineRevision": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "status": {
+      "enum": [
+        "ready",
+        "running",
+        "paused",
+        "succeeded",
+        "failed",
+        "cancelled",
+        "unknown-outcome"
+      ]
+    },
+    "currentStep": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "state": {
+      "type": "object",
+      "additionalProperties": {
+        "type": [
+          "string",
+          "number",
+          "boolean",
+          "null"
+        ]
+      }
+    },
+    "checkpointRefs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 512
+      },
+      "maxItems": 25
+    },
+    "receiptRefs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 512
+      },
+      "maxItems": 100
+    },
+    "deadlineAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "id",
+    "recordType",
+    "schemaVersion",
+    "createdAt",
+    "updatedAt",
+    "ownerId",
+    "routineId",
+    "routineRevision",
+    "status",
+    "currentStep",
+    "state",
+    "checkpointRefs",
+    "receiptRefs",
+    "deadlineAt"
+  ],
+  "additionalProperties": false
+}

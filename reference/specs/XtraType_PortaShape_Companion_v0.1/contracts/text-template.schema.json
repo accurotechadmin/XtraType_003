@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.portashape.invalid/companion/0.1/text-template.schema.json",
+  "title": "Procedure.TextTemplate v1",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "recordType": {
+      "const": "Procedure.TextTemplate"
+    },
+    "schemaVersion": {
+      "const": 1
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "ownerId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "template": {
+      "type": "string",
+      "maxLength": 80000
+    },
+    "variables": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "pattern": "^[A-Za-z_][A-Za-z0-9_]*$"
+          },
+          "type": {
+            "enum": [
+              "string",
+              "number",
+              "boolean"
+            ]
+          },
+          "label": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512
+          },
+          "required": {
+            "type": "boolean"
+          },
+          "default": {
+            "type": [
+              "string",
+              "number",
+              "boolean"
+            ]
+          }
+        },
+        "required": [
+          "name",
+          "type",
+          "label",
+          "required"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 50
+    },
+    "provenanceRefs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 512
+      },
+      "maxItems": 100
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 1
+    }
+  },
+  "required": [
+    "id",
+    "recordType",
+    "schemaVersion",
+    "createdAt",
+    "updatedAt",
+    "ownerId",
+    "template",
+    "variables",
+    "provenanceRefs",
+    "revision"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,53 @@
+ID,Owner,Case,Expected result,Stage,Spec,Evidence status
+AT001,PS,Tampered/oversize/traversal package,Reject without installation or extraction effects,C1,02,Not run
+AT002,PS,Missing dependency/cycle/host version,Block only dependent package; retain inspectable source,C1,02,Not run
+AT003,PS,Imported enabled/grant claims,Install disabled; reject imported authority,C1,02,Not run
+AT004,PS,Revision/site authority expansion,Require review; old grants do not transfer,C1,02,Not run
+AT005,PS,Plugin namespace impersonation,Deny foreign storage/operation identity,C1,02,Not run
+AT006,PS,Disable during active effect,Stop future dispatch; preserve truthful effect outcome,C1,01,Not run
+AT007,PS,Host startup/update interruption,Reconcile actual state before ready,C1,01,Not run
+AT008,XT,Host unavailable,Existing annotation read/composer remains available,C1,01,Not run
+AT009,SS,Valid/invalid userscript metadata,Supported profile installs; unsupported directives explained,C2,05,Not run
+AT010,SS,Site grant/revoked toggle,No unauthorized injection; truthful registration error,C2,05,Not run
+AT011,SS,Update/restart registration,Desired and actual state reconciled,C2,05,Not run
+AT012,SS,Source hash change/rollback,Fresh revision review; no inherited authority,C2,05,Not run
+AT013,SS,Fixture requests external effect,Mock or deny; no live mutation,C2,05,Not run
+AT014,SS,Cross-script identity spoof,No privileged call attributed from claimed ID alone,C4,05,Not run
+AT015,SS,Promotion into privileged plugin,Requires tested catalog implementation; no eval shortcut,C4,05,Not run
+AT016,DRY,Consent off/pause/exclusion,No new observation; explicit evidence deletion honored,C2,06,Not run
+AT017,DRY,Password/payment/OTP field,Excluded from capture and pattern input,C2,06,Not run
+AT018,DRY,IME/Unicode/multiline/cursor,Composition untouched and preview/insertion accurate,C2,06,Not run
+AT019,DRY,Stale focus/value/document,Insertion blocked with preserved draft,C2,06,Not run
+AT020,DRY,Repeated event debounce/threshold,Distinct committed uses counted once; threshold exact,C2,06,Not run
+AT021,DRY,TTL/quota/dismissal,Evict/suppress predictably with no invisible retention,C2,06,Not run
+AT022,DRY,Template variables/escaped braces,Unknown/missing fields block; HTML remains text,C2,06,Not run
+AT023,DRY,Helper insertion,"No form submit, Send click or publish",C2,06,Not run
+AT024,DRY,Finite routine bounds/restart,Stop or pause; no unsafe replay after unknown effect,C4,06,Not run
+AT025,XT,Legacy record families/keys/media,Readability and current envelope preserved,C0,04,Not run
+AT026,XT,Duplicate/moved/deleted text,Resolve uniquely or show ambiguity/missing,C3,04,Not run
+AT027,XT,SPA/owned DOM mutation,No feedback loop; stale async result discarded,C3,04,Not run
+AT028,XT,Sidecar write fails after note commit,Note survives; extension pending/recoverable,C3,04,Not run
+AT029,XT,Supersession cycle/missing parent,Reject cycle; orphan context visible,C3,04,Not run
+AT030,XT,Shared-mode request,Blocked until authority services exist,C3,04,Not run
+AT031,PUB,Required field/fidelity/media loss,Preview blocks or requires explicit acknowledgement,C3,07,Not run
+AT032,PUB,Changed content/account/revision after preview,Invalidate plan confirmation,C3,07,Not run
+AT033,PUB,Two real targets and two stubs,Live evidence separate; stubs clearly labeled,C3,07,Not run
+AT034,PUB,Partial success/cancel,Retain successes; stop pending only,C3,07,Not run
+AT035,PUB,Lost response/unknown outcome,Require reconciliation; no blind retry,C3,07,Not run
+AT036,PUB,Retry failed subset,Never duplicate successful destinations,C3,07,Not run
+AT037,PUB,Object versus replica annotation,Explicit scope; no unwanted external post edit,C3,07,Not run
+AT038,EXT,Wrong/expired account,AUTH_REQUIRED before effect,C3,08,Not run
+AT039,EXT,Selector drift/ambiguous confirmation,"Blocked or unknown, never fabricated success",C3,08,Not run
+AT040,EXT,Unsupported update/delete/locality,Operation absent/unavailable; no no-op success,C3,08,Not run
+AT041,EXT,Secrets/logs/exports,No cookies/tokens/secret payload leakage,C3,08,Not run
+AT042,EXT,Platform rate limit,Respect provider response; bounded safe retry only,C3,08,Not run
+AT043,UI,Unsupported host and imported script,Metadata usable; execution unavailable/disabled,C5,09,Not run
+AT044,UI,Mobile narrow layout/keyboard,"Readable controls, focus and announcements",C5,09,Not run
+AT045,UI,Draft handoff across local hosts,Fresh destinations/grants/confirmation required,C5,09,Not run
+AT046,UI,Legacy feed versus local-only records,No automatic upload or false remote privacy,C5,09,Not run
+AT047,PS,Backup/restore binary/hash/ref integrity,Restore complete selected records; conflicts explicit,C1,10,Not run
+AT048,PS,Quota before/after external effect,Block before or enter explicit recovery after,C1,10,Not run
+AT049,PS,Event retention gap,Consumer refreshes owning records,C1,03,Not run
+AT050,PS,Plugin removal/reference retention,No unrelated note or external post deletion,C1,10,Not run
+AT051,DOC,Registry foreign IDs and schema examples,All selected refs valid; status evidence truthful,C1,12,Not run
+AT052,DOC,Excluded/deferred dependency regression,No active omitted module/service dependency,C1,12,Not run

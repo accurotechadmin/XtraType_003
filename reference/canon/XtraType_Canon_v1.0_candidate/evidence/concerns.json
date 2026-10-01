@@ -1,0 +1,452 @@
+[
+  {
+    "id": "XT-001",
+    "priority": "P0 deployment",
+    "evidence_class": "CURRENT gap",
+    "source": "server/config.php; server/api/*",
+    "title": "Unauthenticated shared API",
+    "mechanism": "Any reachable client can read/write/delete supported records; author is a display string.",
+    "acceptance": "Identity/authorization and negative cross-user tests before public exposure.",
+    "owner": "C-07"
+  },
+  {
+    "id": "XT-002",
+    "priority": "P0 deployment",
+    "evidence_class": "CURRENT exposure path",
+    "source": "start-server.sh/.bat; server/data/*",
+    "title": "All-interface launch and raw data beneath webroot",
+    "mechanism": "Scripts bind 0.0.0.0; static JSON can bypass future API guards. HTTP exposure not exercised here.",
+    "acceptance": "Default loopback, private data root, denied direct data/lock/temp access, protected media.",
+    "owner": "C-10"
+  },
+  {
+    "id": "XT-003",
+    "priority": "P1",
+    "evidence_class": "CURRENT defect",
+    "source": "ext/sidepanel/app.js:pull; ext/service-worker.js:recentAnnotationsForPage/youtubeAnnotations",
+    "title": "Remote pull can erase dirty local state",
+    "mechanism": "Failed push or concurrent local change followed by same-ID remote put marks old data synced.",
+    "acceptance": "Dirty-record preservation and explicit revision/conflict handling with a stale-pull fixture.",
+    "owner": "C-06"
+  },
+  {
+    "id": "XT-004",
+    "priority": "P1",
+    "evidence_class": "CURRENT defect",
+    "source": "ext/core/api.js:syncAnnotation",
+    "title": "Successful sync loses local image references",
+    "mechanism": "Server attachments replace blobId descriptors; offline renderer cannot find retained bytes.",
+    "acceptance": "Retain attachment identity and Blob mapping across sync and offline reload.",
+    "owner": "C-06"
+  },
+  {
+    "id": "XT-005",
+    "priority": "P1",
+    "evidence_class": "CURRENT defect",
+    "source": "ext/sidepanel/app.js:pull; ext/core/api.js:syncAnnotation",
+    "title": "Missing Blob can silently drop attachment",
+    "mechanism": "Manual push skips absent Blob; transport omits local descriptor, allowing incomplete server record.",
+    "acceptance": "Missing required media blocks complete-sync status and offers recovery without dropping metadata.",
+    "owner": "C-05"
+  },
+  {
+    "id": "XT-006",
+    "priority": "P1",
+    "evidence_class": "SOURCE risk",
+    "source": "ext/content/youtube.js:render/MutationObserver",
+    "title": "Observer reacts to its own marker mutations",
+    "mechanism": "replaceChildren and append under observed subtree can trigger repeated render work.",
+    "acceptance": "Owned DOM excluded, idempotent render, bounded refresh; observer-quiescence browser test.",
+    "owner": "C-09"
+  },
+  {
+    "id": "XT-007",
+    "priority": "P1",
+    "evidence_class": "VERIFIED defect",
+    "source": "ext/content/youtube.js:render/interval",
+    "title": "Whole-video null time becomes zero",
+    "mechanism": "Number(null) is finite zero, so bare-video entries qualify as markers/toasts.",
+    "acceptance": "Explicit null guard; zero-second notes retained; bare-video notes produce neither timed affordance.",
+    "owner": "C-09"
+  },
+  {
+    "id": "XT-008",
+    "priority": "P1",
+    "evidence_class": "SOURCE/platform risk",
+    "source": "ext/sidepanel/app.js:makeFullSnapshot",
+    "title": "Capture pacing does not enforce Chrome rate limit",
+    "mechanism": "140 ms delay does not guarantee <=2 capture calls/second.",
+    "acceptance": "Central limiter/backoff and rate-limit failure test, with finally restoration.",
+    "owner": "C-08"
+  },
+  {
+    "id": "XT-009",
+    "priority": "P1",
+    "evidence_class": "CURRENT defect/race",
+    "source": "ext/sidepanel/app.js:makeVisibleSnapshot/makeFullSnapshot",
+    "title": "Screenshot and extracted page may differ",
+    "mechanism": "Active-window capture versus saved tabId plus live context queries; navigation not pinned.",
+    "acceptance": "Capture token verifies tab/window/document before and after each stage; mismatch aborts.",
+    "owner": "C-08"
+  },
+  {
+    "id": "XT-010",
+    "priority": "P1",
+    "evidence_class": "CURRENT defect",
+    "source": "ext/sidepanel/app.js:makeFullSnapshot",
+    "title": "Failed tile may leave page scrolled and resources retained",
+    "mechanism": "No finally restores scroll; ImageBitmaps not closed; concurrent capture allowed.",
+    "acceptance": "Guaranteed cleanup/cancel and one active job per target tab with failure injection.",
+    "owner": "C-08"
+  },
+  {
+    "id": "XT-011",
+    "priority": "P1",
+    "evidence_class": "CURRENT defect",
+    "source": "ext/sidepanel/app.js:renderUrl",
+    "title": "Unscriptable/invalid page can target example.com",
+    "mechanism": "Fallback is a valid real-looking URL and posting is not disabled.",
+    "acceptance": "No placeholder target persisted; require explicit valid user target when context unavailable.",
+    "owner": "C-04"
+  },
+  {
+    "id": "XT-012",
+    "priority": "P1",
+    "evidence_class": "CURRENT defect",
+    "source": "ext/sidepanel/app.js:refreshContext/loadSchemas",
+    "title": "Draft target/quote can become stale or mismatched",
+    "mechanism": "Refresh replaces fields but retains body/old nonempty quote; no tab lifecycle subscription.",
+    "acceptance": "Separate draft from live context, show binding, explicit rebind action and navigation tests.",
+    "owner": "C-04"
+  },
+  {
+    "id": "XT-013",
+    "priority": "P1",
+    "evidence_class": "CURRENT inconsistency",
+    "source": "worker:quickReply; panel:installSchema/loadSchemas",
+    "title": "Auto-sync off still permits automatic network paths",
+    "mechanism": "Reply always POSTs; schema install always POSTs; schema loads always GET.",
+    "acceptance": "Define network preferences and apply consistently; no unexpected traffic in disabled-mode suite.",
+    "owner": "C-06"
+  },
+  {
+    "id": "XT-014",
+    "priority": "P1",
+    "evidence_class": "CURRENT defect",
+    "source": "server/api/annotations.php; snapshots.php; events.php",
+    "title": "API trusts structurally invalid record data",
+    "mechanism": "No full target/key/types/parent/time validation; JSON attachments bypass count checks.",
+    "acceptance": "Validate typed envelope before mutation, recompute keys, reject malformed shape with stable errors.",
+    "owner": "C-07"
+  },
+  {
+    "id": "XT-015",
+    "priority": "P1",
+    "evidence_class": "CURRENT defect",
+    "source": "core/schemas.js:normalizeCustomSchema; both schema loaders",
+    "title": "Untrusted schema kind overrides custom dispatch",
+    "mechanism": "Supplied metadata spread overrides kind; remote schemas bypass normalizer.",
+    "acceptance": "Reserved-kind dispatch cannot be selected by custom schemas; all ingress validated.",
+    "owner": "C-02"
+  },
+  {
+    "id": "XT-016",
+    "priority": "P1",
+    "evidence_class": "CURRENT defect",
+    "source": "core/api.js:settings; panel settings/pull",
+    "title": "Changing API base does not migrate sync state",
+    "mechanism": "Synced records skipped on new server; relative media may point to wrong destination.",
+    "acceptance": "Bind receipts/media to server identity and implement explicit switch/export/import policy.",
+    "owner": "C-06"
+  },
+  {
+    "id": "XT-017",
+    "priority": "P1",
+    "evidence_class": "CURRENT integrity risk",
+    "source": "server/api/bootstrap.php:read_collection/mutate_collection",
+    "title": "Malformed collection silently becomes empty",
+    "mechanism": "Next mutation can replace corrupt corpus with a small new array.",
+    "acceptance": "Fail closed, retain corrupt bytes, explicit repair workflow and corruption tests.",
+    "owner": "C-07"
+  },
+  {
+    "id": "XT-018",
+    "priority": "P1",
+    "evidence_class": "CURRENT integrity risk",
+    "source": "panel:saveAnnotation; worker:quickCreate; core/db.js",
+    "title": "Aggregate save is several independent transactions",
+    "mechanism": "Blobs can orphan; event failure after note commit reports operation failure and invites duplicate.",
+    "acceptance": "Atomic aggregate where possible; committed-record-aware responses and retry-safe IDs.",
+    "owner": "C-05"
+  },
+  {
+    "id": "XT-019",
+    "priority": "P1",
+    "evidence_class": "VERIFIED defect",
+    "source": "ext/core/anchors.js:makeGpsTarget; web:getTarget",
+    "title": "Blank GPS becomes coordinates 0,0",
+    "mechanism": "Number empty-string coercion; web additionally omits geographic bounds.",
+    "acceptance": "Reject blank fields while accepting explicit zero; consistent coordinate/radius validation.",
+    "owner": "C-01"
+  },
+  {
+    "id": "XT-020",
+    "priority": "P2",
+    "evidence_class": "CURRENT defect",
+    "source": "panel:renderUrl/buildTarget; web targetKey",
+    "title": "Fragment authoring and key parity incomplete",
+    "mechanism": "Panel loses initial fragment, web always ignores it.",
+    "acceptance": "Preserve/edit fragment and share semantics with migration compatibility tests.",
+    "owner": "C-01"
+  },
+  {
+    "id": "XT-021",
+    "priority": "P2",
+    "evidence_class": "VERIFIED defect",
+    "source": "worker:urlTargetMatchesPage",
+    "title": "All-query anchor with no pairs matches extra query",
+    "mechanism": "Early zero-pair return bypasses all-mode length check.",
+    "acceptance": "All-mode empty set matches only empty live query; duplicate-pair tests retained.",
+    "owner": "C-01"
+  },
+  {
+    "id": "XT-022",
+    "priority": "P2",
+    "evidence_class": "VERIFIED/core + CURRENT/web defect",
+    "source": "anchors:youtubeInfo; web:getTarget",
+    "title": "YouTube hostname recognition is permissive/inconsistent",
+    "mechanism": "Substring spoof hosts accepted; web accepts v on unrelated hosts and lacks Shorts support.",
+    "acceptance": "Strict allowed-host parser shared by both clients; canonical ID validation fixture suite.",
+    "owner": "C-01"
+  },
+  {
+    "id": "XT-023",
+    "priority": "P2",
+    "evidence_class": "CURRENT gap",
+    "source": "core/schemas.js; both form controllers",
+    "title": "Schema constraints and scalar conversions differ",
+    "mechanism": "Required-only validator, permissive unions, numeric enum web strings, missing defaults/ranges.",
+    "acceptance": "Document/enforce exact supported subset and same typed values across both clients.",
+    "owner": "C-02"
+  },
+  {
+    "id": "XT-024",
+    "priority": "P2",
+    "evidence_class": "CURRENT defect",
+    "source": "panel:renderFeed/event bindings",
+    "title": "Context Here can show all data or lag form",
+    "mechanism": "Invalid target skips filtering; ordinary field edits do not rerender.",
+    "acceptance": "Invalid-target explicit state and consistent resolver update triggers.",
+    "owner": "C-04"
+  },
+  {
+    "id": "XT-025",
+    "priority": "P2",
+    "evidence_class": "CURRENT inconsistency",
+    "source": "worker:quickReply; youtube:reply handler",
+    "title": "Reply status is misleading and validation incomplete",
+    "mechanism": "Empty message can be stored via bus; ignores sync errors; UI ignores ok false; no event/refresh.",
+    "acceptance": "Use shared creation service, validate body, return commit/sync result, truthful UI.",
+    "owner": "C-04"
+  },
+  {
+    "id": "XT-026",
+    "priority": "P2",
+    "evidence_class": "SOURCE risk",
+    "source": "youtube:refresh/interval/ensureUi",
+    "title": "YouTube navigation and toast lifecycle races",
+    "mechanism": "Concurrent refreshes can resolve out of order; missing progress can leave toast undefined; stale ID/second state.",
+    "acceptance": "Generation tokens, clear on navigation, guard unavailable player, detach cleanup.",
+    "owner": "C-09"
+  },
+  {
+    "id": "XT-027",
+    "priority": "P2",
+    "evidence_class": "CURRENT UX gap",
+    "source": "youtube:showCard",
+    "title": "Interactive cards cannot be dismissed reliably",
+    "mechanism": "No explicit close/outside/Escape; narrow left positioning may be negative.",
+    "acceptance": "Keyboard/pointer dismiss and viewport-bounded placement tests.",
+    "owner": "C-09"
+  },
+  {
+    "id": "XT-028",
+    "priority": "P2",
+    "evidence_class": "CURRENT limitation",
+    "source": "panel:makeFullSnapshot/persistSnapshot",
+    "title": "Full-page label can hide clipping or extraction loss",
+    "mechanism": "Dimension clamps, no quality flags; extraction errors default to empty text/HTML.",
+    "acceptance": "Coverage/truncation/error metadata, explicit partial capture, no false complete label.",
+    "owner": "C-08"
+  },
+  {
+    "id": "XT-029",
+    "priority": "P2",
+    "evidence_class": "CURRENT risk",
+    "source": "panel capture/compare; api upload limits",
+    "title": "Memory and screenshot upload budgets differ",
+    "mechanism": "Potential large canvases/retained tiles, PNG can exceed server 8 MiB.",
+    "acceptance": "Memory preflight, measured budgets and upload-size outcome without local loss.",
+    "owner": "C-08"
+  },
+  {
+    "id": "XT-030",
+    "priority": "P2",
+    "evidence_class": "CURRENT limitation",
+    "source": "panel:compareLatest",
+    "title": "Rescaling can obscure dimension changes",
+    "mechanism": "Both entire images distorted into common min rectangle; mixed capture modes accepted.",
+    "acceptance": "Version algorithm, show dimension/mode changes and compatible comparison policy.",
+    "owner": "C-08"
+  },
+  {
+    "id": "XT-031",
+    "priority": "P2",
+    "evidence_class": "CURRENT gap",
+    "source": "core/api.js; panel sync",
+    "title": "No remote snapshot restore or event sync",
+    "mechanism": "Endpoints exist, corresponding client bridge does not.",
+    "acceptance": "Label direction accurately; restore requires metadata plus verified media, event purpose decision.",
+    "owner": "C-06"
+  },
+  {
+    "id": "XT-032",
+    "priority": "P2",
+    "evidence_class": "CURRENT gap",
+    "source": "all sync paths; API DELETE",
+    "title": "No deletion/tombstone reconciliation",
+    "mechanism": "Remote absence does not delete local record; cached schemas can be republished.",
+    "acceptance": "Versioned tombstones and explicit conflict/retention semantics before delete UI rollout.",
+    "owner": "C-06"
+  },
+  {
+    "id": "XT-033",
+    "priority": "P2",
+    "evidence_class": "CURRENT risk",
+    "source": "api/bootstrap.php:save_uploaded_images; POST endpoints",
+    "title": "Media written before validation and duplicated on retry",
+    "mechanism": "No transactional rollback/idempotency/GC; extra snapshot files unreferenced.",
+    "acceptance": "Prevalidate, stage/commit, stable media identity, cleanup and retry tests.",
+    "owner": "C-07"
+  },
+  {
+    "id": "XT-034",
+    "priority": "P2",
+    "evidence_class": "CURRENT limitation",
+    "source": "core/api.js:api; panel:pull",
+    "title": "No timeouts and incomplete sync summaries",
+    "mechanism": "Fetch can wait indefinitely; item errors swallowed; stale syncError may remain after success.",
+    "acceptance": "Abortable network, per-item result ledger, truthful completion and clear resolved errors.",
+    "owner": "C-06"
+  },
+  {
+    "id": "XT-035",
+    "priority": "P2",
+    "evidence_class": "CURRENT resource gap",
+    "source": "panel/web previews/feed/timeline",
+    "title": "Object URLs and stored media accumulate",
+    "mechanism": "Most object URLs not revoked; no blob/media reference lifecycle or retention.",
+    "acceptance": "Dispose views, preserve ownership refs, quota/retention design and stress check.",
+    "owner": "C-05"
+  },
+  {
+    "id": "XT-036",
+    "priority": "P2",
+    "evidence_class": "CURRENT gap",
+    "source": "panel:exportMetadata; core/db.js",
+    "title": "No complete backup/import or migrations",
+    "mechanism": "Export omits binaries/settings; DB remains v1 with no upgrade/recovery protocol.",
+    "acceptance": "Versioned lossless export/import with hashes and migration fixtures before schema/storage changes.",
+    "owner": "C-05"
+  },
+  {
+    "id": "XT-037",
+    "priority": "P2",
+    "evidence_class": "CURRENT performance gap",
+    "source": "worker lookups; panel feeds; server collections",
+    "title": "Whole-corpus queries and full-file rewrites",
+    "mechanism": "Video/recent refresh may pull all notes; loops scan all; HTML/text inflate snapshot JSON.",
+    "acceptance": "Measure corpus budgets, indexed/delta/paginated queries and bounded concurrency.",
+    "owner": "C-06"
+  },
+  {
+    "id": "XT-038",
+    "priority": "P2",
+    "evidence_class": "CURRENT privacy boundary",
+    "source": "quick bar open Shadow DOM; auto-sync defaults; image URLs",
+    "title": "Page and server see sensitive content through intended paths",
+    "mechanism": "Draft/quote DOM visible to host; no redaction/exclusions; remote image origins unrestricted.",
+    "acceptance": "Document surface trust, per-origin capture policy and governed remote media loads.",
+    "owner": "C-03"
+  },
+  {
+    "id": "XT-039",
+    "priority": "P2",
+    "evidence_class": "CURRENT resilience gap",
+    "source": "web:initialization/loadFeed/loadSchemas/post",
+    "title": "Web failure handling/offline behavior weak",
+    "mechanism": "No durable drafts, several GET status checks absent, submission not locked.",
+    "acceptance": "Explicit loading/error/retry states and duplicate prevention; offline mode remains separately scoped.",
+    "owner": "C-04"
+  },
+  {
+    "id": "XT-040",
+    "priority": "P2",
+    "evidence_class": "CURRENT accessibility gap",
+    "source": "panel HTML/CSS; content UIs; web shell",
+    "title": "Accessibility coverage incomplete",
+    "mechanism": "Unlabeled images, div-click timeline rows, hidden file inputs, dynamic errors and small text.",
+    "acceptance": "Keyboard/focus/screen-reader/contrast verification with accessible controls and error links.",
+    "owner": "C-04"
+  },
+  {
+    "id": "XT-041",
+    "priority": "P2",
+    "evidence_class": "CURRENT mismatch",
+    "source": "panel GPS settings/import; web Nearby",
+    "title": "GPS preference suggests behavior panel does not perform",
+    "mechanism": "defaultGpsRadius stored but unused in panel resolver; web uses independent server config.",
+    "acceptance": "Explicit Exact/Nearby mode and clearly scoped setting or remove inactive control.",
+    "owner": "C-01"
+  },
+  {
+    "id": "XT-042",
+    "priority": "P2",
+    "evidence_class": "CURRENT governance gap",
+    "source": "tests/*; repository root",
+    "title": "No end-to-end suite, CI, license or pinned development toolchain",
+    "mechanism": "Only small pure tests; earlier checks are not current runtime proof.",
+    "acceptance": "Document supported runtimes/distribution decision and required release integration matrix.",
+    "owner": "C-10"
+  },
+  {
+    "id": "XT-043",
+    "priority": "P2",
+    "evidence_class": "CURRENT risk",
+    "source": "server timestamps; targetKey rounding/sort",
+    "title": "Identity/time canonicalization can drift or collide",
+    "mechanism": "LocaleCompare URL sorting, rounded GPS/time keys, arbitrary accepted timestamp formats.",
+    "acceptance": "Version explicit canonicalization; collision fixtures; normalized timestamps and migration decision.",
+    "owner": "C-01"
+  },
+  {
+    "id": "XT-044",
+    "priority": "P2",
+    "evidence_class": "CURRENT UX defect",
+    "source": "panel:saveAnnotation; web:post; file handlers",
+    "title": "Repeated submit and stale native file selection",
+    "mechanism": "No full-form submit lock/idempotency; file input value not reset after state clear.",
+    "acceptance": "One logical submission per action and predictable reselection of same file.",
+    "owner": "C-04"
+  },
+  {
+    "id": "XT-045",
+    "priority": "P3",
+    "evidence_class": "CURRENT maintainability gap",
+    "source": "panel app.js; web app.js; core built-ins; legacy docs",
+    "title": "Mixed concerns and compressed duplicated source",
+    "mechanism": "Large physical lines obscure logic; unused imports/encoder; stale names/overstated reports.",
+    "acceptance": "Incremental module extraction, format source, remove dead code and maintain generated inventories.",
+    "owner": "C-10"
+  }
+]

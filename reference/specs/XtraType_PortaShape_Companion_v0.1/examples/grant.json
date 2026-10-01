@@ -1,0 +1,15 @@
+{
+  "id": "example:record",
+  "recordType": "Host.Grant",
+  "schemaVersion": 1,
+  "createdAt": "2026-10-01T07:10:00.000Z",
+  "updatedAt": "2026-10-01T07:10:00.000Z",
+  "ownerId": "local:owner",
+  "principalId": "example",
+  "packageId": "example",
+  "revisionDigest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "operationIds": [],
+  "siteMatches": [],
+  "resourceRefs": [],
+  "approvedAt": "2026-10-01T07:10:00.000Z"
+}

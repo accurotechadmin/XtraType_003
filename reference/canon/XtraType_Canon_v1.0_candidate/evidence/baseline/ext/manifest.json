@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "XtraType \u2014 PortaShape MVP",
+  "short_name": "XtraType",
+  "version": "2.3.0",
+  "description": "XtraType side-panel workspace with all-site browser access, optional quick bar, URL/GPS/YouTube/custom anchors, snapshots and visual history.",
+  "minimum_chrome_version": "116",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "sidePanel",
+    "contextMenus",
+    "tabs",
+    "geolocation"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "service-worker.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Open XtraType"
+  },
+  "side_panel": {
+    "default_path": "sidepanel/index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/*"
+      ],
+      "js": [
+        "content/youtube.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

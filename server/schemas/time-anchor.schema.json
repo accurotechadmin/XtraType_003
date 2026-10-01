@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "xtratype.anchor.time@1",
+  "title": "Time / timeframe",
+  "type": "object",
+  "properties": {
+    "timestamp": { "type": ["string", "null"], "title": "Timestamp" },
+    "startTime": { "type": ["string", "null"], "title": "Start time" },
+    "endTime": { "type": ["string", "null"], "title": "End time" }
+  },
+  "x-xtratype": {
+    "label": "Time",
+    "kind": "time",
+    "description": "A generic moment or bounded timeframe that is not tied to a URL, location, or video."
+  }
+}

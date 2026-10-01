@@ -1,0 +1,113 @@
+TAP version 13
+# Subtest: PHP HTTP and JSON repository integration
+    # Subtest: retained URL/GPS/Time/YouTube/custom routes and key contracts
+    ok 1 - retained URL/GPS/Time/YouTube/custom routes and key contracts
+      ---
+      duration_ms: 54.031859
+      type: 'test'
+      ...
+    # Subtest: invalid inputs, wrong key, reserved kinds and unsupported schema rejected
+    ok 2 - invalid inputs, wrong key, reserved kinds and unsupported schema rejected
+      ---
+      duration_ms: 8.831578
+      type: 'test'
+      ...
+    # Subtest: malformed JSON, CSRF origin, missing client header, DNS host rejection
+    ok 3 - malformed JSON, CSRF origin, missing client header, DNS host rejection
+      ---
+      duration_ms: 15.489805
+      type: 'test'
+      ...
+    # Subtest: image upload, stable retry, valid media delivery and no raw data exposure
+    ok 4 - image upload, stable retry, valid media delivery and no raw data exposure
+      ---
+      duration_ms: 21.514138
+      type: 'test'
+      ...
+    # Subtest: concurrent requests retain all records; events and deletion retained
+    ok 5 - concurrent requests retain all records; events and deletion retained
+      ---
+      duration_ms: 41.570749
+      type: 'test'
+      ...
+    # Subtest: invitation accounts, profile payloads, messaging, group chat access and admin controls
+    ok 6 - invitation accounts, profile payloads, messaging, group chat access and admin controls
+      ---
+      duration_ms: 654.944936
+      type: 'test'
+      ...
+    # Subtest: corrupt JSON refuses writes without replacing bytes
+    ok 7 - corrupt JSON refuses writes without replacing bytes
+      ---
+      duration_ms: 266.738582
+      type: 'test'
+      ...
+    1..7
+ok 1 - PHP HTTP and JSON repository integration
+  ---
+  duration_ms: 1156.944313
+  type: 'test'
+  ...
+# Subtest: extension manifest binds Ctrl+Q to Chrome's native action and exposes xt omnibox keyword
+ok 2 - extension manifest binds Ctrl+Q to Chrome's native action and exposes xt omnibox keyword
+  ---
+  duration_ms: 4.469419
+  type: 'test'
+  ...
+# Subtest: service worker leaves Ctrl+Q on Chrome's native action/side-panel toggle path
+ok 3 - service worker leaves Ctrl+Q on Chrome's native action/side-panel toggle path
+  ---
+  duration_ms: 0.974012
+  type: 'test'
+  ...
+# Subtest: side panel ships built-in Attach to options and URL controls before JS hydration
+ok 4 - side panel ships built-in Attach to options and URL controls before JS hydration
+  ---
+  duration_ms: 2.300363
+  type: 'test'
+  ...
+# Subtest: built-in schema catalog labels the four requested attach handles
+ok 5 - built-in schema catalog labels the four requested attach handles
+  ---
+  duration_ms: 0.18648
+  type: 'test'
+  ...
+# Subtest: omnibox flow opens the panel, transfers typed text, refreshes context and focuses the composer
+ok 6 - omnibox flow opens the panel, transfers typed text, refreshes context and focuses the composer
+  ---
+  duration_ms: 1.211498
+  type: 'test'
+  ...
+# Subtest: seven-day age state uses Mark all as old and a green tree marker without read-clearing
+ok 7 - seven-day age state uses Mark all as old and a green tree marker without read-clearing
+  ---
+  duration_ms: 4.043379
+  type: 'test'
+  ...
+# Subtest: header quick snapshot defaults full and can be changed under Capture
+ok 8 - header quick snapshot defaults full and can be changed under Capture
+  ---
+  duration_ms: 2.07223
+  type: 'test'
+  ...
+# Subtest: account and messaging UI exposes registration, invites, contacts, DMs, group chats and admin controls
+ok 9 - account and messaging UI exposes registration, invites, contacts, DMs, group chats and admin controls
+  ---
+  duration_ms: 0.930567
+  type: 'test'
+  ...
+# Subtest: JSON repository serializes independent writer processes without lost updates
+ok 10 - JSON repository serializes independent writer processes without lost updates
+  ---
+  duration_ms: 95.091625
+  type: 'test'
+  ...
+1..10
+# tests 17
+# suites 0
+# pass 17
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1251.958868

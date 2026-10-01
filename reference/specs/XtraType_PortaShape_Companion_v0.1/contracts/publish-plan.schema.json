@@ -1,0 +1,159 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.portashape.invalid/companion/0.1/publish-plan.schema.json",
+  "title": "Publish.Plan v1",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "recordType": {
+      "const": "Publish.Plan"
+    },
+    "schemaVersion": {
+      "const": 1
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "ownerId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "publicationId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "publicationRevision": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "publicationDigest": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "targets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "destinationId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512
+          },
+          "destinationDigest": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "connectorId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512
+          },
+          "connectorRevision": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512
+          },
+          "transformVersion": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512
+          },
+          "payloadDigest": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "targetPayload": {
+            "type": "object"
+          },
+          "fidelityRef": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512
+          },
+          "acknowledgedItemIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 512
+            },
+            "maxItems": 100
+          },
+          "operationId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512
+          }
+        },
+        "required": [
+          "destinationId",
+          "destinationDigest",
+          "connectorId",
+          "connectorRevision",
+          "transformVersion",
+          "payloadDigest",
+          "targetPayload",
+          "fidelityRef",
+          "acknowledgedItemIds",
+          "operationId"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 20
+    },
+    "planDigest": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "intentId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "status": {
+      "enum": [
+        "needs-input",
+        "ready",
+        "confirmed",
+        "running",
+        "complete",
+        "partial",
+        "needs-reconciliation",
+        "cancelled"
+      ]
+    },
+    "confirmationRef": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    }
+  },
+  "required": [
+    "id",
+    "recordType",
+    "schemaVersion",
+    "createdAt",
+    "updatedAt",
+    "ownerId",
+    "publicationId",
+    "publicationRevision",
+    "publicationDigest",
+    "targets",
+    "planDigest",
+    "intentId",
+    "status"
+  ],
+  "additionalProperties": false
+}

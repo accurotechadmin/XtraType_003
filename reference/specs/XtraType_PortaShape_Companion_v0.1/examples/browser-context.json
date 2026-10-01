@@ -1,0 +1,16 @@
+{
+  "id": "example:record",
+  "recordType": "Browser.Context",
+  "schemaVersion": 1,
+  "createdAt": "2026-10-01T07:10:00.000Z",
+  "updatedAt": "2026-10-01T07:10:00.000Z",
+  "ownerId": "local:owner",
+  "tabId": 1,
+  "documentId": "document:example",
+  "frameId": 0,
+  "generation": "generation:1",
+  "origin": "https://example.com",
+  "pageUrl": "https://example.com/article",
+  "capturedAt": "2026-10-01T07:10:00.000Z",
+  "scriptAccess": true
+}

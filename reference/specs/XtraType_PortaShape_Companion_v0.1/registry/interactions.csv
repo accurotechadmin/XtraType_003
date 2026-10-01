@@ -1,0 +1,17 @@
+ID,From,To,Shared seam,Operations,Boundary,Spec
+IX01,XT,PS,Current context and reviewed drafts,context.capture / xtratype.proposeDraft,Document generation; user review,01/04
+IX02,SS,PS,Package install and effective registrations,package.* / script.execute,Revision and site grants,02/05
+IX03,DRY,PS,Consented observation/insertion,dry.observe / dry.insert,Site/field consent; no implicit submit,06
+IX04,DRY,SS,Helper/routine promotion,dry.promote / script.importDraft,Draft only; no grant transfer,05/06
+IX05,DRY,XT,Composer assistance,dry.insert,Eligible field and current gesture,04/06
+IX06,DRY,PUB,Selected text/presets,publish.compose,Draft creation is not posting authority,06/07
+IX07,PUB,EXT,"Transform, preview and publish",connector.*,Pinned account/plan; fidelity; evidence,07/08
+IX08,PUB,XT,Context on object or representation,xtratype.relate / xtratype.proposeDraft,Explicit target scope and selected content,04/07
+IX09,SS,XT,Later typed draft proposal,xtratype.proposeDraft,Trusted script identity prerequisite,04/05
+IX10,SS,EXT,Promote tested adapter code,Package staging,Privileged code requires host release catalog,02/05/08
+IX11,UI,PS,Local management and inert import/export,host.describe / package.* / data.*,Host-local availability; no remote channel,09/10
+IX12,UI,PUB,Local compose/preview/status,publish.compose / publish.preview,Execution only where supported locally,07/09
+IX13,UI,XT,Context rendering/local drafts,xtratype.readContext,No new private remote feed,04/09
+IX14,UI,DRY,Local template management,dry.saveTemplate,No system-wide mobile observation,06/09
+IX15,UI,SS,Inspect source and inactive packages,package.inspect / script.importDraft,Imported source stays disabled,05/09
+IX16,DOC,PS,Versioned inventory and implementation evidence,Registry release,Planning state never runtime authority,12

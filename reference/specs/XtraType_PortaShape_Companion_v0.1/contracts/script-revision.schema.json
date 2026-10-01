@@ -1,0 +1,131 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.portashape.invalid/companion/0.1/script-revision.schema.json",
+  "title": "Script.Revision v1",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "recordType": {
+      "const": "Script.Revision"
+    },
+    "schemaVersion": {
+      "const": 1
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "ownerId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "scriptId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "source": {
+      "type": "string",
+      "maxLength": 1048576
+    },
+    "sourceHash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)$"
+    },
+    "matches": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 512
+      },
+      "maxItems": 100
+    },
+    "excludeMatches": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 512
+      },
+      "maxItems": 100
+    },
+    "profile": {
+      "enum": [
+        "userscript-initial-v1",
+        "userscript-typed-v1"
+      ]
+    },
+    "runAt": {
+      "const": "document_idle"
+    },
+    "world": {
+      "const": "USER_SCRIPT"
+    },
+    "allFrames": {
+      "const": false
+    },
+    "inputContract": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "outputContract": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "permissions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 512
+      },
+      "maxItems": 30
+    },
+    "fixtureRefs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 512
+      },
+      "maxItems": 100
+    }
+  },
+  "required": [
+    "id",
+    "recordType",
+    "schemaVersion",
+    "createdAt",
+    "updatedAt",
+    "ownerId",
+    "scriptId",
+    "source",
+    "sourceHash",
+    "version",
+    "matches",
+    "excludeMatches",
+    "profile",
+    "runAt",
+    "world",
+    "allFrames",
+    "permissions",
+    "fixtureRefs"
+  ],
+  "additionalProperties": false
+}

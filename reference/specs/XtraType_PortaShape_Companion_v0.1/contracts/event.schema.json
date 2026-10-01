@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.portashape.invalid/companion/0.1/event.schema.json",
+  "title": "Host.Event v1",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "recordType": {
+      "const": "Host.Event"
+    },
+    "schemaVersion": {
+      "const": 1
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "ownerId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "eventId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "eventType": {
+      "enum": [
+        "plugin.installed",
+        "plugin.stateChanged",
+        "grant.revoked",
+        "script.registrationChanged",
+        "dry.suggestionCreated",
+        "annotation.extensionChanged",
+        "publish.destinationChanged",
+        "operation.completed"
+      ]
+    },
+    "eventVersion": {
+      "const": 1
+    },
+    "occurredAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "sourceId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "sourceRevision": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "subjectId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "sequence": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "data": {
+      "type": "object",
+      "maxProperties": 30
+    }
+  },
+  "required": [
+    "id",
+    "recordType",
+    "schemaVersion",
+    "createdAt",
+    "updatedAt",
+    "ownerId",
+    "eventId",
+    "eventType",
+    "eventVersion",
+    "occurredAt",
+    "sourceId",
+    "sourceRevision",
+    "subjectId",
+    "sequence",
+    "data"
+  ],
+  "additionalProperties": false
+}

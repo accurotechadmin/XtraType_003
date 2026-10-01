@@ -1,0 +1,9 @@
+ID,Module,Placement,Responsibility,Baseline status,Spec,Source
+PS,PortaShape,Core service,"Plugin installation, grants, local invocation and interoperability boundary",New,01,USER; DEC-01
+XT,XtraType,First-party client,"Context, annotations, anchors and relationships",Existing foundation + specified,04,USER; D06
+SS,Script Studio,Plugin,"User JavaScript authoring, installation, testing and promotion",Specified,05,USER; D05
+DRY,Stay D.R.Y.,Plugin,"Consented browser text assistance, patterns and routines",Specified,06,USER; D07
+PUB,Bridges / Universal Publisher,Core feature,"Canonical publishing, fidelity and replicas",Specified,07,USER; D08
+EXT,Platform connector packages,Plugin family,Platform-specific transformations and authorized effects,Specified; providers unqualified,08,USER; D08
+UI,Web/mobile surfaces,Shared clients,Local management and supported platform-specific execution,Existing narrow web + specified,09,USER; D11
+DOC,Glossary and registry,Documentation,"Versioned vocabulary, inventory and change control",Authored,12,USER; D00/D12/W

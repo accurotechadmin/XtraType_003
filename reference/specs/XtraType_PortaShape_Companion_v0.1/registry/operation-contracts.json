@@ -1,0 +1,242 @@
+[
+  {
+    "operationId": "package.list",
+    "major": 1,
+    "inputSchema": "operation-payloads.schema.json#/$defs/package_list_input",
+    "outputSchema": "operation-payloads.schema.json#/$defs/package_list_output"
+  },
+  {
+    "operationId": "operation.list",
+    "major": 1,
+    "inputSchema": "operation-payloads.schema.json#/$defs/operation_list_input",
+    "outputSchema": "operation-payloads.schema.json#/$defs/operation_list_output"
+  },
+  {
+    "operationId": "operation.cancel",
+    "major": 1,
+    "inputSchema": "operation-payloads.schema.json#/$defs/operation_cancel_input",
+    "outputSchema": "operation-payloads.schema.json#/$defs/operation_cancel_output"
+  },
+  {
+    "operationId": "receipt.read",
+    "major": 1,
+    "inputSchema": "operation-payloads.schema.json#/$defs/receipt_read_input",
+    "outputSchema": "operation-payloads.schema.json#/$defs/receipt_read_output"
+  },
+  {
+    "operationId": "event.subscribe",
+    "major": 1,
+    "inputSchema": "operation-payloads.schema.json#/$defs/event_subscribe_input",
+    "outputSchema": "operation-payloads.schema.json#/$defs/event_subscribe_output"
+  },
+  {
+    "operationId": "package.export",
+    "major": 1,
+    "inputSchema": "operation-payloads.schema.json#/$defs/package_export_input",
+    "outputSchema": "operation-payloads.schema.json#/$defs/package_export_output"
+  },
+  {
+    "operationId": "host.describe",
+    "major": 1,
+    "inputSchema": "operation-payloads.schema.json#/$defs/host_describe_input",
+    "outputSchema": "operation-payloads.schema.json#/$defs/host_describe_output"
+  },
+  {
+    "operationId": "package.inspect",
+    "major": 1,
+    "inputSchema": "operation-payloads.schema.json#/$defs/package_inspect_input",
+    "outputSchema": "operation-payloads.schema.json#/$defs/package_inspect_output"
+  },
+  {
+    "operationId": "package.install",
+    "major": 1,
+    "inputSchema": "operation-payloads.schema.json#/$defs/package_install_input",
+    "outputSchema": "operation-payloads.schema.json#/$defs/package_install_output"
+  },
+  {
+    "operationId": "package.enable",
+    "major": 1,
+    "inputSchema": "operation-payloads.schema.json#/$defs/package_enable_input",
+    "outputSchema": "operation-payloads.schema.json#/$defs/package_enable_output"
+  },
+  {
+    "operationId": "package.disable",
+    "major": 1,
+    "inputSchema": "operation-payloads.schema.json#/$defs/package_disable_input",
+    "outputSchema": "operation-payloads.schema.json#/$defs/package_disable_output"
+  },
+  {
+    "operationId": "package.update",
+    "major": 1,
+    "inputSchema": "operation-payloads.schema.json#/$defs/package_update_input",
+    "outputSchema": "operation-payloads.schema.json#/$defs/package_update_output"
+  },
+  {
+    "operationId": "package.remove",
+    "major": 1,
+    "inputSchema": "operation-payloads.schema.json#/$defs/package_remove_input",
+    "outputSchema": "operation-payloads.schema.json#/$defs/package_remove_output"
+  },
+  {
+    "operationId": "context.capture",
+    "major": 1,
+    "inputSchema": "operation-payloads.schema.json#/$defs/context_capture_input",
+    "outputSchema": "operation-payloads.schema.json#/$defs/context_capture_output"
+  },
+  {
+    "operationId": "storage.get",
+    "major": 1,
+    "inputSchema": "operation-payloads.schema.json#/$defs/storage_get_input",
+    "outputSchema": "operation-payloads.schema.json#/$defs/storage_get_output"
+  },
+  {
+    "operationId": "storage.put",
+    "major": 1,
+    "inputSchema": "operation-payloads.schema.json#/$defs/storage_put_input",
+    "outputSchema": "operation-payloads.schema.json#/$defs/storage_put_output"
+  },
+  {
+    "operationId": "xtratype.readContext",
+    "major": 1,
+    "inputSchema": "operation-payloads.schema.json#/$defs/xtratype_readContext_input",
+    "outputSchema": "operation-payloads.schema.json#/$defs/xtratype_readContext_output"
+  },
+  {
+    "operationId": "xtratype.proposeDraft",
+    "major": 1,
+    "inputSchema": "operation-payloads.schema.json#/$defs/xtratype_proposeDraft_input",
+    "outputSchema": "operation-payloads.schema.json#/$defs/xtratype_proposeDraft_output"
+  },
+  {
+    "operationId": "xtratype.attachExtension",
+    "major": 1,
+    "inputSchema": "operation-payloads.schema.json#/$defs/xtratype_attachExtension_input",
+    "outputSchema": "operation-payloads.schema.json#/$defs/xtratype_attachExtension_output"
+  },
+  {
+    "operationId": "xtratype.relate",
+    "major": 1,
+    "inputSchema": "operation-payloads.schema.json#/$defs/xtratype_relate_input",
+    "outputSchema": "operation-payloads.schema.json#/$defs/xtratype_relate_output"
+  },
+  {
+    "operationId": "script.importDraft",
+    "major": 1,
+    "inputSchema": "operation-payloads.schema.json#/$defs/script_importDraft_input",
+    "outputSchema": "operation-payloads.schema.json#/$defs/script_importDraft_output"
+  },
+  {
+    "operationId": "script.execute",
+    "major": 1,
+    "inputSchema": "operation-payloads.schema.json#/$defs/script_execute_input",
+    "outputSchema": "operation-payloads.schema.json#/$defs/script_execute_output"
+  },
+  {
+    "operationId": "script.test",
+    "major": 1,
+    "inputSchema": "operation-payloads.schema.json#/$defs/script_test_input",
+    "outputSchema": "operation-payloads.schema.json#/$defs/script_test_output"
+  },
+  {
+    "operationId": "dry.observe",
+    "major": 1,
+    "inputSchema": "operation-payloads.schema.json#/$defs/dry_observe_input",
+    "outputSchema": "operation-payloads.schema.json#/$defs/dry_observe_output"
+  },
+  {
+    "operationId": "dry.saveTemplate",
+    "major": 1,
+    "inputSchema": "operation-payloads.schema.json#/$defs/dry_saveTemplate_input",
+    "outputSchema": "operation-payloads.schema.json#/$defs/dry_saveTemplate_output"
+  },
+  {
+    "operationId": "dry.insert",
+    "major": 1,
+    "inputSchema": "operation-payloads.schema.json#/$defs/dry_insert_input",
+    "outputSchema": "operation-payloads.schema.json#/$defs/dry_insert_output"
+  },
+  {
+    "operationId": "dry.run",
+    "major": 1,
+    "inputSchema": "operation-payloads.schema.json#/$defs/dry_run_input",
+    "outputSchema": "operation-payloads.schema.json#/$defs/dry_run_output"
+  },
+  {
+    "operationId": "dry.promote",
+    "major": 1,
+    "inputSchema": "operation-payloads.schema.json#/$defs/dry_promote_input",
+    "outputSchema": "operation-payloads.schema.json#/$defs/dry_promote_output"
+  },
+  {
+    "operationId": "publish.compose",
+    "major": 1,
+    "inputSchema": "operation-payloads.schema.json#/$defs/publish_compose_input",
+    "outputSchema": "operation-payloads.schema.json#/$defs/publish_compose_output"
+  },
+  {
+    "operationId": "publish.preview",
+    "major": 1,
+    "inputSchema": "operation-payloads.schema.json#/$defs/publish_preview_input",
+    "outputSchema": "operation-payloads.schema.json#/$defs/publish_preview_output"
+  },
+  {
+    "operationId": "publish.confirm",
+    "major": 1,
+    "inputSchema": "operation-payloads.schema.json#/$defs/publish_confirm_input",
+    "outputSchema": "operation-payloads.schema.json#/$defs/publish_confirm_output"
+  },
+  {
+    "operationId": "publish.execute",
+    "major": 1,
+    "inputSchema": "operation-payloads.schema.json#/$defs/publish_execute_input",
+    "outputSchema": "operation-payloads.schema.json#/$defs/publish_execute_output"
+  },
+  {
+    "operationId": "publish.retry",
+    "major": 1,
+    "inputSchema": "operation-payloads.schema.json#/$defs/publish_retry_input",
+    "outputSchema": "operation-payloads.schema.json#/$defs/publish_retry_output"
+  },
+  {
+    "operationId": "publish.cancel",
+    "major": 1,
+    "inputSchema": "operation-payloads.schema.json#/$defs/publish_cancel_input",
+    "outputSchema": "operation-payloads.schema.json#/$defs/publish_cancel_output"
+  },
+  {
+    "operationId": "connector.preview",
+    "major": 1,
+    "inputSchema": "operation-payloads.schema.json#/$defs/connector_preview_input",
+    "outputSchema": "operation-payloads.schema.json#/$defs/connector_preview_output"
+  },
+  {
+    "operationId": "connector.resolveAccount",
+    "major": 1,
+    "inputSchema": "operation-payloads.schema.json#/$defs/connector_resolveAccount_input",
+    "outputSchema": "operation-payloads.schema.json#/$defs/connector_resolveAccount_output"
+  },
+  {
+    "operationId": "connector.create",
+    "major": 1,
+    "inputSchema": "operation-payloads.schema.json#/$defs/connector_create_input",
+    "outputSchema": "operation-payloads.schema.json#/$defs/connector_create_output"
+  },
+  {
+    "operationId": "connector.inspectResult",
+    "major": 1,
+    "inputSchema": "operation-payloads.schema.json#/$defs/connector_inspectResult_input",
+    "outputSchema": "operation-payloads.schema.json#/$defs/connector_inspectResult_output"
+  },
+  {
+    "operationId": "data.export",
+    "major": 1,
+    "inputSchema": "operation-payloads.schema.json#/$defs/data_export_input",
+    "outputSchema": "operation-payloads.schema.json#/$defs/data_export_output"
+  },
+  {
+    "operationId": "data.import",
+    "major": 1,
+    "inputSchema": "operation-payloads.schema.json#/$defs/data_import_input",
+    "outputSchema": "operation-payloads.schema.json#/$defs/data_import_output"
+  }
+]

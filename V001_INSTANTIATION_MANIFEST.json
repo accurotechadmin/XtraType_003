@@ -1,0 +1,67 @@
+{
+  "schema": "xtratype.v001.instantiation-manifest@1",
+  "canonicalProjectVersion": "v.001",
+  "instantiatedAt": "2026-10-01T09:06:53-04:00",
+  "status": "forward SSOT instantiated; predecessor sealed; no application source changes",
+  "predecessor": {
+    "archive": "XtraType-Seed-1-Repository-updated-2026-10-01-v3(1).zip",
+    "sha256": "e8dd69c287036c97a421bd8c1b0a5ba2e88c5d5240e87f30a64751dcba57fd8b",
+    "fileCount": 260,
+    "classification": "Perpetual Legacy Seed Standard"
+  },
+  "versioning": {
+    "forwardName": "XtraType v.001",
+    "inheritedTechnicalIdentifier": "2.5.0",
+    "rule": "Do not retroactively rewrite sealed predecessor identifiers. Record technical version mapping before the first post-v.001 code-bearing increment."
+  },
+  "currentStatus": "docs/v001/01_CURRENT_STATUS_2026-10-01T090653-0400.md",
+  "bootPrompt": "V001_EXPERT_SESSION_BOOT_PROMPT.md",
+  "legacySeal": "docs/v001/V001_LEGACY_SEED_SHA256SUMS.txt",
+  "legacyManifest": "docs/v001/V001_LEGACY_BASELINE_MANIFEST.json",
+  "authority": "docs/v001/00_AUTHORITY_AND_INSTANTIATION.md",
+  "confidentialOperationalPolicy": {
+    "invitationCapacityCeilingExists": true,
+    "numericValueStoredInRepository": false,
+    "instruction": "Do not infer, expose, or hard-code the owner-held total invitation ceiling without explicit direction."
+  },
+  "addedDocuments": [
+    "00_V001_START_HERE.md",
+    "V001_EXPERT_SESSION_BOOT_PROMPT.md",
+    "docs/v001/00_AUTHORITY_AND_INSTANTIATION.md",
+    "docs/v001/01_CURRENT_STATUS_2026-10-01T090653-0400.md",
+    "docs/v001/02_ARCHITECTURE_WIRING_HARNESS_COMPONENT_MAP.md",
+    "docs/v001/03_PRODUCT_ETHOS_PURPOSE_AND_LONG_HORIZON.md",
+    "docs/v001/04_CHANGE_CONTROL_VERSIONING_AND_FIDELITY.md",
+    "docs/v001/05_ECOSYSTEM_EXTENSIBILITY_AND_COMMUNITY_GUARDRAILS.md",
+    "docs/v001/06_VERIFICATION_SECURITY_SCALE_AND_RELEASE_GATES.md",
+    "docs/v001/07_PROVENANCE_AND_HOW_WE_GOT_HERE.md",
+    "docs/v001/08_RESET_RECOVERY_AND_BASELINE_COMPARISON.md",
+    "docs/v001/09_SESSION_ENDING_LOG_2026-10-01.md",
+    "docs/v001/10_FOUNDATIONAL_DECISIONS_AND_OPEN_BOUNDARIES.md",
+    "docs/v001/V001_LEGACY_BASELINE_MANIFEST.json",
+    "docs/v001/V001_LEGACY_SEED_SHA256SUMS.txt",
+    "reference/00_V001_REFERENCE_AUTHORITY.md",
+    "reference/canon/V001_CANON_HANDOFF_AND_PERPETUAL_LEGACY_STATUS.md",
+    "reference/specs/V001_SPECIFICATION_HANDOFF_AND_PERPETUAL_LEGACY_STATUS.md",
+    "V001_INSTANTIATION_MANIFEST.json",
+    "docs/v001/V001_FILE_AUTHORITY_INDEX.csv",
+    "V001_SHA256SUMS.txt"
+  ],
+  "applicationCodeChanged": false,
+  "legacyFilesModified": true,
+  "forwardChecksumFile": "V001_SHA256SUMS.txt",
+  "authorityIndex": "docs/v001/V001_FILE_AUTHORITY_INDEX.csv",
+  "currentPackageFileCount": 282,
+  "forwardChecksumEntries": 281,
+  "predecessorChecksumsRemainFrozen": true,
+  "postInstantiationDocumentationUpdates": [
+    {
+      "timestamp": "2026-10-01T10:10:00-04:00",
+      "type": "owner-authorized-root-readme-promotion",
+      "applicationCodeChanged": false,
+      "summary": "Root README promoted to forward ecosystem/current-status entrance; original README preserved verbatim under reference/canon; authority/index/checksums reconciled.",
+      "preservedOriginal": "reference/canon/V001_ROOT_README_PRE_PROMOTION_2026-10-01.md"
+    }
+  ],
+  "legacyModificationScope": "README.md only, explicitly owner-authorized after original v.001 seal; original bytes preserved verbatim in reference/canon/V001_ROOT_README_PRE_PROMOTION_2026-10-01.md. No application code changed."
+}

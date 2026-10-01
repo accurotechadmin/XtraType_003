@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.portashape.invalid/companion/0.1/installation.schema.json",
+  "title": "Plugin.Installation v1",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "recordType": {
+      "const": "Plugin.Installation"
+    },
+    "schemaVersion": {
+      "const": 1
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "ownerId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "packageId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "revisionDigest": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "desiredState": {
+      "enum": [
+        "enabled",
+        "disabled",
+        "removed"
+      ]
+    },
+    "effectiveState": {
+      "enum": [
+        "staged",
+        "disabled",
+        "enabled",
+        "needs-review",
+        "blocked",
+        "rejected",
+        "removed"
+      ]
+    },
+    "blockReason": {
+      "type": "string",
+      "maxLength": 80000
+    },
+    "registeredOperations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 512
+      },
+      "maxItems": 100
+    },
+    "reconciledAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "id",
+    "recordType",
+    "schemaVersion",
+    "createdAt",
+    "updatedAt",
+    "ownerId",
+    "packageId",
+    "revisionDigest",
+    "desiredState",
+    "effectiveState",
+    "registeredOperations"
+  ],
+  "additionalProperties": false
+}

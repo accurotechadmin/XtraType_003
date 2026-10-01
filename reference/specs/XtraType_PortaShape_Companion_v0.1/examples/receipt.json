@@ -1,0 +1,27 @@
+{
+  "id": "receipt:example",
+  "recordType": "Host.Receipt",
+  "schemaVersion": 1,
+  "createdAt": "2026-10-01T07:10:00.000Z",
+  "updatedAt": "2026-10-01T07:10:00.000Z",
+  "ownerId": "local:owner",
+  "requestId": "example",
+  "intentId": "example",
+  "operationId": "example",
+  "operationMajor": 1,
+  "providerId": "example",
+  "providerRevision": "example",
+  "startedAt": "2026-10-01T07:10:00.000Z",
+  "endedAt": "2026-10-01T07:10:00.000Z",
+  "status": "unknown-outcome",
+  "effectRefs": [],
+  "provenanceRefs": [],
+  "error": {
+    "code": "UNKNOWN_OUTCOME",
+    "message": "External response was lost; inspect before retry.",
+    "providerId": "connector.example",
+    "retryable": false,
+    "effectState": "unknown",
+    "userAction": "Inspect the selected platform destination."
+  }
+}

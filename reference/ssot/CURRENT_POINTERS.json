@@ -1,0 +1,47 @@
+{
+  "schema": "xtratype.forward-ssot.current-pointers@1",
+  "canonicalProjectVersion": "v.003",
+  "effectiveAt": "2026-10-01T18:20:00-04:00",
+  "applicationCodeChanged": true,
+  "inheritedTechnicalVersion": "2.5.1",
+  "status": "v.003 Ctrl+Q native action toggle repair implemented; personal local-first baseline retained; native Chrome acceptance remains pending",
+  "startHere": "00_V003_START_HERE.md",
+  "rootReadme": "README.md",
+  "activeBootPrompt": "EXPERT_SESSION_BOOT_PROMPT.md",
+  "versionedBootPrompt": "V003_EXPERT_SESSION_BOOT_PROMPT.md",
+  "ssotGateway": "reference/ssot/README.md",
+  "currentAuthority": "reference/ssot/00_CURRENT_AUTHORITY.md",
+  "documentRouter": "reference/ssot/01_DOCUMENT_ROUTER.md",
+  "antiDrift": "reference/ssot/02_ANTI_DRIFT_GUARD_DOGS.md",
+  "changeProtocol": "reference/ssot/03_CHANGE_PROTOCOL.md",
+  "codeReferenceMap": "reference/ssot/04_CODE_AND_CONTRACT_REFERENCE_MAP.md",
+  "documentLifecycle": "reference/ssot/05_DOCUMENT_LIFECYCLE_AND_RETIREMENT.md",
+  "decisionProtocol": "reference/ssot/06_DECISION_AND_LOGGING_PROTOCOL.md",
+  "bootProtocol": "reference/ssot/07_BOOT_AND_HANDOFF_PROTOCOL.md",
+  "versioningSignal": "reference/ssot/08_VERSIONING_AND_CURRENT_DOCS_SIGNAL.md",
+  "ecosystemScope": "reference/ssot/09_ECOSYSTEM_SCOPE_AND_INTEROPERABILITY.md",
+  "releaseSecurityGates": "reference/ssot/10_TEST_RELEASE_SECURITY_GATES.md",
+  "glossary": "reference/ssot/11_GLOSSARY_NAMING_AND_IDENTIFIERS.md",
+  "decisionRegister": "reference/ssot/decisions/CURRENT_DECISION_REGISTER.md",
+  "currentStatus": "docs/v003/00_CURRENT_STATUS_2026-10-01T172600-0400.md",
+  "currentDocumentRegister": "docs/v003/04_CURRENT_DOCUMENT_REGISTER.md",
+  "foundational": {
+    "v001": "docs/v001/00_AUTHORITY_AND_INSTANTIATION.md",
+    "seedAuthority": "docs/SEED_00_CURRENT_TRUTH_AND_AUTHORITY.md",
+    "historicalCanon": "reference/canon/XtraType_Canon_v1.0_candidate/00_START_HERE.md",
+    "portaShapeCompanion": "reference/specs/XtraType_PortaShape_Companion_v0.1/00_READ_ME_AND_AUTHORITY.md"
+  },
+  "standingSignals": {
+    "update current docs": "Perform the synchronization protocol in reference/ssot/08_VERSIONING_AND_CURRENT_DOCS_SIGNAL.md"
+  },
+  "clientInstall": {
+    "browser": "Chrome",
+    "steps": [
+      "Navigate to chrome://extensions",
+      "Enable Developer mode",
+      "Click Load unpacked",
+      "Select the repository /ext folder"
+    ]
+  },
+  "technicalVersionRelationship": "canonical v.003 code-bearing corrective patch maps to Chrome/npm/release 2.5.1"
+}

@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.portashape.invalid/companion/0.1/provenance.schema.json",
+  "title": "Evidence.ProvenanceRecord v1",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "recordType": {
+      "const": "Evidence.ProvenanceRecord"
+    },
+    "schemaVersion": {
+      "const": 1
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "ownerId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "subjectRef": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "action": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "componentId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "componentVersion": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "actorRef": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "occurredAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "parentRefs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 512
+      },
+      "maxItems": 100
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 80000
+      },
+      "maxItems": 50
+    },
+    "effectState": {
+      "enum": [
+        "none",
+        "committed",
+        "unknown"
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "recordType",
+    "schemaVersion",
+    "createdAt",
+    "updatedAt",
+    "ownerId",
+    "subjectRef",
+    "action",
+    "componentId",
+    "componentVersion",
+    "actorRef",
+    "occurredAt",
+    "parentRefs",
+    "warnings",
+    "effectState"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,30 @@
+{
+  "id": "routine:example",
+  "recordType": "Procedure.Routine",
+  "schemaVersion": 1,
+  "createdAt": "2026-10-01T07:10:00.000Z",
+  "updatedAt": "2026-10-01T07:10:00.000Z",
+  "ownerId": "local:owner",
+  "name": "Insert reviewed greeting",
+  "inputs": [],
+  "outputNames": [],
+  "steps": [
+    {
+      "id": "step:1",
+      "operationId": "dry.insert",
+      "operationMajor": 1,
+      "providerId": "portashape.stay-dry",
+      "providerRevision": "1.0.0",
+      "inputBindings": {
+        "text": "Hello"
+      },
+      "preconditions": [],
+      "postconditions": [],
+      "checkpoint": true
+    }
+  ],
+  "maxDurationMs": 120000,
+  "trigger": "manual",
+  "revision": 1,
+  "provenanceRefs": []
+}

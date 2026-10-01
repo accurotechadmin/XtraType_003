@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.portashape.invalid/companion/0.1/script-definition.schema.json",
+  "title": "Script.Definition v1",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "recordType": {
+      "const": "Script.Definition"
+    },
+    "schemaVersion": {
+      "const": 1
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "ownerId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "namespace": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "currentRevisionId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "desiredEnabled": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "id",
+    "recordType",
+    "schemaVersion",
+    "createdAt",
+    "updatedAt",
+    "ownerId",
+    "name",
+    "namespace",
+    "currentRevisionId",
+    "desiredEnabled"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "xtratype.anchor.youtube@1",
+  "title": "YouTube video/time",
+  "type": "object",
+  "required": ["videoId"],
+  "properties": {
+    "videoId": {"type": "string", "pattern": "^[A-Za-z0-9_-]{6,20}$"},
+    "videoUrl": {"type": "string", "format": "uri"},
+    "startSeconds": {"type": ["number", "null"], "minimum": 0, "default": null},
+    "endSeconds": {"type": ["number", "null"], "minimum": 0, "default": null}
+  },
+  "x-xtratype": {"label": "YouTube", "kind": "youtube", "version": 1}
+}

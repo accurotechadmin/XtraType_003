@@ -1,0 +1,81 @@
+id,layer,owner,component,path_or_spec,status
+CUR-EXT-MANIFEST,current,Chrome extension,MV3 shell,ext/manifest.json,IMPLEMENTED
+CUR-EXT-WORKER,current,Chrome extension,Service worker / message and capture coordinator,ext/service-worker.js,IMPLEMENTED
+CUR-CORE-ANCHOR,current,Extension core,Target parsing/key/applicability,ext/core/anchors.js,IMPLEMENTED
+CUR-CORE-SCHEMA,current,Extension core,Bounded schema normalization/validation,ext/core/schemas.js,IMPLEMENTED
+CUR-CORE-DB,current,Extension core,IndexedDB and aggregate transactions,ext/core/db.js,IMPLEMENTED
+CUR-CORE-RECORD,current,Extension core,Annotation aggregate construction,ext/core/records.js,IMPLEMENTED
+CUR-CORE-API,current,Extension core,Settings/sync/account API client,ext/core/api.js,IMPLEMENTED
+CUR-CORE-CAPTURE,current,Extension core,Capture/page extraction orchestration,ext/core/capture.js,IMPLEMENTED
+CUR-UI-PANEL,current,Extension UI,Native side panel,ext/sidepanel/,IMPLEMENTED
+CUR-UI-QUICK,current,Page UI,Injected quick bar,ext/content/page-ui.js,IMPLEMENTED
+CUR-UI-YT,current,Page UI,YouTube contextual projection/reply,ext/content/youtube.js,IMPLEMENTED
+CUR-SRV-BOOT,current,Server,HTTP bootstrap/security/media/account helper loading,server/api/bootstrap.php,IMPLEMENTED
+CUR-SRV-API,current,Server,Annotation/schema/snapshot/event/health routes plus account service routes,server/api/,IMPLEMENTED
+CUR-SRV-REPO,current,Server,Repository + JSON implementation,src/server/Repository.php,IMPLEMENTED
+CUR-SRV-VALID,current,Server,Server-side target/schema/annotation validation,src/server/Validation.php,IMPLEMENTED
+CUR-WEB,current,Web client,Responsive Post/Nearby/All/Schemas + account surface,server/index.php; server/assets/,IMPLEMENTED
+CUR-TEST,current,Verification,Automated test fixtures,tests/,IMPLEMENTED
+PS-C01,target,PS,Installation coordinator,reference/specs/XtraType_PortaShape_Companion_v0.1/01_*.md,SPECIFIED — no runtime implementation in Seed 1
+PS-C02,target,PS,Operation directory,reference/specs/XtraType_PortaShape_Companion_v0.1/01_*.md,SPECIFIED — no runtime implementation in Seed 1
+PS-C03,target,PS,Grant broker,reference/specs/XtraType_PortaShape_Companion_v0.1/01_*.md,SPECIFIED — no runtime implementation in Seed 1
+PS-C04,target,PS,Invocation coordinator,reference/specs/XtraType_PortaShape_Companion_v0.1/01_*.md,SPECIFIED — no runtime implementation in Seed 1
+PS-C05,target,PS,Local repository boundary,reference/specs/XtraType_PortaShape_Companion_v0.1/01_*.md,SPECIFIED — no runtime implementation in Seed 1
+PS-C06,target,PS,Receipt/event boundary,reference/specs/XtraType_PortaShape_Companion_v0.1/01_*.md,SPECIFIED — no runtime implementation in Seed 1
+PS-C07,target,PS,UI contribution boundary,reference/specs/XtraType_PortaShape_Companion_v0.1/01_*.md,SPECIFIED — no runtime implementation in Seed 1
+PS-C08,target,PS,Client bridge,reference/specs/XtraType_PortaShape_Companion_v0.1/01_*.md,SPECIFIED — no runtime implementation in Seed 1
+SS-C037,target,SS,Editor,reference/specs/XtraType_PortaShape_Companion_v0.1/05_*.md,SPECIFIED — no runtime implementation in Seed 1
+SS-C038,target,SS,Runner,reference/specs/XtraType_PortaShape_Companion_v0.1/05_*.md,SPECIFIED — no runtime implementation in Seed 1
+SS-C039,target,SS,Manifest Editor,reference/specs/XtraType_PortaShape_Companion_v0.1/05_*.md,SPECIFIED — no runtime implementation in Seed 1
+SS-C040,target,SS,Sandbox/Bridge,reference/specs/XtraType_PortaShape_Companion_v0.1/05_*.md,SPECIFIED — no runtime implementation in Seed 1
+SS-C041,target,SS,Local Library,reference/specs/XtraType_PortaShape_Companion_v0.1/05_*.md,SPECIFIED — no runtime implementation in Seed 1
+SS-C042,target,SS,Package Import/Export,reference/specs/XtraType_PortaShape_Companion_v0.1/05_*.md,SPECIFIED — no runtime implementation in Seed 1
+SS-C043,target,SS,Trigger Manager,reference/specs/XtraType_PortaShape_Companion_v0.1/05_*.md,SPECIFIED — no runtime implementation in Seed 1
+SS-C044,target,SS,Test Harness,reference/specs/XtraType_PortaShape_Companion_v0.1/05_*.md,SPECIFIED — no runtime implementation in Seed 1
+SS-C045,target,SS,Promotion Workflow,reference/specs/XtraType_PortaShape_Companion_v0.1/05_*.md,SPECIFIED — no runtime implementation in Seed 1
+SS-C046,target,SS,Diagnostics,reference/specs/XtraType_PortaShape_Companion_v0.1/05_*.md,SPECIFIED — no runtime implementation in Seed 1
+XT-C047,target,XT,Target Resolver,reference/specs/XtraType_PortaShape_Companion_v0.1/04_*.md,EXISTING-NARROW in XtraType 2.4; companion expansion not implemented
+XT-C048,target,XT,Anchor Bundle,reference/specs/XtraType_PortaShape_Companion_v0.1/04_*.md,SPECIFIED expansion; current XtraType has predecessor seams only where noted
+XT-C049,target,XT,Annotation Object,reference/specs/XtraType_PortaShape_Companion_v0.1/04_*.md,EXISTING-NARROW in XtraType 2.4; companion expansion not implemented
+XT-C050,target,XT,Context Relationship,reference/specs/XtraType_PortaShape_Companion_v0.1/04_*.md,SPECIFIED expansion; current XtraType has predecessor seams only where noted
+XT-C051,target,XT,Overlay Renderer,reference/specs/XtraType_PortaShape_Companion_v0.1/04_*.md,EXISTING-NARROW in XtraType 2.4; companion expansion not implemented
+XT-C052,target,XT,Capture UI,reference/specs/XtraType_PortaShape_Companion_v0.1/04_*.md,EXISTING-NARROW in XtraType 2.4; companion expansion not implemented
+XT-C053,target,XT,Visibility/Sharing,reference/specs/XtraType_PortaShape_Companion_v0.1/04_*.md,BLOCKED/DEFERRED beyond local intent; no shared-authority implementation
+XT-C054,target,XT,Conversation Layer,reference/specs/XtraType_PortaShape_Companion_v0.1/04_*.md,EXISTING-NARROW in XtraType 2.4; companion expansion not implemented
+XT-C055,target,XT,Alternative Content,reference/specs/XtraType_PortaShape_Companion_v0.1/04_*.md,SPECIFIED expansion; current XtraType has predecessor seams only where noted
+XT-C056,target,XT,Feed/Query API,reference/specs/XtraType_PortaShape_Companion_v0.1/04_*.md,EXISTING-NARROW in XtraType 2.4; companion expansion not implemented
+DRY-C057,target,DRY,Observation Consent,reference/specs/XtraType_PortaShape_Companion_v0.1/06_*.md,SPECIFIED — no runtime implementation in Seed 1
+DRY-C058,target,DRY,Input Observer,reference/specs/XtraType_PortaShape_Companion_v0.1/06_*.md,SPECIFIED — no runtime implementation in Seed 1
+DRY-C059,target,DRY,Action Observer,reference/specs/XtraType_PortaShape_Companion_v0.1/06_*.md,SPECIFIED — no runtime implementation in Seed 1
+DRY-C060,target,DRY,Pattern Detector,reference/specs/XtraType_PortaShape_Companion_v0.1/06_*.md,SPECIFIED — no runtime implementation in Seed 1
+DRY-C061,target,DRY,Template Extractor,reference/specs/XtraType_PortaShape_Companion_v0.1/06_*.md,SPECIFIED — no runtime implementation in Seed 1
+DRY-C062,target,DRY,Routine Extractor,reference/specs/XtraType_PortaShape_Companion_v0.1/06_*.md,SPECIFIED — no runtime implementation in Seed 1
+DRY-C063,target,DRY,Procedure Extractor,reference/specs/XtraType_PortaShape_Companion_v0.1/06_*.md,SPECIFIED — no runtime implementation in Seed 1
+DRY-C064,target,DRY,Suggestion UI,reference/specs/XtraType_PortaShape_Companion_v0.1/06_*.md,SPECIFIED — no runtime implementation in Seed 1
+DRY-C065,target,DRY,Variable/Default Manager,reference/specs/XtraType_PortaShape_Companion_v0.1/06_*.md,SPECIFIED — no runtime implementation in Seed 1
+DRY-C066,target,DRY,Promotion Bridge,reference/specs/XtraType_PortaShape_Companion_v0.1/06_*.md,SPECIFIED — no runtime implementation in Seed 1
+EXT-C067,target,EXT,Connector Descriptor,reference/specs/XtraType_PortaShape_Companion_v0.1/08_*.md,SPECIFIED — no connector package runtime
+EXT-C068,target,EXT,Source Adapter,reference/specs/XtraType_PortaShape_Companion_v0.1/08_*.md,LEGACY/NARROW PRECURSOR ONLY — no PortaShape connector package runtime
+EXT-C069,target,EXT,Target Adapter,reference/specs/XtraType_PortaShape_Companion_v0.1/08_*.md,LEGACY/NARROW PRECURSOR ONLY — no PortaShape connector package runtime
+PUB-C070,target,PUB,Canonical Shape Library,reference/specs/XtraType_PortaShape_Companion_v0.1/07_*.md,SPECIFIED — no runtime implementation in Seed 1
+PUB-C071,target,PUB,Field Mapping,reference/specs/XtraType_PortaShape_Companion_v0.1/07_*.md,SPECIFIED — no runtime implementation in Seed 1
+PUB-C072,target,PUB,Fidelity Report,reference/specs/XtraType_PortaShape_Companion_v0.1/07_*.md,SPECIFIED — no runtime implementation in Seed 1
+PUB-C073,target,PUB,Account Binding,reference/specs/XtraType_PortaShape_Companion_v0.1/07_*.md,SPECIFIED — no runtime implementation in Seed 1
+PUB-C074,target,PUB,Publisher Composer,reference/specs/XtraType_PortaShape_Companion_v0.1/07_*.md,SPECIFIED — no runtime implementation in Seed 1
+PUB-C075,target,PUB,Destination Selector,reference/specs/XtraType_PortaShape_Companion_v0.1/07_*.md,SPECIFIED — no runtime implementation in Seed 1
+PUB-C076,target,PUB,Preview/Validation,reference/specs/XtraType_PortaShape_Companion_v0.1/07_*.md,SPECIFIED — no runtime implementation in Seed 1
+PUB-C077,target,PUB,Publish Workflow,reference/specs/XtraType_PortaShape_Companion_v0.1/07_*.md,SPECIFIED — no runtime implementation in Seed 1
+PUB-C078,target,PUB,Replica Set Manager,reference/specs/XtraType_PortaShape_Companion_v0.1/07_*.md,SPECIFIED — no runtime implementation in Seed 1
+UI-C103,target,UI,Web Library,reference/specs/XtraType_PortaShape_Companion_v0.1/09_*.md,EXISTING-NARROW web behavior; full companion component not implemented
+UI-C104,target,UI,Workflow/Execution View,reference/specs/XtraType_PortaShape_Companion_v0.1/09_*.md,SPECIFIED — not implemented as companion surface
+UI-C105,target,UI,Package Manager,reference/specs/XtraType_PortaShape_Companion_v0.1/09_*.md,SPECIFIED — not implemented as companion surface
+UI-C106,target,UI,Account/Permission Center,reference/specs/XtraType_PortaShape_Companion_v0.1/09_*.md,SPECIFIED — not implemented as companion surface
+UI-C107,target,UI,Annotation Feed,reference/specs/XtraType_PortaShape_Companion_v0.1/09_*.md,EXISTING-NARROW web behavior; full companion component not implemented
+UI-C108,target,UI,Publisher Web Surface,reference/specs/XtraType_PortaShape_Companion_v0.1/09_*.md,SPECIFIED — not implemented as companion surface
+UI-C109,target,UI,Responsive Mobile Web,reference/specs/XtraType_PortaShape_Companion_v0.1/09_*.md,EXISTING-NARROW web behavior; full companion component not implemented
+UI-C110,target,UI,Native Mobile Shell,reference/specs/XtraType_PortaShape_Companion_v0.1/09_*.md,SPECIFIED — not implemented as companion surface
+DOC-C01,target,DOC,Glossary,reference/specs/XtraType_PortaShape_Companion_v0.1/12_*.md,INSTANTIATED AS DOCUMENTATION/REGISTRY — not a runtime component
+DOC-C02,target,DOC,Relational registry,reference/specs/XtraType_PortaShape_Companion_v0.1/12_*.md,INSTANTIATED AS DOCUMENTATION/REGISTRY — not a runtime component
+CUR-SRV-AUTH,current,Server,Account/session/invitation authorization core,src/server/Auth.php; server/api/auth.php; server/api/invites.php; server/api/admin.php,IMPLEMENTED
+CUR-SRV-MSG,current,Server,Contact groups/direct messages/XT Group Chats,server/api/contacts.php; server/api/messages.php; server/api/group-chats.php,IMPLEMENTED
+CUR-UI-ACCOUNT,current,Extension UI,Account/invitation/contact/message/group-chat controls,ext/sidepanel/,IMPLEMENTED

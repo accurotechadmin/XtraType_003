@@ -1,0 +1,20 @@
+{
+  "id": "template:example",
+  "recordType": "Procedure.TextTemplate",
+  "schemaVersion": 1,
+  "createdAt": "2026-10-01T07:10:00.000Z",
+  "updatedAt": "2026-10-01T07:10:00.000Z",
+  "ownerId": "local:owner",
+  "template": "Hello {{name}}",
+  "variables": [
+    {
+      "name": "name",
+      "type": "string",
+      "label": "Name",
+      "required": true,
+      "default": "there"
+    }
+  ],
+  "provenanceRefs": [],
+  "revision": 1
+}

@@ -1,0 +1,23 @@
+{
+  "id": "connector-descriptor:example",
+  "recordType": "Connector.Descriptor",
+  "schemaVersion": 1,
+  "createdAt": "2026-10-01T07:10:00.000Z",
+  "updatedAt": "2026-10-01T07:10:00.000Z",
+  "ownerId": "local:owner",
+  "packageId": "connector.example",
+  "packageRevision": "1.0.0",
+  "platformLabel": "Example test target",
+  "operations": [],
+  "accepts": [],
+  "produces": [],
+  "authModes": [
+    "browser-session"
+  ],
+  "locality": "browser-local",
+  "requiredFields": [],
+  "idempotencyMode": "manual-only",
+  "canReconcile": false,
+  "fixtureRefs": [],
+  "status": "stub"
+}

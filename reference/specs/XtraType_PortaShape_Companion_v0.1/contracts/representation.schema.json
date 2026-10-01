@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.portashape.invalid/companion/0.1/representation.schema.json",
+  "title": "Publish.Representation v1",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "recordType": {
+      "const": "Publish.Representation"
+    },
+    "schemaVersion": {
+      "const": 1
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "ownerId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "publicationId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "objectId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "destinationId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "connectorId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "connectorRevision": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "operationId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "status": {
+      "enum": [
+        "pending",
+        "blocked",
+        "executing",
+        "succeeded",
+        "failed",
+        "cancelled",
+        "unknown-outcome"
+      ]
+    },
+    "externalHandleRef": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "payloadDigest": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "fidelityRef": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "receiptRefs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 512
+      },
+      "maxItems": 100
+    }
+  },
+  "required": [
+    "id",
+    "recordType",
+    "schemaVersion",
+    "createdAt",
+    "updatedAt",
+    "ownerId",
+    "publicationId",
+    "objectId",
+    "destinationId",
+    "connectorId",
+    "connectorRevision",
+    "operationId",
+    "status",
+    "payloadDigest",
+    "fidelityRef",
+    "receiptRefs"
+  ],
+  "additionalProperties": false
+}

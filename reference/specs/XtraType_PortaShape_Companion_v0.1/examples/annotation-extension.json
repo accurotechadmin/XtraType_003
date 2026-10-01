@@ -1,0 +1,15 @@
+{
+  "id": "annotation-extension:example",
+  "recordType": "Context.AnnotationExtension",
+  "schemaVersion": 1,
+  "createdAt": "2026-10-01T07:10:00.000Z",
+  "updatedAt": "2026-10-01T07:10:00.000Z",
+  "ownerId": "local:owner",
+  "annotationId": "annotation:example",
+  "tags": [],
+  "visibilityIntent": "local",
+  "relationshipRefs": [],
+  "revision": 1,
+  "authorRef": "local:owner",
+  "anchorBundleRef": "anchor:example"
+}

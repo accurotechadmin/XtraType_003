@@ -1,0 +1,315 @@
+# Seed 1 — Exhaustive File Inventory
+
+This inventory lists **260 repository files, including the root `SHA256SUMS.txt` integrity file**. `docs/inventory/FILES.csv` contains the same machine-readable rows. `SHA256SUMS.txt` hashes every repository file except itself.
+
+Status labels follow `SEED_00_CURRENT_TRUTH_AND_AUTHORITY.md`. Historical/target files are preserved because they are evidence/specification layers, not because their contents are current runtime implementation.
+
+## Seed current-truth / navigation files
+
+| Path | Status | Bytes | Contents / use |
+|---|---|---:|---|
+| `.gitignore` | CURRENT | 327 | Repository hygiene for dev dependencies, editor noise and runtime-uploaded media. |
+| `EXPERT_SESSION_BOOT_PROMPT.md` | CURRENT | 11581 | Fresh expert coding/development LLM onboarding prompt. |
+| `README.md` | CURRENT | 8634 | Seed repository entry point and seed declaration. |
+| `SEED_MANIFEST.json` | CURRENT | 3014 | Machine-readable Seed 1 identity, counts, source identities and authority roots. |
+| `SHA256SUMS.txt` | CURRENT | 33101 | Seed 1 SHA-256 integrity inventory covering every repository file except itself. |
+| `docs/SEED_00_CURRENT_TRUTH_AND_AUTHORITY.md` | CURRENT | 6943 | Seed 1 — Current Truth and Authority (SSOT Router). |
+| `docs/SEED_01_REPOSITORY_INDEX.md` | CURRENT | 6035 | Seed 1 — Repository Index and Navigation. |
+| `docs/SEED_02_FILE_INVENTORY.md` | CURRENT | 44402 | Seed 1 — Exhaustive File Inventory. |
+| `docs/SEED_03_CURRENT_IMPLEMENTATION_COMPONENTS.md` | CURRENT | 16271 | Seed 1 — Current Implementation Component Inventory. |
+| `docs/SEED_04_PORTASHAPE_TARGET_ARCHITECTURE.md` | CURRENT | 18200 | Seed 1 — PortaShape Target Architecture and Module Inventory. |
+| `docs/SEED_05_CONTRACT_AND_OPERATION_INDEX.md` | CURRENT | 18005 | Seed 1 — PortaShape Contract, Operation and Permission Index. |
+| `docs/SEED_06_DATA_WORKFLOWS_AND_SEAMS.md` | CURRENT | 8950 | Seed 1 — Data Workflows, Seams and Commit Boundaries. |
+| `docs/SEED_07_VERIFICATION_AND_DEVELOPMENT_STATUS.md` | CURRENT | 4934 | Seed 1 — Verification, Maturity and Development Status. |
+| `docs/SEED_08_CONCERN_STATUS_CROSSWALK.md` | CURRENT | 12419 | Seed 1 — Canon Concern Status Crosswalk. |
+| `docs/SEED_09_BUILD_FORWARD_SEQUENCE.md` | CURRENT | 4259 | Seed 1 — Build-Forward Sequence. |
+| `docs/inventory/COMPONENTS.csv` | CURRENT | 11326 | Machine-readable combined current/target component inventory including current account/messaging components. |
+| `docs/inventory/FILES.csv` | CURRENT | 43037 | Machine-readable exhaustive repository file inventory, including the checksum-file row. |
+
+## Current XtraType 2.5 runtime/code/data/test files
+
+| Path | Status | Bytes | Contents / use |
+|---|---|---:|---|
+| `docs/ARCHITECTURE.md` | IMPLEMENTED | 6906 | Current 2.5 architecture, JSON repository/account boundary, local commit/sync, capture and deployment constraints. |
+| `docs/CONCERN_DISPOSITION.md` | IMPLEMENTED | 11858 | Current dispositions and evidence for all 45 historical canon concerns. |
+| `docs/FEATURE_PARITY.md` | IMPLEMENTED | 6116 | Current 2.5 compatibility/behavior changes relative to preserved baseline. |
+| `docs/SCHEMAS.md` | IMPLEMENTED | 1757 | Supported bounded custom anchor schema profile. |
+| `docs/SOURCE_BASELINE.json` | IMPLEMENTED | 12667 | Machine-readable source/baseline identity comparison. |
+| `docs/UPGRADE_AND_RECOVERY.md` | IMPLEMENTED | 2941 | Data-preserving upgrade, rollback and recovery instructions. |
+| `docs/VERIFICATION.md` | IMPLEMENTED | 5482 | Preserved 2.4 evidence plus current 2.5 selected test/static verification and unrun native/manual gates. |
+| `docs/evidence/static-checks.json` | IMPLEMENTED | 5155 | Structured syntax/lint/JSON/reference verification evidence. |
+| `docs/evidence/test-results.txt` | IMPLEMENTED | 2997 | Recorded textual output from 2.4 automated test execution. |
+| `ext/INSTALL.txt` | IMPLEMENTED | 1682 | Extension installation/setup instructions. |
+| `ext/content/page-ui.js` | IMPLEMENTED | 12305 | Injected on-demand page quick bar and recent-context UI; creates bounded annotations through worker messages. |
+| `ext/content/youtube.js` | IMPLEMENTED | 8956 | YouTube contextual markers/toasts/replies with navigation/player lifecycle handling. |
+| `ext/core/anchors.js` | IMPLEMENTED | 7582 | Shared target parsing/builders and deterministic keys for URL/GPS/Time/YouTube plus applicability helpers. |
+| `ext/core/api.js` | IMPLEMENTED | 12229 | Extension settings, bearer-authenticated HTTP client, account/messaging helpers, pull/merge and annotation/schema/snapshot sync. |
+| `ext/core/capture.js` | IMPLEMENTED | 4472 | Capture tile calculation, page extraction/scroll orchestration and image assembly cleanup. |
+| `ext/core/db.js` | IMPLEMENTED | 4340 | IndexedDB schema/CRUD/blob/event helpers and aggregate transaction helpers. |
+| `ext/core/records.js` | IMPLEMENTED | 4703 | Annotation v2 aggregate construction and target/image validation, including built-in Time targets. |
+| `ext/core/schemas.js` | IMPLEMENTED | 7705 | Built-in URL/GPS/Time/YouTube video schema definitions plus bounded custom-schema normalization/validation. |
+| `ext/manifest.json` | IMPLEMENTED | 1032 | MV3 extension manifest declaring native side panel, Ctrl+Q action shortcut, xt omnibox keyword, all-sites access, webNavigation and content scripts. |
+| `ext/service-worker.js` | IMPLEMENTED | 21035 | Extension control plane: menus, live tab/URL signals, omnibox text-to-composer entry, seven-day week-young badge/old-state actions, quick actions, queries, authority and capture coordination. |
+| `ext/sidepanel/app.js` | IMPLEMENTED | 59899 | Native side-panel logic: live context, URL/GPS/Time/YouTube/custom composer, week-young tree state, quick Snapshot, accounts/invites/contacts/DMs/group chats, capture/timeline/diff/schemas/settings/export. |
+| `ext/sidepanel/index.html` | IMPLEMENTED | 16729 | Native side-panel structure with static-safe built-in targets/URL controls, reorderable author/Annotations sections, quick Snapshot and account/messaging modules. |
+| `ext/sidepanel/style.css` | IMPLEMENTED | 14553 | Native side-panel presentation including week-young green/tree state, account/message surfaces, reorder handles and nested URL options. |
+| `package-lock.json` | IMPLEMENTED | 19537 | Pinned XtraType 2.5 development dependency lockfile. |
+| `package.json` | IMPLEMENTED | 255 | Node development metadata for XtraType 2.5 and test command. |
+| `release-manifest.json` | IMPLEMENTED | 2366 | Machine-readable XtraType 2.5 runtime identity, bounded account scope and verification limits. |
+| `scripts/sync-shared.mjs` | IMPLEMENTED | 233 | Copies shared anchors/schemas implementation to web assets. |
+| `server/.htaccess` | IMPLEMENTED | 193 | Apache routing/access restrictions for supported public paths. |
+| `server/api/admin.php` | IMPLEMENTED | 1393 | Administrator system/invitation switches and per-user enabled/invite-creation controls. |
+| `server/api/annotations.php` | IMPLEMENTED | 1965 | HTTP API endpoint for annotations. |
+| `server/api/auth.php` | IMPLEMENTED | 3983 | Registration/login/logout endpoint; first account becomes seed admin and later registrations consume single-use invitations. |
+| `server/api/bootstrap.php` | IMPLEMENTED | 6741 | HTTP bootstrap/security/media/repository helpers plus account authorization helper loading. |
+| `server/api/contacts.php` | IMPLEMENTED | 1637 | Authenticated per-user contact-group JSON API. |
+| `server/api/events.php` | IMPLEMENTED | 518 | HTTP API endpoint for events. |
+| `server/api/group-chats.php` | IMPLEMENTED | 4304 | Authenticated five-character case-sensitive XT Group Chat creation, grants, membership queries and messages. |
+| `server/api/health.php` | IMPLEMENTED | 397 | Health endpoint validating core and account/messaging JSON collections. |
+| `server/api/invites.php` | IMPLEMENTED | 1602 | Single-use invitation creation/listing with one-code-per-fixed-EST-day quota and central/profile provenance. |
+| `server/api/messages.php` | IMPLEMENTED | 1488 | Authenticated direct-message JSON API. |
+| `server/api/schemas.php` | IMPLEMENTED | 675 | HTTP API endpoint for schemas. |
+| `server/api/snapshots.php` | IMPLEMENTED | 1766 | HTTP API endpoint for snapshots. |
+| `server/assets/app.js` | IMPLEMENTED | 19728 | Responsive web client logic including target composition plus account registration/login bearer handling. |
+| `server/assets/core/anchors.js` | IMPLEMENTED | 7582 | Web parity copy of shared URL/GPS/Time/YouTube target helpers. |
+| `server/assets/core/schemas.js` | IMPLEMENTED | 7705 | Web parity copy of built-in schemas and bounded custom-schema helpers. |
+| `server/assets/style.css` | IMPLEMENTED | 4413 | Responsive web client stylesheet. |
+| `server/config.php` | IMPLEMENTED | 813 | Server configuration: private data/media/profile paths, limits, allowed origins/hosts and defaults. |
+| `server/index.php` | IMPLEMENTED | 4191 | Responsive XtraType web client shell with target posting/feeds/schemas and account registration/login surface. |
+| `server/media.php` | IMPLEMENTED | 517 | Validated media retrieval endpoint/boundary. |
+| `server/router.php` | IMPLEMENTED | 689 | Restricted local-server router including account, invitation, contact, messaging and group-chat API paths. |
+| `server/schemas/example-book-anchor.schema.json` | IMPLEMENTED | 453 | Packaged example book anchor JSON schema. |
+| `server/schemas/gps-anchor.schema.json` | IMPLEMENTED | 591 | Packaged gps anchor JSON schema. |
+| `server/schemas/time-anchor.schema.json` | IMPLEMENTED | 553 | Packaged Time moment/timeframe anchor JSON schema. |
+| `server/schemas/url-anchor.schema.json` | IMPLEMENTED | 962 | Packaged url anchor JSON schema. |
+| `server/schemas/youtube-anchor.schema.json` | IMPLEMENTED | 565 | Packaged YouTube video anchor JSON schema. |
+| `src/server/Auth.php` | IMPLEMENTED | 7369 | Account/session/invitation authorization helpers, password/session hashing, profile JSON helpers and system/user enable checks. |
+| `src/server/Repository.php` | IMPLEMENTED | 3548 | Persistence interface and process-safe JSON repository implementation. |
+| `src/server/Validation.php` | IMPLEMENTED | 10585 | PHP schema/target/annotation normalization and validation, including Time moment/range targets. |
+| `start-server.bat` | IMPLEMENTED | 169 | Windows local-loopback PHP launcher. |
+| `start-server.sh` | IMPLEMENTED | 183 | macOS/Linux local-loopback PHP launcher. |
+| `tests/README.md` | IMPLEMENTED | 2212 | Developer verification instructions and test-scope limitations, including dependency-free manifest/UI checks. |
+| `tests/anchors.mjs` | IMPLEMENTED | 1550 | Dependency-free anchor assertions including canonical Time moment/range keys. |
+| `tests/client-dom.test.mjs` | IMPLEMENTED | 12550 | jsdom client fixtures including live side-panel navigation and Time target UI. |
+| `tests/core.test.mjs` | IMPLEMENTED | 8892 | Core target/database/API tests including Time normalization and validation. |
+| `tests/http.test.mjs` | IMPLEMENTED | 17153 | Real PHP HTTP tests including Time anchors, first-admin/invitation provenance/quota, contacts, DMs, XT Group Chats and admin controls. |
+| `tests/manifest-ui.test.mjs` | IMPLEMENTED | 4647 | Dependency-free regression checks for static-safe target controls, Ctrl+Q, omnibox text handoff, week-young state, quick Snapshot and account/messaging UI. |
+| `tests/repository-worker.php` | IMPLEMENTED | 202 | Helper process used by repository concurrency test. |
+| `tests/repository.test.mjs` | IMPLEMENTED | 1496 | Independent PHP writer-process concurrency test. |
+| `tests/worker.test.mjs` | IMPLEMENTED | 3126 | Mocked Chrome service-worker authority/reply/capture tests. |
+| `var/data/annotations.json` | IMPLEMENTED | 3 | Packaged empty runtime JSON collection for annotations; owner data is not bundled. |
+| `var/data/events.json` | IMPLEMENTED | 3 | Packaged empty runtime JSON collection for events; owner data is not bundled. |
+| `var/data/schemas.json` | IMPLEMENTED | 3 | Packaged empty runtime JSON collection for schemas; owner data is not bundled. |
+| `var/data/snapshots.json` | IMPLEMENTED | 3 | Packaged empty runtime JSON collection for snapshots; owner data is not bundled. |
+| `var/media/.gitkeep` | IMPLEMENTED | 0 | Placeholder ensuring private runtime media directory exists in source package. |
+| `var/profiles/.gitkeep` | IMPLEMENTED | 0 | Placeholder for private runtime per-user profile JSON directories; user profile payloads are not bundled. |
+
+## Cross-version reconciliation reports
+
+| Path | Status | Bytes | Contents / use |
+|---|---|---:|---|
+| `reports/XtraType_PortaShape_Coherency_Report_2026-10-01.md` | CURRENT-RECONCILIATION | 38257 | Coherency/current-truth audit reconciling canon, companion and XtraType 2.4.0. |
+
+## Preserved provenance/legacy files
+
+| Path | Status | Bytes | Contents / use |
+|---|---|---:|---|
+| `reference/legacy/XtraType_PortaShape_Expert_Session_Boot_Prompt_v1.md` | HISTORICAL | 32705 | Earlier expert-session boot prompt; retained for provenance, superseded by root boot prompt. |
+| `reference/source-snapshot/XtraType-2.4.0/README.original.md` | HISTORICAL-2.4-PACKAGE | 4884 | Original XtraType 2.4 package README preserved before Seed 1 root README replacement. |
+| `reference/source-snapshot/XtraType-2.4.0/SHA256SUMS.original.txt` | HISTORICAL-2.4-PACKAGE | 5696 | Original XtraType 2.4.0 package checksum inventory preserved before the Seed 1 checksum replaced the root checksum file. |
+
+## Historical canon documents
+
+| Path | Status | Bytes | Contents / use |
+|---|---|---:|---|
+| `reference/canon/XtraType_Canon_v1.0_candidate/00_START_HERE.md` | HISTORICAL-v2.3 | 6283 | Canon entry point, scope, status and reading/navigation rules. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/01_AUTHORITY_AND_DECISIONS.md` | HISTORICAL-v2.3 | 6219 | Canon authority hierarchy and architectural decisions for frozen v2.3. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/02_PRODUCT_AND_STATUS.md` | HISTORICAL-v2.3 | 6245 | Historical product/status truth for the v2.3 baseline. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/03_ARCHITECTURE_AND_SEAMS.md` | HISTORICAL-v2.3 | 7600 | Historical v2.3 architecture/process/trust/ownership seams. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/04_RECORD_CONTRACTS.md` | HISTORICAL-v2.3 | 8470 | Historical persisted/transient/wire/attachment/settings/export record contracts. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/05_ANCHORS_AND_RESOLUTION.md` | HISTORICAL-v2.3 | 7736 | Historical typed target/key/applicability behavior. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/06_SCHEMA_SYSTEM.md` | HISTORICAL-v2.3 | 6123 | Historical schema catalog/forms/validation and unsupported semantics. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/07_EXTENSION_SURFACES.md` | HISTORICAL-v2.3 | 9146 | Historical worker/side-panel/page/YouTube extension surfaces. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/08_WORKFLOWS_AND_MESSAGES.md` | HISTORICAL-v2.3 | 7379 | Historical entry points, message envelopes and side effects. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/09_HTTP_AND_SERVER.md` | HISTORICAL-v2.3 | 7622 | Historical v2.3 PHP routes/storage/deployment behavior. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/10_STORAGE_AND_SYNC.md` | HISTORICAL-v2.3 | 7702 | Historical local writes, binary linkage, replication order/failures. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/11_CAPTURE_AND_COMPARISON.md` | HISTORICAL-v2.3 | 7125 | Historical capture/snapshot/timeline/pixel-comparison behavior. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/12_WEB_COMPANION.md` | HISTORICAL-v2.3 | 5539 | Historical responsive web behavior/parity gaps. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/13_SECURITY_AND_OPERATIONS.md` | HISTORICAL-v2.3 | 7669 | Historical exposure/privacy/recovery/operations analysis. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/14_CONCERN_REGISTER.md` | HISTORICAL-v2.3 | 22989 | All 45 historical v2.3 concern findings. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/15_CHANGE_SPECIFICATIONS.md` | HISTORICAL-v2.3 | 11453 | Proposed changes responding to historical concerns. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/16_EXPANSION_AND_USERSCRIPTS.md` | HISTORICAL-v2.3 | 9172 | Historical expansion/userscript direction preceding fuller companion. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/17_VERIFICATION_AND_APPROVAL.md` | HISTORICAL-v2.3 | 7235 | Canon verification scope, unrun areas and approval status. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/18_SOURCE_INVENTORY.md` | HISTORICAL-v2.3 | 13713 | Historical inventory of frozen v2.3 source files. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/19_SYMBOL_REFERENCE.md` | HISTORICAL-v2.3 | 17935 | Historical named-symbol inventory for v2.3 source. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/20_PROVENANCE_AND_CORRECTIONS.md` | HISTORICAL-v2.3 | 7812 | Source provenance, corrections and interpretation constraints. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/SHA256SUMS.txt` | HISTORICAL-v2.3 | 7025 | Canon package checksum inventory preserved with the historical v2.3 audit package. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/XtraType_Canon_Reading_Edition.md` | HISTORICAL-v2.3 | 193273 | Generated/searchable combined reading edition of canon modular documents. |
+
+## Historical canon evidence / frozen v2.3 source
+
+| Path | Status | Bytes | Contents / use |
+|---|---|---:|---|
+| `reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/README.md` | HISTORICAL-v2.3-SOURCE | 4586 | Frozen v2.3 baseline source: historical implementation/evidence file README.md. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/docs/ARCHITECTURE.md` | HISTORICAL-v2.3-SOURCE | 2882 | Frozen v2.3 baseline source: Current 2.4 architecture, JSON repository seam, local commit/sync, capture and deployment boundaries.. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/docs/SCHEMAS.md` | HISTORICAL-v2.3-SOURCE | 1547 | Frozen v2.3 baseline source: Supported bounded custom anchor schema profile.. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/ext/INSTALL.txt` | HISTORICAL-v2.3-SOURCE | 1341 | Frozen v2.3 baseline source: Extension installation/setup instructions.. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/ext/content/page-ui.js` | HISTORICAL-v2.3-SOURCE | 11459 | Frozen v2.3 baseline source: Injected on-demand page quick bar and recent-context UI; creates bounded annotations through worker messages.. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/ext/content/youtube.js` | HISTORICAL-v2.3-SOURCE | 5380 | Frozen v2.3 baseline source: YouTube contextual markers/toasts/replies with navigation/player lifecycle handling.. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/ext/core/anchors.js` | HISTORICAL-v2.3-SOURCE | 4435 | Frozen v2.3 baseline source: Shared target parsing, deterministic keys, URL/GPS/YouTube applicability helpers.. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/ext/core/api.js` | HISTORICAL-v2.3-SOURCE | 2378 | Frozen v2.3 baseline source: Extension settings, HTTP client, pull/merge, annotation/schema/snapshot sync and health.. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/ext/core/db.js` | HISTORICAL-v2.3-SOURCE | 2717 | Frozen v2.3 baseline source: IndexedDB schema/CRUD/blob/event helpers and aggregate transaction helpers.. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/ext/core/schemas.js` | HISTORICAL-v2.3-SOURCE | 2721 | Frozen v2.3 baseline source: Bounded custom anchor schema normalization/value validation/form conversion.. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/ext/manifest.json` | HISTORICAL-v2.3-SOURCE | 902 | Frozen v2.3 baseline source: Manifest V3 declaration, permissions, worker, side panel and YouTube content script.. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/ext/service-worker.js` | HISTORICAL-v2.3-SOURCE | 10727 | Frozen v2.3 baseline source: Extension control plane: menus, context, quick actions, queries, message authority and capture coordination.. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/ext/sidepanel/app.js` | HISTORICAL-v2.3-SOURCE | 25185 | Frozen v2.3 baseline source: Native side-panel application logic: composer/feed/capture/timeline/diff/schemas/settings/export.. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/ext/sidepanel/index.html` | HISTORICAL-v2.3-SOURCE | 6829 | Frozen v2.3 baseline source: Native side-panel markup and controls.. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/ext/sidepanel/style.css` | HISTORICAL-v2.3-SOURCE | 8000 | Frozen v2.3 baseline source: Native side-panel styling/responsive layout.. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/server/api/annotations.php` | HISTORICAL-v2.3-SOURCE | 2451 | Frozen v2.3 baseline source: HTTP API endpoint for annotations.. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/server/api/bootstrap.php` | HISTORICAL-v2.3-SOURCE | 6544 | Frozen v2.3 baseline source: historical implementation/evidence file server/api/bootstrap.php. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/server/api/events.php` | HISTORICAL-v2.3-SOURCE | 440 | Frozen v2.3 baseline source: HTTP API endpoint for events.. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/server/api/health.php` | HISTORICAL-v2.3-SOURCE | 122 | Frozen v2.3 baseline source: HTTP API endpoint for health.. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/server/api/schemas.php` | HISTORICAL-v2.3-SOURCE | 1530 | Frozen v2.3 baseline source: HTTP API endpoint for schemas.. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/server/api/snapshots.php` | HISTORICAL-v2.3-SOURCE | 1108 | Frozen v2.3 baseline source: HTTP API endpoint for snapshots.. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/server/assets/app.js` | HISTORICAL-v2.3-SOURCE | 11219 | Frozen v2.3 baseline source: Responsive web client application logic.. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/server/assets/style.css` | HISTORICAL-v2.3-SOURCE | 2874 | Frozen v2.3 baseline source: Responsive web client styling.. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/server/config.php` | HISTORICAL-v2.3-SOURCE | 206 | Frozen v2.3 baseline source: Server configuration: private storage paths, limits, allowed origins/hosts and defaults.. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/server/data/annotations.json` | HISTORICAL-v2.3-SOURCE | 3 | Frozen v2.3 baseline source: historical implementation/evidence file server/data/annotations.json. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/server/data/events.json` | HISTORICAL-v2.3-SOURCE | 3 | Frozen v2.3 baseline source: historical implementation/evidence file server/data/events.json. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/server/data/schemas.json` | HISTORICAL-v2.3-SOURCE | 3 | Frozen v2.3 baseline source: historical implementation/evidence file server/data/schemas.json. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/server/data/snapshots.json` | HISTORICAL-v2.3-SOURCE | 3 | Frozen v2.3 baseline source: historical implementation/evidence file server/data/snapshots.json. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/server/index.php` | HISTORICAL-v2.3-SOURCE | 2667 | Frozen v2.3 baseline source: Responsive PHP web application shell.. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/server/media/.gitkeep` | HISTORICAL-v2.3-SOURCE | 0 | Frozen v2.3 baseline source: historical implementation/evidence file server/media/.gitkeep. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/server/schemas/example-book-anchor.schema.json` | HISTORICAL-v2.3-SOURCE | 453 | Frozen v2.3 baseline source: Packaged example book anchor JSON schema.. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/server/schemas/gps-anchor.schema.json` | HISTORICAL-v2.3-SOURCE | 591 | Frozen v2.3 baseline source: Packaged gps anchor JSON schema.. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/server/schemas/url-anchor.schema.json` | HISTORICAL-v2.3-SOURCE | 962 | Frozen v2.3 baseline source: Packaged url anchor JSON schema.. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/server/schemas/youtube-anchor.schema.json` | HISTORICAL-v2.3-SOURCE | 559 | Frozen v2.3 baseline source: Packaged youtube anchor JSON schema.. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/start-server.bat` | HISTORICAL-v2.3-SOURCE | 90 | Frozen v2.3 baseline source: Windows local-loopback PHP launcher.. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/start-server.sh` | HISTORICAL-v2.3-SOURCE | 122 | Frozen v2.3 baseline source: macOS/Linux local-loopback PHP launcher.. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/tests/README.md` | HISTORICAL-v2.3-SOURCE | 177 | Frozen v2.3 baseline source: Developer verification instructions and test-scope limitations.. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/tests/anchors.mjs` | HISTORICAL-v2.3-SOURCE | 1064 | Frozen v2.3 baseline source: Preserved baseline anchor assertions.. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/evidence/characterize.mjs` | HISTORICAL | 3457 | Characterization checks encoding selected baseline behaviors, including known defects. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/evidence/concerns.json` | HISTORICAL | 20066 | Structured 45-entry concern register/evidence mapping. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/evidence/legacy-reference.md` | HISTORICAL | 102787 | Legacy reference/provenance notes and limitations. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/evidence/legacy-reports/01_XtraType_Full_Feature_Rundown.md` | HISTORICAL | 26218 | Earlier attributed XtraType report retained as historical evidence, not current authority. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/evidence/legacy-reports/02_XtraType_Deep_Technical_Snapshot.md` | HISTORICAL | 51355 | Earlier attributed XtraType report retained as historical evidence, not current authority. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/evidence/legacy-reports/03_XtraType_Concise_Summary.md` | HISTORICAL | 6581 | Earlier attributed XtraType report retained as historical evidence, not current authority. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/evidence/source-manifest.json` | HISTORICAL | 11401 | Hashes/identity for the 38 frozen v2.3 baseline source files. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/evidence/symbols.json` | HISTORICAL | 24848 | Structured 117-entry historical named-symbol inventory. |
+| `reference/canon/XtraType_Canon_v1.0_candidate/evidence/verification.json` | HISTORICAL | 5194 | Structured canon audit verification results and limitations. |
+
+## PortaShape target specification documents
+
+| Path | Status | Bytes | Contents / use |
+|---|---|---:|---|
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/00_READ_ME_AND_AUTHORITY.md` | TARGET-SPEC | 7600 | Companion target scope, authority and precedence rules. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/01_PORTASHAPE_SERVICE_ARCHITECTURE.md` | TARGET-SPEC | 10196 | Target PortaShape host/service architecture and component responsibilities. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/02_PLUGIN_PACKAGE_LIFECYCLE.md` | TARGET-SPEC | 8201 | Target package inspection/install/grants/enable/update/remove/reconcile lifecycle. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/03_SHARED_CONTRACTS_AND_OPERATIONS.md` | TARGET-SPEC | 10814 | Target record/operation/permission model and effect semantics. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/04_XTRATYPE_CLIENT_INTEGRATION.md` | TARGET-SPEC | 10260 | Target first-party XtraType integration, sidecars, anchors, relationships and compatibility. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/05_SCRIPT_STUDIO_PLUGIN.md` | TARGET-SPEC | 9003 | Target Script Studio plugin behavior/userscript boundaries. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/06_STAY_DRY_PLUGIN.md` | TARGET-SPEC | 11317 | Target consented text-assistance/pattern/template/routine plugin behavior. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/07_BRIDGES_UNIVERSAL_PUBLISHER_CORE.md` | TARGET-SPEC | 11400 | Target canonical publishing/fidelity/plan/effect/replica architecture. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/08_EXTERNAL_PLATFORM_PLUGIN_STANDARD.md` | TARGET-SPEC | 7045 | Target connector package standard and authorized external effects. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/09_WEB_MOBILE_SURFACES.md` | TARGET-SPEC | 7458 | Target shared web/mobile surfaces and host capability limits. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/10_LOCAL_DATA_AND_DEFERRED_SERVICES.md` | TARGET-SPEC | 7549 | Target local data ownership/import/export and explicitly deferred services. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/11_VERIFICATION_AND_IMPLEMENTATION_SEQUENCE.md` | TARGET-SPEC | 5979 | Target stage order and acceptance/evidence discipline. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/12_GLOSSARY_REGISTRY_AND_CHANGE_CONTROL.md` | TARGET-SPEC | 7903 | Vocabulary, registry ownership and change-control rules. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/13_SOURCE_TRACEABILITY_AND_DECISIONS.md` | TARGET-SPEC | 7368 | Provenance and USER/INHERITED/DESIGN decision traceability. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/14_STRUCTURAL_CONTRACT_REFERENCE.md` | TARGET-SPEC | 30343 | Human-readable reference for structural schemas/operations. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/PortaShape_Relational_Registry_v0.1.xlsx` | TARGET-SPEC | 46051 | Twelve-sheet review/planning projection of the relational registry. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/READING_EDITION.md` | TARGET-SPEC | 153387 | Generated/searchable combined reading edition of companion modular specs. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/READ_ME.md` | TARGET-SPEC | 2922 | Companion entry point and package navigation. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/package-manifest.json` | TARGET-SPEC | 15623 | Companion package file-size/hash manifest. |
+
+## PortaShape target JSON Schemas
+
+| Path | Status | Bytes | Contents / use |
+|---|---|---:|---|
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/anchor-bundle.schema.json` | TARGET-SPEC | 1999 | JSON Schema for target record contract `anchor-bundle`. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/annotation-extension.schema.json` | TARGET-SPEC | 1892 | JSON Schema for target record contract `annotation-extension`. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/browser-context.schema.json` | TARGET-SPEC | 1745 | JSON Schema for target record contract `browser-context`. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/common.schema.json` | TARGET-SPEC | 9786 | Shared definitions referenced by companion JSON Schemas. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/connector-descriptor.schema.json` | TARGET-SPEC | 4244 | JSON Schema for target record contract `connector-descriptor`. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/conversation.schema.json` | TARGET-SPEC | 1275 | JSON Schema for target record contract `conversation`. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/credential-reference.schema.json` | TARGET-SPEC | 1518 | JSON Schema for target record contract `credential-reference`. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/destination.schema.json` | TARGET-SPEC | 1825 | JSON Schema for target record contract `destination`. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/event.schema.json` | TARGET-SPEC | 1914 | JSON Schema for target record contract `event`. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/fidelity.schema.json` | TARGET-SPEC | 4879 | JSON Schema for target record contract `fidelity`. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/grant.schema.json` | TARGET-SPEC | 1977 | JSON Schema for target record contract `grant`. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/handle.schema.json` | TARGET-SPEC | 1529 | JSON Schema for target record contract `handle`. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/installation.schema.json` | TARGET-SPEC | 1764 | JSON Schema for target record contract `installation`. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/invocation.schema.json` | TARGET-SPEC | 1743 | JSON Schema for target record contract `invocation`. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/message.schema.json` | TARGET-SPEC | 1336 | JSON Schema for target record contract `message`. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/object.schema.json` | TARGET-SPEC | 1515 | JSON Schema for target record contract `object`. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/operation-payloads.schema.json` | TARGET-SPEC | 38366 | Exact input/output payload definitions for all 40 operations. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/pattern.schema.json` | TARGET-SPEC | 1819 | JSON Schema for target record contract `pattern`. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/plugin-manifest.schema.json` | TARGET-SPEC | 6848 | JSON Schema for target record contract `plugin-manifest`. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/provenance.schema.json` | TARGET-SPEC | 1987 | JSON Schema for target record contract `provenance`. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/publication.schema.json` | TARGET-SPEC | 3769 | JSON Schema for target record contract `publication`. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/publish-plan.schema.json` | TARGET-SPEC | 3533 | JSON Schema for target record contract `publish-plan`. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/receipt.schema.json` | TARGET-SPEC | 3955 | JSON Schema for target record contract `receipt`. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/relationship.schema.json` | TARGET-SPEC | 1437 | JSON Schema for target record contract `relationship`. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/replica-set.schema.json` | TARGET-SPEC | 1262 | JSON Schema for target record contract `replica-set`. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/representation.schema.json` | TARGET-SPEC | 2272 | JSON Schema for target record contract `representation`. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/routine-run.schema.json` | TARGET-SPEC | 2010 | JSON Schema for target record contract `routine-run`. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/routine.schema.json` | TARGET-SPEC | 5872 | JSON Schema for target record contract `routine`. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/script-definition.schema.json` | TARGET-SPEC | 1247 | JSON Schema for target record contract `script-definition`. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/script-revision.schema.json` | TARGET-SPEC | 2547 | JSON Schema for target record contract `script-revision`. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/text-template.schema.json` | TARGET-SPEC | 2114 | JSON Schema for target record contract `text-template`. |
+
+## PortaShape target example records
+
+| Path | Status | Bytes | Contents / use |
+|---|---|---:|---|
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/examples/anchor-bundle.json` | TARGET-EXAMPLE | 407 | Structural example instance for target `anchor-bundle` record contract. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/examples/annotation-extension.json` | TARGET-EXAMPLE | 422 | Structural example instance for target `annotation-extension` record contract. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/examples/browser-context.json` | TARGET-EXAMPLE | 444 | Structural example instance for target `browser-context` record contract. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/examples/connector-descriptor.json` | TARGET-EXAMPLE | 582 | Structural example instance for target `connector-descriptor` record contract. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/examples/conversation.json` | TARGET-EXAMPLE | 276 | Structural example instance for target `conversation` record contract. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/examples/credential-reference.json` | TARGET-EXAMPLE | 386 | Structural example instance for target `credential-reference` record contract. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/examples/destination.json` | TARGET-EXAMPLE | 402 | Structural example instance for target `destination` record contract. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/examples/event.json` | TARGET-EXAMPLE | 431 | Structural example instance for target `event` record contract. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/examples/fidelity.json` | TARGET-EXAMPLE | 514 | Structural example instance for target `fidelity` record contract. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/examples/grant.json` | TARGET-EXAMPLE | 445 | Structural example instance for target `grant` record contract. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/examples/handle.json` | TARGET-EXAMPLE | 315 | Structural example instance for target `handle` record contract. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/examples/installation.json` | TARGET-EXAMPLE | 406 | Structural example instance for target `installation` record contract. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/examples/invocation.json` | TARGET-EXAMPLE | 420 | Structural example instance for target `invocation` record contract. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/examples/message.json` | TARGET-EXAMPLE | 277 | Structural example instance for target `message` record contract. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/examples/object.json` | TARGET-EXAMPLE | 309 | Structural example instance for target `object` record contract. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/examples/pattern.json` | TARGET-EXAMPLE | 526 | Structural example instance for target `pattern` record contract. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/examples/plugin-manifest.json` | TARGET-EXAMPLE | 525 | Structural example instance for target `plugin-manifest` record contract. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/examples/provenance.json` | TARGET-EXAMPLE | 452 | Structural example instance for target `provenance` record contract. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/examples/publication.json` | TARGET-EXAMPLE | 437 | Structural example instance for target `publication` record contract. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/examples/publish-plan.json` | TARGET-EXAMPLE | 498 | Structural example instance for target `publish-plan` record contract. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/examples/receipt.json` | TARGET-EXAMPLE | 791 | Structural example instance for target `receipt` record contract. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/examples/relationship.json` | TARGET-EXAMPLE | 308 | Structural example instance for target `relationship` record contract. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/examples/replica-set.json` | TARGET-EXAMPLE | 285 | Structural example instance for target `replica-set` record contract. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/examples/representation.json` | TARGET-EXAMPLE | 540 | Structural example instance for target `representation` record contract. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/examples/routine-run.json` | TARGET-EXAMPLE | 392 | Structural example instance for target `routine-run` record contract. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/examples/routine.json` | TARGET-EXAMPLE | 698 | Structural example instance for target `routine` record contract. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/examples/script-definition.json` | TARGET-EXAMPLE | 338 | Structural example instance for target `script-definition` record contract. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/examples/script-revision.json` | TARGET-EXAMPLE | 645 | Structural example instance for target `script-revision` record contract. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/examples/text-template.json` | TARGET-EXAMPLE | 433 | Structural example instance for target `text-template` record contract. |
+
+## PortaShape target registry/validation/workbook evidence
+
+| Path | Status | Bytes | Contents / use |
+|---|---|---:|---|
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/registry/REGISTRY_INDEX.md` | TARGET-SPEC | 37440 | Human-readable index of modules/components/contracts/operations/permissions/interactions/surfaces/stages/acceptance/decisions/traceability. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/registry/acceptance.csv` | TARGET-SPEC | 5281 | 52 target acceptance cases; all recorded Not run. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/registry/components.csv` | TARGET-SPEC | 9397 | 60 target component rows and stage/spec provenance. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/registry/contracts.csv` | TARGET-SPEC | 2769 | 29 target record contracts. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/registry/decisions.csv` | TARGET-SPEC | 2196 | 18 USER/DESIGN/INHERITED decisions. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/registry/interactions.csv` | TARGET-SPEC | 1845 | 16 selected cross-module interaction seams. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/registry/modules.csv` | TARGET-SPEC | 1068 | 8 selected module rows. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/registry/operation-contracts.json` | TARGET-SPEC | 9083 | Exact mapping from 40 operations to 80 input/output definitions. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/registry/operations.csv` | TARGET-SPEC | 3961 | 40 exact operation identifiers and permission/effect/stage metadata. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/registry/permissions.csv` | TARGET-SPEC | 1490 | 15 target permission boundaries. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/registry/registry.json` | TARGET-SPEC | 65566 | Combined authoring registry containing the relational inventory. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/registry/source-fingerprints.json` | TARGET-SPEC | 298 | Fingerprints/provenance identifiers for source inputs. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/registry/stages.csv` | TARGET-SPEC | 781 | C0–C5 and D stage definitions and exit gates. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/registry/surfaces.csv` | TARGET-SPEC | 1249 | 12 target/current-narrow user/host surfaces. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/registry/traceability.csv` | TARGET-SPEC | 2291 | 16 traceability rows linking selected source/prototype direction. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/registry/validation.json` | TARGET-SPEC | 117833 | Structural validation report for companion registry/contracts/examples. |
+| `reference/specs/XtraType_PortaShape_Companion_v0.1/registry/workbook-verification.json` | TARGET-SPEC | 572 | Evidence that workbook projections match registry data. |

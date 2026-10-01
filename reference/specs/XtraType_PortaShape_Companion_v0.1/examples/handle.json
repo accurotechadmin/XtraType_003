@@ -1,0 +1,13 @@
+{
+  "id": "example:record",
+  "recordType": "Core.Handle",
+  "schemaVersion": 1,
+  "createdAt": "2026-10-01T07:10:00.000Z",
+  "updatedAt": "2026-10-01T07:10:00.000Z",
+  "ownerId": "local:owner",
+  "objectId": "example",
+  "type": "example",
+  "value": "example",
+  "confidence": "asserted",
+  "provenanceRefs": []
+}

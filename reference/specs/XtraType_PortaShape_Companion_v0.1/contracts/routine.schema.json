@@ -1,0 +1,260 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.portashape.invalid/companion/0.1/routine.schema.json",
+  "title": "Procedure.Routine v1",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "recordType": {
+      "const": "Procedure.Routine"
+    },
+    "schemaVersion": {
+      "const": 1
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "ownerId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "inputs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "pattern": "^[A-Za-z_][A-Za-z0-9_]*$"
+          },
+          "type": {
+            "enum": [
+              "string",
+              "number",
+              "boolean"
+            ]
+          },
+          "label": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512
+          },
+          "required": {
+            "type": "boolean"
+          },
+          "default": {
+            "type": [
+              "string",
+              "number",
+              "boolean"
+            ]
+          }
+        },
+        "required": [
+          "name",
+          "type",
+          "label",
+          "required"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 50
+    },
+    "outputNames": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 512
+      },
+      "maxItems": 50
+    },
+    "steps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512
+          },
+          "operationId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512
+          },
+          "operationMajor": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "providerId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512
+          },
+          "providerRevision": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512
+          },
+          "inputBindings": {
+            "type": "object",
+            "additionalProperties": {
+              "type": [
+                "string",
+                "number",
+                "boolean",
+                "null"
+              ]
+            }
+          },
+          "preconditions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "operator": {
+                  "enum": [
+                    "equals",
+                    "contains",
+                    "lt",
+                    "lte",
+                    "gt",
+                    "gte"
+                  ]
+                },
+                "stateKey": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 512
+                },
+                "value": {
+                  "type": [
+                    "string",
+                    "number",
+                    "boolean"
+                  ]
+                }
+              },
+              "required": [
+                "operator",
+                "stateKey",
+                "value"
+              ],
+              "additionalProperties": false
+            },
+            "maxItems": 10
+          },
+          "postconditions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "operator": {
+                  "enum": [
+                    "equals",
+                    "contains",
+                    "lt",
+                    "lte",
+                    "gt",
+                    "gte"
+                  ]
+                },
+                "stateKey": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 512
+                },
+                "value": {
+                  "type": [
+                    "string",
+                    "number",
+                    "boolean"
+                  ]
+                }
+              },
+              "required": [
+                "operator",
+                "stateKey",
+                "value"
+              ],
+              "additionalProperties": false
+            },
+            "maxItems": 10
+          },
+          "checkpoint": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "id",
+          "operationId",
+          "operationMajor",
+          "providerId",
+          "providerRevision",
+          "inputBindings",
+          "preconditions",
+          "postconditions",
+          "checkpoint"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 25,
+      "minItems": 1
+    },
+    "maxDurationMs": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 120000
+    },
+    "trigger": {
+      "const": "manual"
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "provenanceRefs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 512
+      },
+      "maxItems": 100
+    }
+  },
+  "required": [
+    "id",
+    "recordType",
+    "schemaVersion",
+    "createdAt",
+    "updatedAt",
+    "ownerId",
+    "name",
+    "inputs",
+    "outputNames",
+    "steps",
+    "maxDurationMs",
+    "trigger",
+    "revision",
+    "provenanceRefs"
+  ],
+  "additionalProperties": false
+}

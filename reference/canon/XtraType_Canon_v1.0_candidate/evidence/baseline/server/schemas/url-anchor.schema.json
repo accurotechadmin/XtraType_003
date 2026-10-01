@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "xtratype.anchor.url@1",
+  "title": "URL",
+  "type": "object",
+  "required": ["url", "queryMode", "queryParameters"],
+  "properties": {
+    "url": {"type": "string", "format": "uri", "description": "Bare HTTP(S) URL without fragment or query."},
+    "queryMode": {"type": "string", "enum": ["ignore", "selected", "all"], "default": "ignore"},
+    "queryParameters": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["key", "value", "include"],
+        "properties": {
+          "key": {"type": "string"},
+          "value": {"type": "string"},
+          "include": {"type": "boolean", "default": false}
+        }
+      }
+    },
+    "fragmentMode": {"type": "string", "enum": ["ignore", "include"], "default": "ignore"},
+    "fragment": {"type": ["string", "null"], "default": null}
+  },
+  "x-xtratype": {"label": "URL", "kind": "url", "version": 1}
+}

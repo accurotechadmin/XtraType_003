@@ -1,0 +1,57 @@
+{
+  "schema": "xtratype.v002.instantiation-manifest@1",
+  "canonicalProjectVersion": "v.002",
+  "instantiatedAt": "2026-10-01T10:10:00-04:00",
+  "applicationCodeChanged": false,
+  "applicationTechnicalVersion": "2.5.0",
+  "status": "forward SSOT/canon guard-dog system instantiated; personal client baseline retained; server-side under heavy development",
+  "predecessor": {
+    "archive": "XtraType-v001-Canonical-Instantiation-2026-10-01-FINAL.zip",
+    "classification": "v.001 final canonical predecessor",
+    "fileCount": 282
+  },
+  "current": {
+    "startHere": "00_V002_START_HERE.md",
+    "status": "docs/v002/00_CURRENT_STATUS_2026-10-01T101000-0400.md",
+    "ssot": "reference/ssot/README.md",
+    "bootPrompt": "EXPERT_SESSION_BOOT_PROMPT.md",
+    "pointers": "reference/ssot/CURRENT_POINTERS.json",
+    "decisionRegister": "reference/ssot/decisions/CURRENT_DECISION_REGISTER.md"
+  },
+  "standingInstruction": {
+    "update current docs": "Perform reference/ssot/08_VERSIONING_AND_CURRENT_DOCS_SIGNAL.md synchronization pass"
+  },
+  "clientStatus": "tested and working for personal client-side non-server-dependent use",
+  "serverStatus": "heavy testing and development underway",
+  "clientInstall": "chrome://extensions -> Developer mode -> Load unpacked -> select /ext",
+  "confidentialOperationalPolicy": {
+    "invitationCapacityCeilingExists": true,
+    "numericValueStoredInRepository": false
+  },
+  "historicalPreservation": {
+    "v001LandmarksRemainImmutable": true,
+    "seedCanonRemainFoundational": true,
+    "portaShapeCompanionV01RemainsSelectedFoundationalTarget": true,
+    "outgoingReadmePreserved": "reference/canon/v001-final/README_FINAL_BEFORE_V002_2026-10-01.md",
+    "retiredBootPrompts": "reference/ssot/boot-prompts/retired/"
+  },
+  "currentPackageFileCount": 329,
+  "currentChecksumEntries": 328,
+  "authorityIndex": "docs/v002/V002_FILE_AUTHORITY_INDEX.csv",
+  "currentChecksumFile": "V002_SHA256SUMS.txt",
+  "predecessorChecksumFile": "docs/v002/V002_PREDECESSOR_SHA256SUMS.txt",
+  "predecessorManifest": "docs/v002/V002_PREDECESSOR_BASELINE_MANIFEST.json",
+  "verification": {
+    "selectedTestsPassed": 16,
+    "selectedTestsFailed": 0,
+    "executablePredecessorFilesCompared": 58,
+    "executableFilesChanged": 0,
+    "jsonParseFailures": 0,
+    "jsMjsSyntaxFailures": 0,
+    "phpLintFailures": 0,
+    "sharedAnchorParity": true,
+    "sharedSchemaParity": true
+  },
+  "newForwardSsotRoot": "reference/ssot/",
+  "packageIntegrityNote": "V002_SHA256SUMS.txt covers every package file except itself. The authority index classifies the package while avoiding circular self-hashes."
+}

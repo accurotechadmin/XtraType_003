@@ -1,0 +1,22 @@
+{
+  "id": "portashape.script-studio",
+  "recordType": "Plugin.Manifest",
+  "schemaVersion": 1,
+  "createdAt": "2026-10-01T07:10:00.000Z",
+  "updatedAt": "2026-10-01T07:10:00.000Z",
+  "ownerId": "PS",
+  "name": "Script Studio",
+  "description": "Packaged authoring plugin",
+  "version": "1.0.0",
+  "kind": "module",
+  "hostApiMajor": 1,
+  "implementation": {
+    "catalogKey": "plugins/script-studio@1.0.0"
+  },
+  "requires": [],
+  "operations": [],
+  "permissions": [],
+  "uiContributions": [],
+  "files": [],
+  "tests": []
+}

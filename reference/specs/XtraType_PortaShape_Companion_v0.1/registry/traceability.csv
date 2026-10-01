@@ -1,0 +1,17 @@
+ID,Source,Selected content,Disposition,Spec,Reason
+TR01,D00,Shared authority/index,Retained with owner precedence,00,USER topology overrides source umbrella
+TR02,D05 C037-C046,Script Studio components,All ten retained; staged bridge/promotion,05,Replace omitted-project dependencies with selected host facade
+TR03,D06 C047-C056,XtraType context components,All ten retained; local/blocked modes explicit,04,Preserve v2; companion sidecars; shared modes blocked
+TR04,D07 C057-C066,Stay D.R.Y. components,All ten retained; text assistance first,06,Host mediates; finite local routine profile
+TR05,D08 C067-C078,Publisher/connector components,All twelve retained with core/plugin split,07/08,Direct declared transforms; no generic omitted engine
+TR06,D10,Backend/API/identity/sync,Deferred only,10,No component/service implementation imported
+TR07,D11 C103-C110,Web/mobile components,Eight retained with locality/dependency gates,09,No remote execution or invented service availability
+TR08,D11 C111,Third-party API client boundary,Not active; tied to deferred service plane,09/10,No new external API developer program
+TR09,D12,Glossary/shared shapes/capability meanings,Selected vocabulary only,03/12,No chat or omitted-project contract family imported
+TR10,W,Component/contract/interaction inventory,Filtered and re-owned registry,12,All-to-all topology removed; source IDs retained
+TR11,Current canon C01/C16,PortaShape boundary/userscript scope,Selective target overrides only,00/05,Current-state evidence unchanged
+TR12,Current canon C04/C10/C15,Records/storage/stabilization,Preserved foundation/prerequisites,04/10/11,No renamed DB or false atomicity
+TR13,D08 first MVP,Named example targets,"Candidate shapes, not support promises",07/08,Feasibility evidence required for actual selection
+TR14,D05/D07 roadmap,Shared libraries/remote stubs/team routines,Local portions staged; service-dependent portions blocked,05/06/10,No backend or omitted intelligence modules inferred
+TR15,D08 roadmap,Scheduling/two-way sync/catalog,Retained direction within selected concern,07,Reliable remote/deferred-service execution blocked
+TR16,D11 roadmap,Native/locality/parity,Local shell later; sync/remote notifications blocked,09,Resolve conflicting old native stage labels explicitly

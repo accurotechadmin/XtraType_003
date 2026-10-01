@@ -1,0 +1,41 @@
+ID,Operation,Major,Provider,Input,Output,Permission,Effect,Stage,Spec
+OP01,host.describe,1,PS,Host query,Availability manifest,none,read,C1,01
+OP02,package.list,1,PS,Local catalog filter,Package summaries,none,read,C1,02
+OP03,operation.list,1,PS,Host/locality filter,Operation declarations and availability,none,read,C1,03
+OP04,operation.cancel,1,PS,Owned active request,Cancellation acknowledgement and effect state,PM03,local-write,C1,03
+OP05,receipt.read,1,PS,Owned receipt reference,Authorized Host.Receipt,PM03,read,C1,03
+OP06,event.subscribe,1,PS,Authorized subject/type + after sequence,Event page or retention-gap result,PM03,read,C1,03
+OP07,package.export,1,PS,Selected package/revision,Inert source/package bundle,PM15,read,C1,02
+OP08,package.inspect,1,PS,Package ID,Manifest + installation,none,read,C1,02
+OP09,package.install,1,PS,Manifest + file set,Installation + receipt,PM01,local-write,C1,02
+OP10,package.enable,1,PS,Package revision + reviewed grants,Installation,PM01,local-write,C1,02
+OP11,package.disable,1,PS,Package ID,Installation + receipt,PM01,local-write,C1,02
+OP12,package.update,1,PS,Staged revision,Review result + installation,PM01,local-write,C1,02
+OP13,package.remove,1,PS,Package ID + retention choice,Receipt,PM01,local-write,C1,02
+OP14,context.capture,1,PS,Pinned browser context request,Browser.Context,PM02,read,C1,03
+OP15,storage.get,1,PS,Owned namespace/key,Typed local value,PM03,read,C1,10
+OP16,storage.put,1,PS,Owned namespace/value,Local commit receipt,PM03,local-write,C1,10
+OP17,xtratype.readContext,1,XT,Target/Object + local scope,Context page,PM07,read,C3,04
+OP18,xtratype.proposeDraft,1,XT,Typed draft + context ref,Draft reference,PM08,local-write,C4,04
+OP19,xtratype.attachExtension,1,XT,AnnotationExtension,Local commit receipt,PM09,local-write,C3,04
+OP20,xtratype.relate,1,XT,Context.Relationship,Local commit receipt,PM09,local-write,C3,04
+OP21,script.importDraft,1,SS,Source/template + provenance,Disabled Script.Definition,PM03,local-write,C2,05
+OP22,script.execute,1,SS,Pinned revision + approved context/input,Host.Receipt,PM04,page-write,C2,05
+OP23,script.test,1,SS,Revision + controlled fixtures,Fixture results,PM03,local-write,C2,05
+OP24,dry.observe,1,DRY,Eligible committed input/action,Local observation/pattern result,PM05,local-write,C2,06
+OP25,dry.saveTemplate,1,DRY,Reviewed template/defaults,TextTemplate,PM03,local-write,C2,06
+OP26,dry.insert,1,DRY,Resolved text + unchanged target,Insertion receipt,PM06,page-write,C2,06
+OP27,dry.run,1,DRY,Reviewed Routine + explicit values,Procedure.Run,PM13,page-write,C4,06
+OP28,dry.promote,1,DRY,Reviewed helper/routine,Script Studio draft reference,PM03,local-write,C4,06
+OP29,publish.compose,1,PUB,Selected text/media,Publication draft,PM10,local-write,C3,07
+OP30,publish.preview,1,PUB,Publication revision + destinations,Publish.Plan + fidelity,PM10,local-write,C3,07
+OP31,publish.confirm,1,PUB,Plan digest + explicit user gesture,Local confirmation receipt,PM11,local-write,C3,07
+OP32,publish.execute,1,PUB,Confirmed plan reference,Per-target results + ReplicaSet,PM11,external-write,C3,07
+OP33,publish.retry,1,PUB,Reconciled safe target subset,Per-target results,PM11,external-write,C3,07
+OP34,publish.cancel,1,PUB,Local publish intent,Cancellation receipt,PM11,local-write,C3,07
+OP35,connector.preview,1,EXT,Publication + destination snapshot,Target payload + fidelity,PM10,read,C3,08
+OP36,connector.resolveAccount,1,EXT,Authorized pinned local context,Nonsecret account evidence,PM12,read,C3,08
+OP37,connector.create,1,EXT,Confirmed immutable target intent,Handle/result/unknown outcome,PM11,external-write,C3,08
+OP38,connector.inspectResult,1,EXT,Intent/handle + local authority,Reconciliation evidence,PM12,read,C3,08
+OP39,data.export,1,PS,Explicit record selection,Inert hashed bundle,PM15,read,C1,10
+OP40,data.import,1,PS,Bounded inert bundle,Staging/conflicts/commit receipt,PM01,local-write,C1,10

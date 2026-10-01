@@ -1,0 +1,207 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.portashape.invalid/companion/0.1/connector-descriptor.schema.json",
+  "title": "Connector.Descriptor v1",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "recordType": {
+      "const": "Connector.Descriptor"
+    },
+    "schemaVersion": {
+      "const": 1
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "ownerId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "packageId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "packageRevision": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "platformLabel": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "operations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512
+          },
+          "major": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "inputContract": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512
+          },
+          "outputContract": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512
+          },
+          "permissions": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 512
+            },
+            "maxItems": 30
+          },
+          "sideEffect": {
+            "enum": [
+              "read",
+              "local-write",
+              "page-write",
+              "external-write"
+            ]
+          },
+          "locality": {
+            "enum": [
+              "browser-local",
+              "web-local",
+              "mobile-local"
+            ]
+          },
+          "maxDurationMs": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 120000
+          }
+        },
+        "required": [
+          "id",
+          "major",
+          "inputContract",
+          "outputContract",
+          "permissions",
+          "sideEffect",
+          "locality",
+          "maxDurationMs"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 20
+    },
+    "accepts": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 512
+      },
+      "maxItems": 20
+    },
+    "produces": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 512
+      },
+      "maxItems": 20
+    },
+    "authModes": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "browser-session"
+        ]
+      },
+      "maxItems": 3
+    },
+    "locality": {
+      "enum": [
+        "browser-local",
+        "web-local",
+        "mobile-local"
+      ]
+    },
+    "requiredFields": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 512
+      },
+      "maxItems": 100
+    },
+    "idempotencyMode": {
+      "enum": [
+        "platform-key",
+        "reconcile-before-retry",
+        "manual-only"
+      ]
+    },
+    "canReconcile": {
+      "type": "boolean"
+    },
+    "fixtureRefs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 512
+      },
+      "maxItems": 100
+    },
+    "status": {
+      "enum": [
+        "candidate",
+        "stub",
+        "qualified",
+        "blocked-service-deferred"
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "recordType",
+    "schemaVersion",
+    "createdAt",
+    "updatedAt",
+    "ownerId",
+    "packageId",
+    "packageRevision",
+    "platformLabel",
+    "operations",
+    "accepts",
+    "produces",
+    "authModes",
+    "locality",
+    "requiredFields",
+    "idempotencyMode",
+    "canReconcile",
+    "fixtureRefs",
+    "status"
+  ],
+  "additionalProperties": false
+}

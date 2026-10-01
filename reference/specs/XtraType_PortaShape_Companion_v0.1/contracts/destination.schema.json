@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.portashape.invalid/companion/0.1/destination.schema.json",
+  "title": "Publish.Destination v1",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "recordType": {
+      "const": "Publish.Destination"
+    },
+    "schemaVersion": {
+      "const": 1
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "ownerId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "platformId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "connectorRevision": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "accountLabel": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "accountRef": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "credentialRef": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "presets": {
+      "type": "object",
+      "maxProperties": 50,
+      "additionalProperties": {
+        "type": [
+          "string",
+          "number",
+          "boolean",
+          "null"
+        ]
+      }
+    },
+    "operations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 512
+      },
+      "maxItems": 20
+    }
+  },
+  "required": [
+    "id",
+    "recordType",
+    "schemaVersion",
+    "createdAt",
+    "updatedAt",
+    "ownerId",
+    "platformId",
+    "connectorRevision",
+    "accountLabel",
+    "accountRef",
+    "presets",
+    "operations"
+  ],
+  "additionalProperties": false
+}

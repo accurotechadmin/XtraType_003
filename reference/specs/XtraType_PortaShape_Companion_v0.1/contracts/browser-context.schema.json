@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.portashape.invalid/companion/0.1/browser-context.schema.json",
+  "title": "Browser.Context v1",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "recordType": {
+      "const": "Browser.Context"
+    },
+    "schemaVersion": {
+      "const": 1
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "ownerId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "tabId": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "documentId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "frameId": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "generation": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "origin": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "pageUrl": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "title": {
+      "type": "string",
+      "maxLength": 80000
+    },
+    "capturedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "selectedText": {
+      "type": "string",
+      "maxLength": 80000
+    },
+    "scriptAccess": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "id",
+    "recordType",
+    "schemaVersion",
+    "createdAt",
+    "updatedAt",
+    "ownerId",
+    "tabId",
+    "documentId",
+    "frameId",
+    "generation",
+    "origin",
+    "pageUrl",
+    "capturedAt",
+    "scriptAccess"
+  ],
+  "additionalProperties": false
+}

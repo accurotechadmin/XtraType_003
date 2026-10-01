@@ -1,0 +1,199 @@
+{
+  "release": "2.4.0",
+  "checks": [
+    {
+      "name": ".js syntax",
+      "status": "passed",
+      "count": 13,
+      "paths": [
+        "ext/content/page-ui.js",
+        "ext/content/youtube.js",
+        "ext/core/anchors.js",
+        "ext/core/api.js",
+        "ext/core/capture.js",
+        "ext/core/db.js",
+        "ext/core/records.js",
+        "ext/core/schemas.js",
+        "ext/service-worker.js",
+        "ext/sidepanel/app.js",
+        "server/assets/app.js",
+        "server/assets/core/anchors.js",
+        "server/assets/core/schemas.js"
+      ],
+      "detail": ""
+    },
+    {
+      "name": ".mjs syntax",
+      "status": "passed",
+      "count": 8,
+      "paths": [
+        "scripts/sync-shared.mjs",
+        "tests/anchors.mjs",
+        "tests/client-dom.test.mjs",
+        "tests/core.test.mjs",
+        "tests/http.test.mjs",
+        "tests/manifest-ui.test.mjs",
+        "tests/repository.test.mjs",
+        "tests/worker.test.mjs"
+      ],
+      "detail": ""
+    },
+    {
+      "name": ".php syntax",
+      "status": "passed",
+      "count": 13,
+      "paths": [
+        "server/api/annotations.php",
+        "server/api/bootstrap.php",
+        "server/api/events.php",
+        "server/api/health.php",
+        "server/api/schemas.php",
+        "server/api/snapshots.php",
+        "server/config.php",
+        "server/index.php",
+        "server/media.php",
+        "server/router.php",
+        "src/server/Repository.php",
+        "src/server/Validation.php",
+        "tests/repository-worker.php"
+      ],
+      "detail": ""
+    },
+    {
+      "name": "JSON parsing",
+      "status": "passed",
+      "count": 15,
+      "paths": [
+        "docs/SOURCE_BASELINE.json",
+        "docs/evidence/static-checks.json",
+        "ext/manifest.json",
+        "package-lock.json",
+        "package.json",
+        "release-manifest.json",
+        "server/schemas/example-book-anchor.schema.json",
+        "server/schemas/gps-anchor.schema.json",
+        "server/schemas/time-anchor.schema.json",
+        "server/schemas/url-anchor.schema.json",
+        "server/schemas/youtube-anchor.schema.json",
+        "var/data/annotations.json",
+        "var/data/events.json",
+        "var/data/schemas.json",
+        "var/data/snapshots.json"
+      ],
+      "detail": ""
+    },
+    {
+      "name": "Relative JS import resolution",
+      "status": "passed",
+      "count": 21,
+      "paths": [
+        "ext/content/page-ui.js",
+        "ext/content/youtube.js",
+        "ext/core/anchors.js",
+        "ext/core/api.js",
+        "ext/core/capture.js",
+        "ext/core/db.js",
+        "ext/core/records.js",
+        "ext/core/schemas.js",
+        "ext/service-worker.js",
+        "ext/sidepanel/app.js",
+        "scripts/sync-shared.mjs",
+        "server/assets/app.js",
+        "server/assets/core/anchors.js",
+        "server/assets/core/schemas.js",
+        "tests/anchors.mjs",
+        "tests/client-dom.test.mjs",
+        "tests/core.test.mjs",
+        "tests/http.test.mjs",
+        "tests/manifest-ui.test.mjs",
+        "tests/repository.test.mjs",
+        "tests/worker.test.mjs"
+      ],
+      "detail": ""
+    },
+    {
+      "name": "Chrome manifest entrypoints",
+      "status": "passed",
+      "count": 3,
+      "paths": [
+        "ext/service-worker.js",
+        "ext/sidepanel/index.html",
+        "ext/content/youtube.js"
+      ],
+      "detail": ""
+    },
+    {
+      "name": "Shared core equality",
+      "status": "passed",
+      "count": 2,
+      "paths": [
+        "anchors.js",
+        "schemas.js"
+      ],
+      "detail": ""
+    },
+    {
+      "name": "Baseline worker message IDs retained",
+      "status": "passed",
+      "count": 10,
+      "paths": [
+        "xtratype:captureVisible",
+        "xtratype:getContext",
+        "xtratype:getRecentContextAnnotations",
+        "xtratype:getYouTubeAnnotations",
+        "xtratype:openQuickBar",
+        "xtratype:openSidePanel",
+        "xtratype:pageExtract",
+        "xtratype:quickCreate",
+        "xtratype:quickReply",
+        "xtratype:scrollTo"
+      ],
+      "detail": "Request validation and authorization have been tightened."
+    },
+    {
+      "name": "Baseline HTTP entrypoints retained",
+      "status": "passed",
+      "count": 5,
+      "paths": [
+        "annotations.php",
+        "events.php",
+        "health.php",
+        "schemas.php",
+        "snapshots.php"
+      ],
+      "detail": ""
+    },
+    {
+      "name": "Empty release data",
+      "status": "passed",
+      "count": 4,
+      "paths": [
+        "var/data/annotations.json",
+        "var/data/schemas.json",
+        "var/data/snapshots.json",
+        "var/data/events.json"
+      ],
+      "detail": ""
+    },
+    {
+      "name": "Existing database identity/version/stores",
+      "status": "passed",
+      "count": 1,
+      "paths": [
+        "ext/core/db.js"
+      ],
+      "detail": ""
+    },
+    {
+      "name": "Documentation/concern coverage",
+      "status": "passed",
+      "count": 1,
+      "paths": [
+        "docs/CONCERN_DISPOSITION.md"
+      ],
+      "detail": "All 45 canon IDs retained; partial/deferred dispositions explicit."
+    }
+  ],
+  "totalChecks": 12,
+  "status": "passed"
+}

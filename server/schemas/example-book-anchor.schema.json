@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "example.anchor.book@1",
+  "title": "Book",
+  "type": "object",
+  "required": ["isbn"],
+  "properties": {
+    "isbn": {"type": "string", "title": "ISBN"},
+    "page": {"type": "integer", "title": "Page", "minimum": 1},
+    "edition": {"type": "string", "title": "Edition"}
+  },
+  "x-xtratype": {"label": "Book", "kind": "custom", "description": "Example custom XtraType anchor"}
+}

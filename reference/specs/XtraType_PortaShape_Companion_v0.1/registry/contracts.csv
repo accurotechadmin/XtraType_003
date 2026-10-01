@@ -1,0 +1,30 @@
+ID,Record type,Owner,Meaning,Schema key,Stage,Spec,Source
+CT01,Plugin.Manifest,PS,"Package identity, operations, permissions and file hashes",plugin-manifest,C1,02,D05; USER
+CT02,Plugin.Installation,PS,Desired/effective local package lifecycle,installation,C1,02,DEC-03
+CT03,Host.Grant,PS,Nonportable local revision/site authority,grant,C1,02,C16; DEC-04
+CT04,Host.Invocation,PS,Pinned bounded operation request,invocation,C1,03,D05/D08
+CT05,Host.Receipt,PS,Truthful effect outcome and evidence,receipt,C1,03,D05/D08
+CT06,Host.Event,PS,Versioned local notification,event,C1,03,D05/D07
+CT07,Core.Object,PS,Conceptual identity and handle references,object,C3,03,D12
+CT08,Core.Handle,PS,Locator with type and evidence,handle,C3,03,D12
+CT09,Browser.Context,PS,Pinned authorized browser context,browser-context,C1,03,D06; current C08
+CT10,Context.AnchorBundle,XT,Passage locator evidence,anchor-bundle,C3,04,D06 C048
+CT11,Context.AnnotationExtension,XT,Sidecar for unchanged v2 annotation,annotation-extension,C3,04,DEC-05; D06
+CT12,Context.Relationship,XT,Typed contextual relation,relationship,C3,04,D06 C050
+CT13,Context.Conversation,XT,Local target-linked thread,conversation,C3,04,D06 C054
+CT14,Context.Message,XT,Local conversation message,message,C3,04,D06 C054
+CT15,Script.Definition,SS,Stable personal script identity,script-definition,C2,05,D05 C041
+CT16,Script.Revision,SS,Immutable source and execution metadata,script-revision,C2,05,D05 C039/C041
+CT17,Procedure.TextTemplate,DRY,Literal text and declared variables,text-template,C2,06,D07; D12
+CT18,Procedure.PatternHypothesis,DRY,Explained repeated behavior candidate,pattern,C2,06,D07 C060
+CT19,Procedure.Routine,DRY,Finite reviewed method and conditions,routine,C4,06,D07 C062/C063
+CT20,Procedure.Run,DRY,Local method execution/checkpoint state,routine-run,C4,06,D07; DEC-06
+CT21,Publish.Publication,PUB,Canonical authored content/revision,publication,C3,07,D08; D12
+CT22,Publish.Destination,PUB,Configured platform/account target,destination,C3,07,D08 C073/C075
+CT23,Publish.Plan,PUB,Frozen preview intent and confirmation digest,publish-plan,C3,07,D08 C076/C077
+CT24,Publish.Representation,PUB,One external result and provenance,representation,C3,07,D08; D12
+CT25,Publish.ReplicaSet,PUB,One object with external representations,replica-set,C3,07,D08 C078; W D11
+CT26,Evidence.FidelityReport,PUB,Preserve/approximate/drop/require,fidelity,C3,07,D08; D12
+CT27,Evidence.ProvenanceRecord,PS,Causal component/version evidence,provenance,C1,03,D12
+CT28,Trust.CredentialReference,PUB,Opaque local authorized session reference,credential-reference,C3,08,D12; USER D10 deferral
+CT29,Connector.Descriptor,EXT,Platform operations/locality/conformance,connector-descriptor,C3,08,D08 C067

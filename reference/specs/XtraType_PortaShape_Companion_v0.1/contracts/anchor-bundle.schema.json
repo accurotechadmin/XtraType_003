@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.portashape.invalid/companion/0.1/anchor-bundle.schema.json",
+  "title": "Context.AnchorBundle v1",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "recordType": {
+      "const": "Context.AnchorBundle"
+    },
+    "schemaVersion": {
+      "const": 1
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "ownerId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "sourceUrl": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "canonicalUrl": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "capturedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "exactText": {
+      "type": "string",
+      "maxLength": 80000
+    },
+    "prefix": {
+      "type": "string",
+      "maxLength": 256
+    },
+    "suffix": {
+      "type": "string",
+      "maxLength": 256
+    },
+    "domHint": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "textPosition": {
+      "type": "object",
+      "properties": {
+        "start": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "end": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "start",
+        "end"
+      ],
+      "additionalProperties": false
+    },
+    "fingerprint": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "normalizationVersion": {
+      "const": 1
+    }
+  },
+  "required": [
+    "id",
+    "recordType",
+    "schemaVersion",
+    "createdAt",
+    "updatedAt",
+    "ownerId",
+    "sourceUrl",
+    "capturedAt",
+    "exactText",
+    "prefix",
+    "suffix",
+    "normalizationVersion"
+  ],
+  "additionalProperties": false
+}

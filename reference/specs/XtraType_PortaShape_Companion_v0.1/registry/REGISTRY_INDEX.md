@@ -1,0 +1,330 @@
+# XtraType and PortaShape — Registry index
+
+## Modules
+
+| ID | Module | Placement | Responsibility | Baseline status | Spec | Source |
+| --- | --- | --- | --- | --- | --- | --- |
+| PS | PortaShape | Core service | Plugin installation, grants, local invocation and interoperability boundary | New | 01 | USER; DEC-01 |
+| XT | XtraType | First-party client | Context, annotations, anchors and relationships | Existing foundation + specified | 04 | USER; D06 |
+| SS | Script Studio | Plugin | User JavaScript authoring, installation, testing and promotion | Specified | 05 | USER; D05 |
+| DRY | Stay D.R.Y. | Plugin | Consented browser text assistance, patterns and routines | Specified | 06 | USER; D07 |
+| PUB | Bridges / Universal Publisher | Core feature | Canonical publishing, fidelity and replicas | Specified | 07 | USER; D08 |
+| EXT | Platform connector packages | Plugin family | Platform-specific transformations and authorized effects | Specified; providers unqualified | 08 | USER; D08 |
+| UI | Web/mobile surfaces | Shared clients | Local management and supported platform-specific execution | Existing narrow web + specified | 09 | USER; D11 |
+| DOC | Glossary and registry | Documentation | Versioned vocabulary, inventory and change control | Authored | 12 | USER; D00/D12/W |
+
+## Components
+
+| ID | Owner | Component | Responsibility | Status | Stage | Spec | Source |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| PS-C01 | PS | Installation coordinator | Validate/install/update/disable/remove and reconcile local packages | specified | C1 | 01 | USER; DEC-01/02 |
+| PS-C02 | PS | Operation directory | Exact provider/version declarations and effective availability | specified | C1 | 01 | USER; DEC-01/02 |
+| PS-C03 | PS | Grant broker | Local revision/site/operation authority and revocation | specified | C1 | 01 | USER; DEC-01/02 |
+| PS-C04 | PS | Invocation coordinator | Bounded correlated calls and truthful effect outcomes | specified | C1 | 01 | USER; DEC-01/02 |
+| PS-C05 | PS | Local repository boundary | Namespace transactions, migrations, quota and export | specified | C1 | 01 | USER; DEC-01/02 |
+| PS-C06 | PS | Receipt/event boundary | Causal local receipts and versioned notifications | specified | C1 | 01 | USER; DEC-01/02 |
+| PS-C07 | PS | UI contribution boundary | Packaged accessible contributions and cleanup | specified | C1 | 01 | USER; DEC-01/02 |
+| PS-C08 | PS | Client bridge | Trusted context and XtraType draft/application interfaces | specified | C1 | 01 | USER; DEC-01/02 |
+| SS-C037 | SS | Editor | JavaScript editor with syntax checking and minimal completion. | specified | C2 | 05 | LEGACY-C037; W Components!A38:E38; D05 T015R02 |
+| SS-C038 | SS | Runner | Execute against current page or typed test fixture. | specified | C2 | 05 | LEGACY-C038; W Components!A39:E39; D05 T015R03 |
+| SS-C039 | SS | Manifest Editor | Inputs, outputs, permissions, triggers, URL matches, capability names. | specified | C2 | 05 | LEGACY-C039; W Components!A40:E40; D05 T015R04 |
+| SS-C040 | SS | Sandbox/Bridge | Controlled, separately granted host APIs; initial userscripts have no privileged bridge | specified | C4 | 05 | LEGACY-C040; W Components!A41:E41; D05 T015R05 |
+| SS-C041 | SS | Local Library | Private scripts and versions. | specified | C2 | 05 | LEGACY-C041; W Components!A42:E42; D05 T015R06 |
+| SS-C042 | SS | Package Import/Export | Portable JSON/shared contract bundle with code, manifest, tests, metadata. | specified | C2 | 05 | LEGACY-C042; W Components!A43:E43; D05 T015R07 |
+| SS-C043 | SS | Trigger Manager | Manual, URL-match, event, or workflow-node invocation. | specified | C2 | 05 | LEGACY-C043; W Components!A44:E44; D05 T015R08 |
+| SS-C044 | SS | Test Harness | Fixture inputs, mocked capabilities, expected output/side-effect assertions. | specified | C4 | 05 | LEGACY-C044; W Components!A45:E45; D05 T015R09 |
+| SS-C045 | SS | Promotion Workflow | Scratch → personal script → micro-extension → plugin/workflow component. | specified | C4 | 05 | LEGACY-C045; W Components!A46:E46; D05 T015R10 |
+| SS-C046 | SS | Diagnostics | Console output, permission violations, execution timing, provenance link. | specified | C2 | 05 | LEGACY-C046; W Components!A47:E47; D05 T015R11 |
+| XT-C047 | XT | Target Resolver | Resolves one or more Handles to a current target. | existing-narrow | C3 | 04 | LEGACY-C047; W Components!A48:E48; D06 T015R02 |
+| XT-C048 | XT | Anchor Bundle | Canonical URL, selected text, nearby text, DOM/path hints, attributes/fingerprints as available. | specified | C3 | 04 | LEGACY-C048; W Components!A49:E49; D06 T015R03 |
+| XT-C049 | XT | Annotation Object | Body, author, target handles, tags, visibility, timestamps, provenance. | existing-narrow | C3 | 04 | LEGACY-C049; W Components!A50:E50; D06 T015R04 |
+| XT-C050 | XT | Context Relationship | Related-to, corrects, warns-about, alternative-to, references, supersedes. | specified | C3 | 04 | LEGACY-C050; W Components!A51:E51; D06 T015R05 |
+| XT-C051 | XT | Overlay Renderer | Shows contextual markers/threads in the browser host/page UI. | existing-narrow | C3 | 04 | LEGACY-C051; W Components!A52:E52; D06 T015R06 |
+| XT-C052 | XT | Capture UI | Create annotation from URL, selection, object, place/time later. | existing-narrow | C3 | 04 | LEGACY-C052; W Components!A53:E53; D06 T015R07 |
+| XT-C053 | XT | Visibility/Sharing | Local visibility intention; shared/group/public enforcement blocked by deferred identity/authorization | blocked-dependency | C3 | 04 | LEGACY-C053; W Components!A54:E54; D06 T015R08 |
+| XT-C054 | XT | Conversation Layer | Local target/annotation threads; remote participants and groups blocked by deferred services | existing-narrow | C3 | 04 | LEGACY-C054; W Components!A55:E55; D06 T015R09 |
+| XT-C055 | XT | Alternative Content | Replacement/alternate representation linked to target. | specified | C3 | 04 | LEGACY-C055; W Components!A56:E56; D06 T015R10 |
+| XT-C056 | XT | Feed/Query API | Retrieve context by handle/object/relation/visibility. | existing-narrow | C3 | 04 | LEGACY-C056; W Components!A57:E57; D06 T015R11 |
+| DRY-C057 | DRY | Observation Consent | Per-site/per-surface authorization and clear pause/disable controls. | specified | C2 | 06 | LEGACY-C057; W Components!A58:E58; D07 T015R02 |
+| DRY-C058 | DRY | Input Observer | Captures normalized repeated text/input patterns without indiscriminate collection. | specified | C2 | 06 | LEGACY-C058; W Components!A59:E59; D07 T015R03 |
+| DRY-C059 | DRY | Action Observer | Captures user-authorized browser events as typed capability invocations. | specified | C4 | 06 | LEGACY-C059; W Components!A60:E60; D07 T015R04 |
+| DRY-C060 | DRY | Pattern Detector | Clusters repeated sequences and estimates stable/variable portions. | specified | C2 | 06 | LEGACY-C060; W Components!A61:E61; D07 T015R05 |
+| DRY-C061 | DRY | Template Extractor | Converts repeated text into static or parameterized templates. | specified | C2 | 06 | LEGACY-C061; W Components!A62:E62; D07 T015R06 |
+| DRY-C062 | DRY | Routine Extractor | Converts repeated action sequences into workflow candidates. | specified | C4 | 06 | LEGACY-C062; W Components!A63:E63; D07 T015R07 |
+| DRY-C063 | DRY | Procedure Extractor | Adds inputs, outputs, state, conditions, checkpoints, and stop criteria. | specified | C4 | 06 | LEGACY-C063; W Components!A64:E64; D07 T015R08 |
+| DRY-C064 | DRY | Suggestion UI | Explains observed pattern and asks user to save/parameterize/edit. | specified | C2 | 06 | LEGACY-C064; W Components!A65:E65; D07 T015R09 |
+| DRY-C065 | DRY | Variable/Default Manager | Fields, defaults, selections, dynamic values, prior-output bindings. | specified | C2 | 06 | LEGACY-C065; W Components!A66:E66; D07 T015R10 |
+| DRY-C066 | DRY | Promotion Bridge | Open reviewed routine/template in Script Studio or local routine inspector without activating it | specified | C4 | 06 | LEGACY-C066; W Components!A67:E67; D07 T015R11 |
+| EXT-C067 | EXT | Connector Descriptor | Target service/site, versions, supported capability operations, authentication modes. | specified | C3 | 08 | LEGACY-C067; W Components!A68:E68; D08 T015R02 |
+| EXT-C068 | EXT | Source Adapter | External representation → canonical shape. | existing-narrow | C3 | 08 | LEGACY-C068; W Components!A69:E69; D08 T015R03 |
+| EXT-C069 | EXT | Target Adapter | Canonical shape → external representation. | existing-narrow | C3 | 08 | LEGACY-C069; W Components!A70:E70; D08 T015R04 |
+| PUB-C070 | PUB | Canonical Shape Library | Publication, ForumPost, SocialPost, Listing, media/link abstractions. | specified | C3 | 07 | LEGACY-C070; W Components!A71:E71; D08 T015R05 |
+| PUB-C071 | PUB | Field Mapping | Correspondence/defaults/normalization rules. | specified | C3 | 07 | LEGACY-C071; W Components!A72:E72; D08 T015R06 |
+| PUB-C072 | PUB | Fidelity Report | Preserves/approximates/drops/needs-user-input. | specified | C3 | 07 | LEGACY-C072; W Components!A73:E73; D08 T015R07 |
+| PUB-C073 | PUB | Account Binding | Destination configuration referencing a Credential Reference and defaults. | specified | C3 | 07 | LEGACY-C073; W Components!A74:E74; D08 T015R08 |
+| PUB-C074 | PUB | Publisher Composer | One compose surface for conceptual Publication. | specified | C3 | 07 | LEGACY-C074; W Components!A75:E75; D08 T015R09 |
+| PUB-C075 | PUB | Destination Selector | Select configured targets/accounts and per-target overrides if needed. | specified | C3 | 07 | LEGACY-C075; W Components!A76:E76; D08 T015R10 |
+| PUB-C076 | PUB | Preview/Validation | Target-shaped preview, missing-required-field prompt, fidelity warnings. | specified | C3 | 07 | LEGACY-C076; W Components!A77:E77; D08 T015R11 |
+| PUB-C077 | PUB | Publish Workflow | Transform → validate → execute → capture external handle → provenance. | specified | C3 | 07 | LEGACY-C077; W Components!A78:E78; D08 T015R12 |
+| PUB-C078 | PUB | Replica Set Manager | Associates returned handles with one conceptual Publication. | specified | C3 | 07 | LEGACY-C078; W Components!A79:E79; D08 T015R13 |
+| UI-C103 | UI | Web Library | Objects, annotations, scripts/packages, helpers, procedures, replica sets. | existing-narrow | C5 | 09 | LEGACY-C103; W Components!A104:E104; D11 T015R02 |
+| UI-C104 | UI | Workflow/Execution View | Run status, steps, inputs, provenance, pause/resume/cancel. | specified | C5 | 09 | LEGACY-C104; W Components!A105:E105; D11 T015R03 |
+| UI-C105 | UI | Package Manager | Import/export/install/update/remove packages. | specified | C5 | 09 | LEGACY-C105; W Components!A106:E106; D11 T015R04 |
+| UI-C106 | UI | Account/Permission Center | Local permissions/session status; centralized account/device administration blocked | specified | C5 | 09 | LEGACY-C106; W Components!A107:E107; D11 T015R05 |
+| UI-C107 | UI | Annotation Feed | Context feed and object-centered views. | existing-narrow | C5 | 09 | LEGACY-C107; W Components!A108:E108; D11 T015R06 |
+| UI-C108 | UI | Publisher Web Surface | Compose canonical Publication and choose configured destinations where supported. | specified | C5 | 09 | LEGACY-C108; W Components!A109:E109; D11 T015R07 |
+| UI-C109 | UI | Responsive Mobile Web | Immediate mobile access before native app. | existing-narrow | C5 | 09 | LEGACY-C109; W Components!A110:E110; D11 T015R08 |
+| UI-C110 | UI | Native Mobile Shell | Later local share ingestion and explicit location/time capture; sync/remote notifications blocked | specified | C5 | 09 | LEGACY-C110; W Components!A111:E111; D11 T015R09 |
+| DOC-C01 | DOC | Glossary | Selected semantic vocabulary and authority | specified | C1 | 12 | D12; USER |
+| DOC-C02 | DOC | Relational registry | Versioned engineering index updated with each change | specified | C1 | 12 | W; USER |
+
+## Contracts
+
+| ID | Record type | Owner | Meaning | Schema key | Stage | Spec | Source |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| CT01 | Plugin.Manifest | PS | Package identity, operations, permissions and file hashes | plugin-manifest | C1 | 02 | D05; USER |
+| CT02 | Plugin.Installation | PS | Desired/effective local package lifecycle | installation | C1 | 02 | DEC-03 |
+| CT03 | Host.Grant | PS | Nonportable local revision/site authority | grant | C1 | 02 | C16; DEC-04 |
+| CT04 | Host.Invocation | PS | Pinned bounded operation request | invocation | C1 | 03 | D05/D08 |
+| CT05 | Host.Receipt | PS | Truthful effect outcome and evidence | receipt | C1 | 03 | D05/D08 |
+| CT06 | Host.Event | PS | Versioned local notification | event | C1 | 03 | D05/D07 |
+| CT07 | Core.Object | PS | Conceptual identity and handle references | object | C3 | 03 | D12 |
+| CT08 | Core.Handle | PS | Locator with type and evidence | handle | C3 | 03 | D12 |
+| CT09 | Browser.Context | PS | Pinned authorized browser context | browser-context | C1 | 03 | D06; current C08 |
+| CT10 | Context.AnchorBundle | XT | Passage locator evidence | anchor-bundle | C3 | 04 | D06 C048 |
+| CT11 | Context.AnnotationExtension | XT | Sidecar for unchanged v2 annotation | annotation-extension | C3 | 04 | DEC-05; D06 |
+| CT12 | Context.Relationship | XT | Typed contextual relation | relationship | C3 | 04 | D06 C050 |
+| CT13 | Context.Conversation | XT | Local target-linked thread | conversation | C3 | 04 | D06 C054 |
+| CT14 | Context.Message | XT | Local conversation message | message | C3 | 04 | D06 C054 |
+| CT15 | Script.Definition | SS | Stable personal script identity | script-definition | C2 | 05 | D05 C041 |
+| CT16 | Script.Revision | SS | Immutable source and execution metadata | script-revision | C2 | 05 | D05 C039/C041 |
+| CT17 | Procedure.TextTemplate | DRY | Literal text and declared variables | text-template | C2 | 06 | D07; D12 |
+| CT18 | Procedure.PatternHypothesis | DRY | Explained repeated behavior candidate | pattern | C2 | 06 | D07 C060 |
+| CT19 | Procedure.Routine | DRY | Finite reviewed method and conditions | routine | C4 | 06 | D07 C062/C063 |
+| CT20 | Procedure.Run | DRY | Local method execution/checkpoint state | routine-run | C4 | 06 | D07; DEC-06 |
+| CT21 | Publish.Publication | PUB | Canonical authored content/revision | publication | C3 | 07 | D08; D12 |
+| CT22 | Publish.Destination | PUB | Configured platform/account target | destination | C3 | 07 | D08 C073/C075 |
+| CT23 | Publish.Plan | PUB | Frozen preview intent and confirmation digest | publish-plan | C3 | 07 | D08 C076/C077 |
+| CT24 | Publish.Representation | PUB | One external result and provenance | representation | C3 | 07 | D08; D12 |
+| CT25 | Publish.ReplicaSet | PUB | One object with external representations | replica-set | C3 | 07 | D08 C078; W D11 |
+| CT26 | Evidence.FidelityReport | PUB | Preserve/approximate/drop/require | fidelity | C3 | 07 | D08; D12 |
+| CT27 | Evidence.ProvenanceRecord | PS | Causal component/version evidence | provenance | C1 | 03 | D12 |
+| CT28 | Trust.CredentialReference | PUB | Opaque local authorized session reference | credential-reference | C3 | 08 | D12; USER D10 deferral |
+| CT29 | Connector.Descriptor | EXT | Platform operations/locality/conformance | connector-descriptor | C3 | 08 | D08 C067 |
+
+## Operations
+
+| ID | Operation | Major | Provider | Input | Output | Permission | Effect | Stage | Spec |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| OP01 | host.describe | 1 | PS | Host query | Availability manifest | none | read | C1 | 01 |
+| OP02 | package.list | 1 | PS | Local catalog filter | Package summaries | none | read | C1 | 02 |
+| OP03 | operation.list | 1 | PS | Host/locality filter | Operation declarations and availability | none | read | C1 | 03 |
+| OP04 | operation.cancel | 1 | PS | Owned active request | Cancellation acknowledgement and effect state | PM03 | local-write | C1 | 03 |
+| OP05 | receipt.read | 1 | PS | Owned receipt reference | Authorized Host.Receipt | PM03 | read | C1 | 03 |
+| OP06 | event.subscribe | 1 | PS | Authorized subject/type + after sequence | Event page or retention-gap result | PM03 | read | C1 | 03 |
+| OP07 | package.export | 1 | PS | Selected package/revision | Inert source/package bundle | PM15 | read | C1 | 02 |
+| OP08 | package.inspect | 1 | PS | Package ID | Manifest + installation | none | read | C1 | 02 |
+| OP09 | package.install | 1 | PS | Manifest + file set | Installation + receipt | PM01 | local-write | C1 | 02 |
+| OP10 | package.enable | 1 | PS | Package revision + reviewed grants | Installation | PM01 | local-write | C1 | 02 |
+| OP11 | package.disable | 1 | PS | Package ID | Installation + receipt | PM01 | local-write | C1 | 02 |
+| OP12 | package.update | 1 | PS | Staged revision | Review result + installation | PM01 | local-write | C1 | 02 |
+| OP13 | package.remove | 1 | PS | Package ID + retention choice | Receipt | PM01 | local-write | C1 | 02 |
+| OP14 | context.capture | 1 | PS | Pinned browser context request | Browser.Context | PM02 | read | C1 | 03 |
+| OP15 | storage.get | 1 | PS | Owned namespace/key | Typed local value | PM03 | read | C1 | 10 |
+| OP16 | storage.put | 1 | PS | Owned namespace/value | Local commit receipt | PM03 | local-write | C1 | 10 |
+| OP17 | xtratype.readContext | 1 | XT | Target/Object + local scope | Context page | PM07 | read | C3 | 04 |
+| OP18 | xtratype.proposeDraft | 1 | XT | Typed draft + context ref | Draft reference | PM08 | local-write | C4 | 04 |
+| OP19 | xtratype.attachExtension | 1 | XT | AnnotationExtension | Local commit receipt | PM09 | local-write | C3 | 04 |
+| OP20 | xtratype.relate | 1 | XT | Context.Relationship | Local commit receipt | PM09 | local-write | C3 | 04 |
+| OP21 | script.importDraft | 1 | SS | Source/template + provenance | Disabled Script.Definition | PM03 | local-write | C2 | 05 |
+| OP22 | script.execute | 1 | SS | Pinned revision + approved context/input | Host.Receipt | PM04 | page-write | C2 | 05 |
+| OP23 | script.test | 1 | SS | Revision + controlled fixtures | Fixture results | PM03 | local-write | C2 | 05 |
+| OP24 | dry.observe | 1 | DRY | Eligible committed input/action | Local observation/pattern result | PM05 | local-write | C2 | 06 |
+| OP25 | dry.saveTemplate | 1 | DRY | Reviewed template/defaults | TextTemplate | PM03 | local-write | C2 | 06 |
+| OP26 | dry.insert | 1 | DRY | Resolved text + unchanged target | Insertion receipt | PM06 | page-write | C2 | 06 |
+| OP27 | dry.run | 1 | DRY | Reviewed Routine + explicit values | Procedure.Run | PM13 | page-write | C4 | 06 |
+| OP28 | dry.promote | 1 | DRY | Reviewed helper/routine | Script Studio draft reference | PM03 | local-write | C4 | 06 |
+| OP29 | publish.compose | 1 | PUB | Selected text/media | Publication draft | PM10 | local-write | C3 | 07 |
+| OP30 | publish.preview | 1 | PUB | Publication revision + destinations | Publish.Plan + fidelity | PM10 | local-write | C3 | 07 |
+| OP31 | publish.confirm | 1 | PUB | Plan digest + explicit user gesture | Local confirmation receipt | PM11 | local-write | C3 | 07 |
+| OP32 | publish.execute | 1 | PUB | Confirmed plan reference | Per-target results + ReplicaSet | PM11 | external-write | C3 | 07 |
+| OP33 | publish.retry | 1 | PUB | Reconciled safe target subset | Per-target results | PM11 | external-write | C3 | 07 |
+| OP34 | publish.cancel | 1 | PUB | Local publish intent | Cancellation receipt | PM11 | local-write | C3 | 07 |
+| OP35 | connector.preview | 1 | EXT | Publication + destination snapshot | Target payload + fidelity | PM10 | read | C3 | 08 |
+| OP36 | connector.resolveAccount | 1 | EXT | Authorized pinned local context | Nonsecret account evidence | PM12 | read | C3 | 08 |
+| OP37 | connector.create | 1 | EXT | Confirmed immutable target intent | Handle/result/unknown outcome | PM11 | external-write | C3 | 08 |
+| OP38 | connector.inspectResult | 1 | EXT | Intent/handle + local authority | Reconciliation evidence | PM12 | read | C3 | 08 |
+| OP39 | data.export | 1 | PS | Explicit record selection | Inert hashed bundle | PM15 | read | C1 | 10 |
+| OP40 | data.import | 1 | PS | Bounded inert bundle | Staging/conflicts/commit receipt | PM01 | local-write | C1 | 10 |
+
+## Permissions
+
+| ID | Permission | Owner | Scope | Boundary | Stage |
+| --- | --- | --- | --- | --- | --- |
+| PM01 | package.manage | PS | Trusted management UI only | Install/update/remove selected package | C1 |
+| PM02 | context.read | PS | Origin + document + allowed fields | No full page/field buffer by default | C1 |
+| PM03 | plugin.storage | PS | Package namespace + revision | No other plugin or XtraType repository access | C1 |
+| PM04 | page.script | SS | Revision + explicit site patterns | Shared DOM exposure; no privileged bridge initially | C2 |
+| PM05 | input.observe | DRY | Site + field category + consent | Sensitive exclusions, TTL and pause | C2 |
+| PM06 | input.insert | DRY | Current gesture + unchanged target | No implicit submit/send | C2 |
+| PM07 | xtratype.read | XT | Selected local context resource | No implicit full corpus export | C3 |
+| PM08 | xtratype.draft | XT | User-reviewed draft | Does not authorize commit/publish | C4 |
+| PM09 | xtratype.extend | XT | Owned annotation/Object references | Sidecar validation; no v2 envelope overwrite | C3 |
+| PM10 | publish.compose | PUB | Local draft | No external write | C3 |
+| PM11 | publish.execute | PUB | Confirmed plan digest + exact destinations | Fresh account/context; no uncertain replay | C3 |
+| PM12 | connector.inspect | EXT | Selected authorized destination | No account-wide scraping | C3 |
+| PM13 | routine.run | DRY | Reviewed method + current step grants | 25 steps / 120 seconds initial profile | C4 |
+| PM14 | script.bridge | SS | Trusted script/revision identity + operation | Unavailable until identity/isolation acceptance | C4 |
+| PM15 | data.export | PS | Explicit selected records/binaries | No grants, secrets or observation buffers | C1 |
+
+## Interactions
+
+| ID | From | To | Shared seam | Operations | Boundary | Spec |
+| --- | --- | --- | --- | --- | --- | --- |
+| IX01 | XT | PS | Current context and reviewed drafts | context.capture / xtratype.proposeDraft | Document generation; user review | 01/04 |
+| IX02 | SS | PS | Package install and effective registrations | package.* / script.execute | Revision and site grants | 02/05 |
+| IX03 | DRY | PS | Consented observation/insertion | dry.observe / dry.insert | Site/field consent; no implicit submit | 06 |
+| IX04 | DRY | SS | Helper/routine promotion | dry.promote / script.importDraft | Draft only; no grant transfer | 05/06 |
+| IX05 | DRY | XT | Composer assistance | dry.insert | Eligible field and current gesture | 04/06 |
+| IX06 | DRY | PUB | Selected text/presets | publish.compose | Draft creation is not posting authority | 06/07 |
+| IX07 | PUB | EXT | Transform, preview and publish | connector.* | Pinned account/plan; fidelity; evidence | 07/08 |
+| IX08 | PUB | XT | Context on object or representation | xtratype.relate / xtratype.proposeDraft | Explicit target scope and selected content | 04/07 |
+| IX09 | SS | XT | Later typed draft proposal | xtratype.proposeDraft | Trusted script identity prerequisite | 04/05 |
+| IX10 | SS | EXT | Promote tested adapter code | Package staging | Privileged code requires host release catalog | 02/05/08 |
+| IX11 | UI | PS | Local management and inert import/export | host.describe / package.* / data.* | Host-local availability; no remote channel | 09/10 |
+| IX12 | UI | PUB | Local compose/preview/status | publish.compose / publish.preview | Execution only where supported locally | 07/09 |
+| IX13 | UI | XT | Context rendering/local drafts | xtratype.readContext | No new private remote feed | 04/09 |
+| IX14 | UI | DRY | Local template management | dry.saveTemplate | No system-wide mobile observation | 06/09 |
+| IX15 | UI | SS | Inspect source and inactive packages | package.inspect / script.importDraft | Imported source stays disabled | 05/09 |
+| IX16 | DOC | PS | Versioned inventory and implementation evidence | Registry release | Planning state never runtime authority | 12 |
+
+## Surfaces
+
+| ID | Owner | Surface | Host | Behavior | Stage | Spec |
+| --- | --- | --- | --- | --- | --- | --- |
+| SF01 | XT | XtraType side panel | Chrome extension | Primary annotation composer and context | C0 | 04 |
+| SF02 | PS | Plugin manager | Extension-owned UI | Install/permissions/effective state | C1 | 02 |
+| SF03 | SS | Script editor/library | Extension-owned UI | Source/revisions/fixtures/registration | C2 | 05 |
+| SF04 | DRY | Input assistance | Authorized browser fields | Suggestions, variables, insertion and pause | C2 | 06 |
+| SF05 | PUB | Publisher composer/results | Extension-owned UI | Destination previews and per-target outcomes | C3 | 07 |
+| SF06 | EXT | Destination configuration | Host contribution slot | Platform fields and account status | C3 | 08 |
+| SF07 | XT | Anchored context overlay | Authorized page | Local resolved/ambiguous context | C3 | 04 |
+| SF08 | UI | Web local library | Ordinary web origin | Inert packages/helpers/drafts and available local operations | C5 | 09 |
+| SF09 | UI | Responsive mobile web | Mobile browser | Same local contracts; no extension privilege | C5 | 09 |
+| SF10 | UI | Native local share/capture | Selected future native host | Explicit shared content/location/time draft | C5 | 09 |
+| SF11 | PS | Activity/permissions | Host-local management | Receipts, errors, grants and local sessions | C1 | 03/09 |
+| SF12 | XT | Existing PHP companion | Legacy web deployment | Existing Post/All/Nearby/schemas only | C0 | 09/10 |
+
+## Stages
+
+| ID | Stage | Scope | Exit gate |
+| --- | --- | --- | --- |
+| C0 | Baseline protection | Existing XtraType safety/integrity prerequisites | C15 relevant stabilization gates |
+| C1 | Host/package boundary | Install, grants, local stores, receipts | Package/isolation/host-unavailable tests |
+| C2 | Local assistance | Userscripts and consented text helpers | Site/IME/insertion/registration tests |
+| C3 | Context and publishing | Anchors, local relations, qualified connectors | Ambiguity + partial/unknown outcome recovery |
+| C4 | Advanced selected behavior | Typed bridges, finite routines, promotion | Identity/isolation/bounds tests |
+| C5 | Additional local clients | Web/native local management/share | Inert import and truthful locality |
+| D | Service deferral | No new backend/identity/sync implementation | Requires a new owner-approved service specification |
+
+## Acceptance
+
+| ID | Owner | Case | Expected result | Stage | Spec | Evidence status |
+| --- | --- | --- | --- | --- | --- | --- |
+| AT001 | PS | Tampered/oversize/traversal package | Reject without installation or extraction effects | C1 | 02 | Not run |
+| AT002 | PS | Missing dependency/cycle/host version | Block only dependent package; retain inspectable source | C1 | 02 | Not run |
+| AT003 | PS | Imported enabled/grant claims | Install disabled; reject imported authority | C1 | 02 | Not run |
+| AT004 | PS | Revision/site authority expansion | Require review; old grants do not transfer | C1 | 02 | Not run |
+| AT005 | PS | Plugin namespace impersonation | Deny foreign storage/operation identity | C1 | 02 | Not run |
+| AT006 | PS | Disable during active effect | Stop future dispatch; preserve truthful effect outcome | C1 | 01 | Not run |
+| AT007 | PS | Host startup/update interruption | Reconcile actual state before ready | C1 | 01 | Not run |
+| AT008 | XT | Host unavailable | Existing annotation read/composer remains available | C1 | 01 | Not run |
+| AT009 | SS | Valid/invalid userscript metadata | Supported profile installs; unsupported directives explained | C2 | 05 | Not run |
+| AT010 | SS | Site grant/revoked toggle | No unauthorized injection; truthful registration error | C2 | 05 | Not run |
+| AT011 | SS | Update/restart registration | Desired and actual state reconciled | C2 | 05 | Not run |
+| AT012 | SS | Source hash change/rollback | Fresh revision review; no inherited authority | C2 | 05 | Not run |
+| AT013 | SS | Fixture requests external effect | Mock or deny; no live mutation | C2 | 05 | Not run |
+| AT014 | SS | Cross-script identity spoof | No privileged call attributed from claimed ID alone | C4 | 05 | Not run |
+| AT015 | SS | Promotion into privileged plugin | Requires tested catalog implementation; no eval shortcut | C4 | 05 | Not run |
+| AT016 | DRY | Consent off/pause/exclusion | No new observation; explicit evidence deletion honored | C2 | 06 | Not run |
+| AT017 | DRY | Password/payment/OTP field | Excluded from capture and pattern input | C2 | 06 | Not run |
+| AT018 | DRY | IME/Unicode/multiline/cursor | Composition untouched and preview/insertion accurate | C2 | 06 | Not run |
+| AT019 | DRY | Stale focus/value/document | Insertion blocked with preserved draft | C2 | 06 | Not run |
+| AT020 | DRY | Repeated event debounce/threshold | Distinct committed uses counted once; threshold exact | C2 | 06 | Not run |
+| AT021 | DRY | TTL/quota/dismissal | Evict/suppress predictably with no invisible retention | C2 | 06 | Not run |
+| AT022 | DRY | Template variables/escaped braces | Unknown/missing fields block; HTML remains text | C2 | 06 | Not run |
+| AT023 | DRY | Helper insertion | No form submit, Send click or publish | C2 | 06 | Not run |
+| AT024 | DRY | Finite routine bounds/restart | Stop or pause; no unsafe replay after unknown effect | C4 | 06 | Not run |
+| AT025 | XT | Legacy record families/keys/media | Readability and current envelope preserved | C0 | 04 | Not run |
+| AT026 | XT | Duplicate/moved/deleted text | Resolve uniquely or show ambiguity/missing | C3 | 04 | Not run |
+| AT027 | XT | SPA/owned DOM mutation | No feedback loop; stale async result discarded | C3 | 04 | Not run |
+| AT028 | XT | Sidecar write fails after note commit | Note survives; extension pending/recoverable | C3 | 04 | Not run |
+| AT029 | XT | Supersession cycle/missing parent | Reject cycle; orphan context visible | C3 | 04 | Not run |
+| AT030 | XT | Shared-mode request | Blocked until authority services exist | C3 | 04 | Not run |
+| AT031 | PUB | Required field/fidelity/media loss | Preview blocks or requires explicit acknowledgement | C3 | 07 | Not run |
+| AT032 | PUB | Changed content/account/revision after preview | Invalidate plan confirmation | C3 | 07 | Not run |
+| AT033 | PUB | Two real targets and two stubs | Live evidence separate; stubs clearly labeled | C3 | 07 | Not run |
+| AT034 | PUB | Partial success/cancel | Retain successes; stop pending only | C3 | 07 | Not run |
+| AT035 | PUB | Lost response/unknown outcome | Require reconciliation; no blind retry | C3 | 07 | Not run |
+| AT036 | PUB | Retry failed subset | Never duplicate successful destinations | C3 | 07 | Not run |
+| AT037 | PUB | Object versus replica annotation | Explicit scope; no unwanted external post edit | C3 | 07 | Not run |
+| AT038 | EXT | Wrong/expired account | AUTH_REQUIRED before effect | C3 | 08 | Not run |
+| AT039 | EXT | Selector drift/ambiguous confirmation | Blocked or unknown, never fabricated success | C3 | 08 | Not run |
+| AT040 | EXT | Unsupported update/delete/locality | Operation absent/unavailable; no no-op success | C3 | 08 | Not run |
+| AT041 | EXT | Secrets/logs/exports | No cookies/tokens/secret payload leakage | C3 | 08 | Not run |
+| AT042 | EXT | Platform rate limit | Respect provider response; bounded safe retry only | C3 | 08 | Not run |
+| AT043 | UI | Unsupported host and imported script | Metadata usable; execution unavailable/disabled | C5 | 09 | Not run |
+| AT044 | UI | Mobile narrow layout/keyboard | Readable controls, focus and announcements | C5 | 09 | Not run |
+| AT045 | UI | Draft handoff across local hosts | Fresh destinations/grants/confirmation required | C5 | 09 | Not run |
+| AT046 | UI | Legacy feed versus local-only records | No automatic upload or false remote privacy | C5 | 09 | Not run |
+| AT047 | PS | Backup/restore binary/hash/ref integrity | Restore complete selected records; conflicts explicit | C1 | 10 | Not run |
+| AT048 | PS | Quota before/after external effect | Block before or enter explicit recovery after | C1 | 10 | Not run |
+| AT049 | PS | Event retention gap | Consumer refreshes owning records | C1 | 03 | Not run |
+| AT050 | PS | Plugin removal/reference retention | No unrelated note or external post deletion | C1 | 10 | Not run |
+| AT051 | DOC | Registry foreign IDs and schema examples | All selected refs valid; status evidence truthful | C1 | 12 | Not run |
+| AT052 | DOC | Excluded/deferred dependency regression | No active omitted module/service dependency | C1 | 12 | Not run |
+
+## Decisions
+
+| ID | Authority | Decision | Consequence | Spec |
+| --- | --- | --- | --- | --- |
+| DEC-01 | USER | PortaShape is the wraparound plugin service | Supersedes target interpretation of old ADR-002 | 01 |
+| DEC-02 | DESIGN | Embed first host in existing extension distribution | No assumed daemon/remote service; replaceable deployment ADR | 01 |
+| DEC-03 | DESIGN | Privileged module/connector code in host release catalog | Users install package state; no arbitrary worker code import | 02 |
+| DEC-04 | INHERITED | Imports never transfer execution grants | Device-local authority and review | 02 |
+| DEC-05 | DESIGN | Preserve annotation v2; add linked extension records | No silent incompatible envelope or database rename | 04 |
+| DEC-06 | DESIGN | Module-owned finite routines and publish sequences | No omitted general runtime dependency | 01/06/07 |
+| DEC-07 | USER | Script Studio and Stay D.R.Y. are plugins | Their source definitions retained within selected scope | 05/06 |
+| DEC-08 | USER | Publisher is core; external platforms are plugins | No generic single mandatory platform implementation | 07/08 |
+| DEC-09 | USER | Backend/API/identity/sync deferred | Local editions; blocked sharing/remote execution/continuity | 10 |
+| DEC-10 | DESIGN | DRY three uses / 14 days; bounded evidence | Defaults exposed and versioned; not historical claims | 06 |
+| DEC-11 | DESIGN | Confirm immutable plan; uncertain effects never blindly retried | Per-target operation identity and reconciliation | 07 |
+| DEC-12 | DESIGN | Chrome 138+ userscript release floor; initial no bridge | Retains C16 proposal and verifies platform requirements | 05 |
+| DEC-13 | DESIGN | Publish.Publication is canonical selected name | Resolves POSH.Publication wording inconsistency | 03/07 |
+| DEC-14 | DESIGN | New portashape-local DB; old DB untouched | No cross-database atomicity claim | 10 |
+| DEC-15 | USER | Web/mobile and shared glossary/registry included | No new third-party API program under deferred services | 09/12 |
+| DEC-16 | DESIGN | Specific selected seams replace all-to-all graph | Omitted projects absent from active dependencies | 01/12 |
+| DEC-17 | DESIGN | Registry JSON + specs are authoring source; workbook is review surface | Reconcile workbook edits in same change | 12 |
+| DEC-18 | INHERITED | Two qualified live connector targets plus two labeled stubs | Source goal retained; actual platform feasibility unasserted | 07/08 |
+
+## Traceability
+
+| ID | Source | Selected content | Disposition | Spec | Reason |
+| --- | --- | --- | --- | --- | --- |
+| TR01 | D00 | Shared authority/index | Retained with owner precedence | 00 | USER topology overrides source umbrella |
+| TR02 | D05 C037-C046 | Script Studio components | All ten retained; staged bridge/promotion | 05 | Replace omitted-project dependencies with selected host facade |
+| TR03 | D06 C047-C056 | XtraType context components | All ten retained; local/blocked modes explicit | 04 | Preserve v2; companion sidecars; shared modes blocked |
+| TR04 | D07 C057-C066 | Stay D.R.Y. components | All ten retained; text assistance first | 06 | Host mediates; finite local routine profile |
+| TR05 | D08 C067-C078 | Publisher/connector components | All twelve retained with core/plugin split | 07/08 | Direct declared transforms; no generic omitted engine |
+| TR06 | D10 | Backend/API/identity/sync | Deferred only | 10 | No component/service implementation imported |
+| TR07 | D11 C103-C110 | Web/mobile components | Eight retained with locality/dependency gates | 09 | No remote execution or invented service availability |
+| TR08 | D11 C111 | Third-party API client boundary | Not active; tied to deferred service plane | 09/10 | No new external API developer program |
+| TR09 | D12 | Glossary/shared shapes/capability meanings | Selected vocabulary only | 03/12 | No chat or omitted-project contract family imported |
+| TR10 | W | Component/contract/interaction inventory | Filtered and re-owned registry | 12 | All-to-all topology removed; source IDs retained |
+| TR11 | Current canon C01/C16 | PortaShape boundary/userscript scope | Selective target overrides only | 00/05 | Current-state evidence unchanged |
+| TR12 | Current canon C04/C10/C15 | Records/storage/stabilization | Preserved foundation/prerequisites | 04/10/11 | No renamed DB or false atomicity |
+| TR13 | D08 first MVP | Named example targets | Candidate shapes, not support promises | 07/08 | Feasibility evidence required for actual selection |
+| TR14 | D05/D07 roadmap | Shared libraries/remote stubs/team routines | Local portions staged; service-dependent portions blocked | 05/06/10 | No backend or omitted intelligence modules inferred |
+| TR15 | D08 roadmap | Scheduling/two-way sync/catalog | Retained direction within selected concern | 07 | Reliable remote/deferred-service execution blocked |
+| TR16 | D11 roadmap | Native/locality/parity | Local shell later; sync/remote notifications blocked | 09 | Resolve conflicting old native stage labels explicitly |
+

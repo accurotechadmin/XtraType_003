@@ -1,0 +1,1429 @@
+{
+  "schema": "xtratype.v002.predecessor-baseline-manifest@1",
+  "predecessorName": "XtraType v.001 final canonical instantiation",
+  "sourceArchive": "XtraType-v001-Canonical-Instantiation-2026-10-01-FINAL.zip",
+  "sourceArchiveSha256": "75261694495ca5acba90017c76c8408e7f4d4dd4afbaade950ec69030e830359",
+  "fileCount": 282,
+  "exactOriginalPathsModifiedInV002": [
+    "README.md",
+    "EXPERT_SESSION_BOOT_PROMPT.md"
+  ],
+  "preservation": {
+    "README.md": "reference/canon/v001-final/README_FINAL_BEFORE_V002_2026-10-01.md",
+    "EXPERT_SESSION_BOOT_PROMPT.md": "reference/ssot/boot-prompts/retired/SEED1_EXPERT_SESSION_BOOT_PROMPT.md",
+    "V001_EXPERT_SESSION_BOOT_PROMPT.md": "reference/ssot/boot-prompts/retired/V001_EXPERT_SESSION_BOOT_PROMPT.md"
+  },
+  "note": "All predecessor paths except the two explicitly promoted mutable root documents retain identical bytes in v.002. Their outgoing bytes are preserved at the paths above. Application source is unchanged.",
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha256": "985b3bc668722f4b6b4fc559e0dcf0cbd873acf20f508b883441a06be79f335a",
+      "bytes": 327
+    },
+    {
+      "path": "00_V001_START_HERE.md",
+      "sha256": "9af2b7c5b786c5594e5459f0ce564e953d5f503d6fbbbc9fd7816fee2622da49",
+      "bytes": 4420
+    },
+    {
+      "path": "EXPERT_SESSION_BOOT_PROMPT.md",
+      "sha256": "c7e11616ff8693b3188a828bc485702ef81de9dbf9583ded71e09b67e9b94ede",
+      "bytes": 11581
+    },
+    {
+      "path": "README.md",
+      "sha256": "072118a8c0f11ad8f7351b1a696919bc1e1672e3fda9a92adbdc6c62dfd917c5",
+      "bytes": 26086
+    },
+    {
+      "path": "SEED_MANIFEST.json",
+      "sha256": "686e82c313fa09896ed636de523ea39f53acbbe233002a73448c999df2b8b72e",
+      "bytes": 3014
+    },
+    {
+      "path": "SHA256SUMS.txt",
+      "sha256": "c8048bf1a9a15409e2177e1bb505a8ab79318f60978933c25fdd63290416884d",
+      "bytes": 33101
+    },
+    {
+      "path": "V001_EXPERT_SESSION_BOOT_PROMPT.md",
+      "sha256": "2d1bccd6646b03d64c392969499577f8faafcb90e612f90adcccd9d234b4e739",
+      "bytes": 7592
+    },
+    {
+      "path": "V001_INSTANTIATION_MANIFEST.json",
+      "sha256": "01b565bf74cd078e2040d28e188be30aa1480779ddc9273d7edd245195569a6a",
+      "bytes": 3523
+    },
+    {
+      "path": "V001_SHA256SUMS.txt",
+      "sha256": "1eab7338a677122ae615d157c66089dc773120500a7482df3dc168ae3e4e9214",
+      "bytes": 35627
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "sha256": "649aaf61cb251299e9c64e5021b13d5a7d8ee4c9adf9fc612baf8d5730e0c26d",
+      "bytes": 6906
+    },
+    {
+      "path": "docs/CONCERN_DISPOSITION.md",
+      "sha256": "e0ee8398936587d68f43e1ef0faa4545017900eae73cf0c2f0605e01aa9647e5",
+      "bytes": 11858
+    },
+    {
+      "path": "docs/FEATURE_PARITY.md",
+      "sha256": "2ff38707ffe8d0a533c3bf52eb9197ad57bb1deb2dc21354ad035de5965cd637",
+      "bytes": 6116
+    },
+    {
+      "path": "docs/SCHEMAS.md",
+      "sha256": "22efcad9faf7f1e9c1f75d5536e8733bb97780c5c0bc9f499a87cddbdcab16a8",
+      "bytes": 1757
+    },
+    {
+      "path": "docs/SEED_00_CURRENT_TRUTH_AND_AUTHORITY.md",
+      "sha256": "8a766b9d986b47a9a2df40af7c21300085d5e1e28f9584645d8ff4c18c3123c8",
+      "bytes": 6943
+    },
+    {
+      "path": "docs/SEED_01_REPOSITORY_INDEX.md",
+      "sha256": "077da276c3493cefa7934c3191c110161a168351935a2300ad44d16783693928",
+      "bytes": 6035
+    },
+    {
+      "path": "docs/SEED_02_FILE_INVENTORY.md",
+      "sha256": "edb3fd0774cbff81884e39c763a0cbdf1a4c2f8e2997e21cfb0a28911327238e",
+      "bytes": 44402
+    },
+    {
+      "path": "docs/SEED_03_CURRENT_IMPLEMENTATION_COMPONENTS.md",
+      "sha256": "b4285543975b44595ad60bcfbc4387035c13b343186b6d5c853869b72a9b8077",
+      "bytes": 16271
+    },
+    {
+      "path": "docs/SEED_04_PORTASHAPE_TARGET_ARCHITECTURE.md",
+      "sha256": "5d73dd0cf10e34fd034a92d4cb7a68421c9b19036dfc2a553831b65d390024cb",
+      "bytes": 18200
+    },
+    {
+      "path": "docs/SEED_05_CONTRACT_AND_OPERATION_INDEX.md",
+      "sha256": "ee6714ca8f098f78c3afc1e275d3283f6d00f785a66eb7d43bebe89a98cc071e",
+      "bytes": 18005
+    },
+    {
+      "path": "docs/SEED_06_DATA_WORKFLOWS_AND_SEAMS.md",
+      "sha256": "16fc52837e402516f47796bb6a0e95b37061de8e92baa916ac68588e36043d18",
+      "bytes": 8950
+    },
+    {
+      "path": "docs/SEED_07_VERIFICATION_AND_DEVELOPMENT_STATUS.md",
+      "sha256": "20d22f723a8ae9567c68eeeb8ac56843c929d21da2fec22c19083c662ef417a3",
+      "bytes": 4934
+    },
+    {
+      "path": "docs/SEED_08_CONCERN_STATUS_CROSSWALK.md",
+      "sha256": "942b06215098dc7e1d2aa4a22932cb44214a756e2cb5f9b2820f7e1d51a67034",
+      "bytes": 12419
+    },
+    {
+      "path": "docs/SEED_09_BUILD_FORWARD_SEQUENCE.md",
+      "sha256": "ad4641da611aab011a33ced1dae9762b247eee04245ef2e068416468c7b35b19",
+      "bytes": 4259
+    },
+    {
+      "path": "docs/SOURCE_BASELINE.json",
+      "sha256": "eedf6e62e4f6b300ad67c3589a4cb8c04a584882c5432d5ea8c8d3a389cf1572",
+      "bytes": 12667
+    },
+    {
+      "path": "docs/UPGRADE_AND_RECOVERY.md",
+      "sha256": "1cb195c1533490ce8f2de8c46f7c829a973bef3ccf5af92c5b784614754f1452",
+      "bytes": 2941
+    },
+    {
+      "path": "docs/VERIFICATION.md",
+      "sha256": "b0ffa415d02773a5bf5518eb59b702ef792d21d653107401c84d9e4dc75647e8",
+      "bytes": 5482
+    },
+    {
+      "path": "docs/evidence/static-checks.json",
+      "sha256": "1c8c2afacc903c4dfc0ec3f63b263e2da95825b10b3efd781eac0e393e1298ec",
+      "bytes": 5155
+    },
+    {
+      "path": "docs/evidence/test-results.txt",
+      "sha256": "2aa2c535a6ecb19a6013cdd341b37ed48bb36df6c2d03a92b6d483faa3ed9f08",
+      "bytes": 2997
+    },
+    {
+      "path": "docs/inventory/COMPONENTS.csv",
+      "sha256": "88f6c9d0f26426ce0265a3620a1f72fd858122f603912283613ee42a6733a491",
+      "bytes": 11326
+    },
+    {
+      "path": "docs/inventory/FILES.csv",
+      "sha256": "b3f8940a8f3eff826f569bc1bb28edb9df58826b8ccc5492cbbef278c0699c05",
+      "bytes": 43037
+    },
+    {
+      "path": "docs/v001/00_AUTHORITY_AND_INSTANTIATION.md",
+      "sha256": "0c13f474634ea10930050397e35d7c15c67c4aed052125adc45505ac0ab39a67",
+      "bytes": 6032
+    },
+    {
+      "path": "docs/v001/01_CURRENT_STATUS_2026-10-01T090653-0400.md",
+      "sha256": "f8b2adc88e4d918fc418a181b43884c09f281222d619075886dec5f96a3ac2da",
+      "bytes": 12374
+    },
+    {
+      "path": "docs/v001/02_ARCHITECTURE_WIRING_HARNESS_COMPONENT_MAP.md",
+      "sha256": "28ee7b2e00cb4dcd80697688a9f85305ff1e818e2b606d33710c992269337d82",
+      "bytes": 12262
+    },
+    {
+      "path": "docs/v001/03_PRODUCT_ETHOS_PURPOSE_AND_LONG_HORIZON.md",
+      "sha256": "17c5d0e8c4103c8317592798e80a9ab4613a2892580aa15427eaa6c8d644b970",
+      "bytes": 6752
+    },
+    {
+      "path": "docs/v001/04_CHANGE_CONTROL_VERSIONING_AND_FIDELITY.md",
+      "sha256": "253f44ae6a6b0a0e79d937cbd10a14f509e83dff399b22eaebd0d9a387554866",
+      "bytes": 5333
+    },
+    {
+      "path": "docs/v001/05_ECOSYSTEM_EXTENSIBILITY_AND_COMMUNITY_GUARDRAILS.md",
+      "sha256": "a057a9d26792fd3bbf8e6714a2561332ac4bc19d0d31435c13f7dd8462801f8a",
+      "bytes": 4855
+    },
+    {
+      "path": "docs/v001/06_VERIFICATION_SECURITY_SCALE_AND_RELEASE_GATES.md",
+      "sha256": "ebd6a68fc9f2a08a4a48463fb9908e945c3d9600967cc9817a08b80f8d98c620",
+      "bytes": 4809
+    },
+    {
+      "path": "docs/v001/07_PROVENANCE_AND_HOW_WE_GOT_HERE.md",
+      "sha256": "ad7d4a675d82fb86ef42d692d393beca12fe67d46a354296f1eef82bf2aa80c5",
+      "bytes": 3906
+    },
+    {
+      "path": "docs/v001/08_RESET_RECOVERY_AND_BASELINE_COMPARISON.md",
+      "sha256": "82aa60710ef94c94643ebb99b3a69cfb094c47dc68bd46d2807a3be44f3682be",
+      "bytes": 2815
+    },
+    {
+      "path": "docs/v001/09_SESSION_ENDING_LOG_2026-10-01.md",
+      "sha256": "e7acdfcbeb71c3db7ece4379ae498844b0b0d9e1a1f6027ddd162c7f358be4dc",
+      "bytes": 3849
+    },
+    {
+      "path": "docs/v001/10_FOUNDATIONAL_DECISIONS_AND_OPEN_BOUNDARIES.md",
+      "sha256": "2b796628df0d4896a87d060f970467f019cca0f65bdb8a3c3b9aad93244a6805",
+      "bytes": 4198
+    },
+    {
+      "path": "docs/v001/V001_FILE_AUTHORITY_INDEX.csv",
+      "sha256": "ad49a89647a11ae802b8d1479abbc56f8809222cb3bcd656b4fd493fc3357899",
+      "bytes": 72628
+    },
+    {
+      "path": "docs/v001/V001_LEGACY_BASELINE_MANIFEST.json",
+      "sha256": "fa67998752d28cbdf78f22f49b79032dbbcf404d350a8b8ada93ce6ff2af3dbb",
+      "bytes": 101398
+    },
+    {
+      "path": "docs/v001/V001_LEGACY_SEED_SHA256SUMS.txt",
+      "sha256": "444c86be56e133a7a5ed0720276828f5443eaa327312a38d2676f0b32aaaf50e",
+      "bytes": 33182
+    },
+    {
+      "path": "ext/INSTALL.txt",
+      "sha256": "d53a1a2bc8441ffa2b13ab1d74bde02e3ae726ae4fadfc19e9a558bcaf41c57b",
+      "bytes": 1682
+    },
+    {
+      "path": "ext/content/page-ui.js",
+      "sha256": "e31a5df3b86023ca9b7b146ab63640c81b1852f68fb92c05348fd3e1c09fa696",
+      "bytes": 12305
+    },
+    {
+      "path": "ext/content/youtube.js",
+      "sha256": "d3b57f1c1539ea33d08fec98054d1782bcbad2937932100abadca1c9d87d2003",
+      "bytes": 8956
+    },
+    {
+      "path": "ext/core/anchors.js",
+      "sha256": "c01e83966af495893545461860d136706eeb641a7576e93f1de38d8ab4b5752d",
+      "bytes": 7582
+    },
+    {
+      "path": "ext/core/api.js",
+      "sha256": "40da1bb6b93d79529c852b8e3836a3fff17d46857e0143fc13d51aadbee82884",
+      "bytes": 12229
+    },
+    {
+      "path": "ext/core/capture.js",
+      "sha256": "607b20b03705477c74b61204954d6ef9d878c60e57f20f178abdcff79e8b1295",
+      "bytes": 4472
+    },
+    {
+      "path": "ext/core/db.js",
+      "sha256": "9bbb40b97e8285fd8a7ad584d9bc93555e28539c86b8e58d99c3448abeb7eb93",
+      "bytes": 4340
+    },
+    {
+      "path": "ext/core/records.js",
+      "sha256": "d825389eac0de2c07b3e8fb9096a5b861447d9bb43795989a4bdc8b7af9c0135",
+      "bytes": 4703
+    },
+    {
+      "path": "ext/core/schemas.js",
+      "sha256": "ad26a33f53334d79e54372a9ace947158caab27122bf1468469ecb830178a179",
+      "bytes": 7705
+    },
+    {
+      "path": "ext/manifest.json",
+      "sha256": "902e875629ebce60fffc8d8e654c420ab7596d1ae4d8e907740f26c8bb51bf73",
+      "bytes": 1032
+    },
+    {
+      "path": "ext/service-worker.js",
+      "sha256": "ca3f011c6a892ff6dd832b1c35e863ede5dfcca99d1f833ee76345f2f5c1c399",
+      "bytes": 21035
+    },
+    {
+      "path": "ext/sidepanel/app.js",
+      "sha256": "6d3cea752dd7a80abf962c72085d7b973be763937da534751195dac7cfe2c164",
+      "bytes": 59899
+    },
+    {
+      "path": "ext/sidepanel/index.html",
+      "sha256": "27d7c896d22e8561d81feaa7f44d5e67ce1f436589ff68c0ca54243d27429c0a",
+      "bytes": 16729
+    },
+    {
+      "path": "ext/sidepanel/style.css",
+      "sha256": "bb9cce6148ce72eebf29972db5f6bc97eb167efeb39080fafeccf8970cb39853",
+      "bytes": 14553
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "3685eb2280a0163878c355590d3e0cc4c8e89fcbc4842a6d114ffc27a36e9863",
+      "bytes": 19537
+    },
+    {
+      "path": "package.json",
+      "sha256": "0788e2b63fda8cf3c5a671211a9cfebe6b3d4ba356b5fe794759c7fcaa166c0f",
+      "bytes": 255
+    },
+    {
+      "path": "reference/00_V001_REFERENCE_AUTHORITY.md",
+      "sha256": "739423494069eb1a93d725bf8776141bf12733abf9b478ead55858df314ff46a",
+      "bytes": 1133
+    },
+    {
+      "path": "reference/canon/V001_CANON_HANDOFF_AND_PERPETUAL_LEGACY_STATUS.md",
+      "sha256": "dabe8c2cbd7fb925c8c74ab02b32ef812ea4bd0dc1add3d496f7698901299f5b",
+      "bytes": 819
+    },
+    {
+      "path": "reference/canon/V001_ROOT_README_PRE_PROMOTION_2026-10-01.md",
+      "sha256": "efaf2e3e4e17e9a14c1639acfdd7c0d2d7c6c1b8faf3452ccf3c3a8805390ece",
+      "bytes": 8634
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/00_START_HERE.md",
+      "sha256": "f176e92ed9936c9194e41df6ac3428e61436dff3834dbed62fee1e2768131386",
+      "bytes": 6283
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/01_AUTHORITY_AND_DECISIONS.md",
+      "sha256": "3607f5a2c03f2b08222eecb0e17228414f44ead4f865eecc11d6fe7d66b103e2",
+      "bytes": 6219
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/02_PRODUCT_AND_STATUS.md",
+      "sha256": "baaff99561f1737e962d9f780081cb67d10aa863cf1c95d334db5babd630675a",
+      "bytes": 6245
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/03_ARCHITECTURE_AND_SEAMS.md",
+      "sha256": "39c887ffc65c872967ec827c102e108abe07d803782a449f2a49bbe14496af70",
+      "bytes": 7600
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/04_RECORD_CONTRACTS.md",
+      "sha256": "8d114f099e69c538f10c97569ea4048826b1f46ee5264143072efe4c9a957458",
+      "bytes": 8470
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/05_ANCHORS_AND_RESOLUTION.md",
+      "sha256": "6df3041ba17b60ea3b8ebe0babb957d6f1c5d6df349a3b249a0a7058b6bdbc77",
+      "bytes": 7736
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/06_SCHEMA_SYSTEM.md",
+      "sha256": "c3013916c95f9ef9a96ef98288ba31d5434fd085563c519b7bb4b93c26959689",
+      "bytes": 6123
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/07_EXTENSION_SURFACES.md",
+      "sha256": "b42ce80a12653ad4c230583c75350dc1b41976667731474b3222dbb526fd99f3",
+      "bytes": 9146
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/08_WORKFLOWS_AND_MESSAGES.md",
+      "sha256": "9b529a39463e14c63eb9449fca15c3d78b2d4628ce932d988aa4ff26148a8965",
+      "bytes": 7379
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/09_HTTP_AND_SERVER.md",
+      "sha256": "700580e499ccc96332e4e0bd88369c1ff7de9909c990c15373ff622e08bb5681",
+      "bytes": 7622
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/10_STORAGE_AND_SYNC.md",
+      "sha256": "30144b96efbc69d4a097e015c2712deff51f29394916e3308bb60a074c52e7e6",
+      "bytes": 7702
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/11_CAPTURE_AND_COMPARISON.md",
+      "sha256": "8f9936cede88038808e0b9aa5b86582162163c342c83110d774b8cfd9c3494f8",
+      "bytes": 7125
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/12_WEB_COMPANION.md",
+      "sha256": "b2a1e80ade4c5d30793d70cf868bf0a3210c8a7d2a7d98f241070a3fb9d3e199",
+      "bytes": 5539
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/13_SECURITY_AND_OPERATIONS.md",
+      "sha256": "0e8d3f488165283d58da7d283ce7380c4589c4cfd2010b9f537edbfeabbe1acf",
+      "bytes": 7669
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/14_CONCERN_REGISTER.md",
+      "sha256": "bc4c11c2a84562e11c264bd0236e8debc4e3fc6095a28aec101e8ec935c20e6e",
+      "bytes": 22989
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/15_CHANGE_SPECIFICATIONS.md",
+      "sha256": "5b851226415073aa721e8d7a64f50c0b62003c690ccb9036977c58e987808a6c",
+      "bytes": 11453
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/16_EXPANSION_AND_USERSCRIPTS.md",
+      "sha256": "d18601259f679e39dd8cf452b70ed2fa766c5a57a6701d1d196790a15574ce1b",
+      "bytes": 9172
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/17_VERIFICATION_AND_APPROVAL.md",
+      "sha256": "d0f620ebb682772b411cbb40f2e134b08ab257a2b758e41df9e6d76fb8d985a3",
+      "bytes": 7235
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/18_SOURCE_INVENTORY.md",
+      "sha256": "f83aeb4031973ee58f99aee299453a8c048b9e761e550192e2a1002ce059448a",
+      "bytes": 13713
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/19_SYMBOL_REFERENCE.md",
+      "sha256": "c43166222b7e195add883a2b853eacf81d3ee3f26a63981ebf70e59af5cce40d",
+      "bytes": 17935
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/20_PROVENANCE_AND_CORRECTIONS.md",
+      "sha256": "60946d7145896565f177fc5ea1e80fa4771f601f2aa0bb7aa2b79ec48c816269",
+      "bytes": 7812
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/SHA256SUMS.txt",
+      "sha256": "58787cbf5217607e3bfd99e138d2b8ac65846230f6957b80d93172398540a748",
+      "bytes": 7025
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/XtraType_Canon_Reading_Edition.md",
+      "sha256": "af2f545d4dec82a86d1220069d9344d97e3b4c9688e5a0fa77599c45417612a1",
+      "bytes": 193273
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/README.md",
+      "sha256": "6545d8550af05c1fd065c8f36dd93b2763255e61160c023529d3068368644cef",
+      "bytes": 4586
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/docs/ARCHITECTURE.md",
+      "sha256": "769879b31e232e703d7de6e64f8c3585168a60d33b9e06a21c73b063acda529b",
+      "bytes": 2882
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/docs/SCHEMAS.md",
+      "sha256": "fe3114c00ffbfb01854463e9868a2c9c99ded5edaea0343f2375b76b78f2bad5",
+      "bytes": 1547
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/ext/INSTALL.txt",
+      "sha256": "591ffa71038902d1015ef5cd0c8f1ea9335840b07647c1e4fff18d35ceccfa86",
+      "bytes": 1341
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/ext/content/page-ui.js",
+      "sha256": "edbacde374c83e4f64d71e0d507048903a62823e6f81707343d6a4d9b923ebf4",
+      "bytes": 11459
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/ext/content/youtube.js",
+      "sha256": "b3b3e6a563e8ea00371108379c8ad2b31d1fa37dfa57363af2a94af0aa22ac69",
+      "bytes": 5380
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/ext/core/anchors.js",
+      "sha256": "de9e16dfb6ad9d50851eac96b8cfa7515bca46a4f4bb1e9c71f100211a8e844b",
+      "bytes": 4435
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/ext/core/api.js",
+      "sha256": "b20e54ba8c12a7e26a93c6a1a95d99e8fe1fcc41eed9e85e2df9060d10c500c4",
+      "bytes": 2378
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/ext/core/db.js",
+      "sha256": "b84784e1f4c48ab0c76fff5a4b3c47e965929c5c53b33b18581e7f418e2d1e06",
+      "bytes": 2717
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/ext/core/schemas.js",
+      "sha256": "c3a9a6271545b1b6ebf9c150a5c05cdd907ebc06d440c1bc5a1bdb8fb19714cd",
+      "bytes": 2721
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/ext/manifest.json",
+      "sha256": "8573c148594afada211032f5401a4fc14817953ef11a79b532fe6f3a56910cc7",
+      "bytes": 902
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/ext/service-worker.js",
+      "sha256": "c7cb425412304efe0471232b414ffeea1f8e03c5b7091f39ba7ce48e25eebd20",
+      "bytes": 10727
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/ext/sidepanel/app.js",
+      "sha256": "4ad4e3edac472f00978cfb36b10dbd85dac72e6067b78d47549a485d99c7f092",
+      "bytes": 25185
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/ext/sidepanel/index.html",
+      "sha256": "de0a00c7a607588abf5d0c26f04b861d083530871430635aaf54d5c2e455b566",
+      "bytes": 6829
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/ext/sidepanel/style.css",
+      "sha256": "918c7c62fe0837ee116124eecd48baa355bf61ab59f5ffa44df77233cc487ff7",
+      "bytes": 8000
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/server/api/annotations.php",
+      "sha256": "7c770a4020d52336e6af1ab4a65b5baf2d3118142be6e6baf33295427b834d4b",
+      "bytes": 2451
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/server/api/bootstrap.php",
+      "sha256": "1a0b75822122c0d0acccccd32a62019b21bff7b936dcd17cae315d545275312d",
+      "bytes": 6544
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/server/api/events.php",
+      "sha256": "e93ac50a08d5b798259c1227f72558bf5912d9602a89a42b0c115ab585fc1591",
+      "bytes": 440
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/server/api/health.php",
+      "sha256": "46bf124c72e1c3c48fed7b23e2bf85b29b164ea8aedb7d5ddf0c76c2bb3efc9a",
+      "bytes": 122
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/server/api/schemas.php",
+      "sha256": "5a5b06d3db653b506164bb2bc7afd5ef169ad46ba60b5a15ecb2febb65682d60",
+      "bytes": 1530
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/server/api/snapshots.php",
+      "sha256": "a44baef84368e0bb3faa59567ba85dd4d86829d416ee1b89828a5d22f6df6db8",
+      "bytes": 1108
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/server/assets/app.js",
+      "sha256": "6901cf6219a694216e787f7f3463b07f613666f8b9a5b6b10098fe70eb93b93f",
+      "bytes": 11219
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/server/assets/style.css",
+      "sha256": "4e9a27ecfa15ce0115473408b9c53dee824913c4b48f9cf5cbef231a374cdc61",
+      "bytes": 2874
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/server/config.php",
+      "sha256": "3b3884ccef5169755316d13ca18df57680f5a26fd107f211da2e0a26b14f4ab1",
+      "bytes": 206
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/server/data/annotations.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/server/data/events.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/server/data/schemas.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/server/data/snapshots.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/server/index.php",
+      "sha256": "a1c2b31765bb1e18572434c24b0ee645466c4a01b37c0c87eaf13de43bab0f06",
+      "bytes": 2667
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/server/media/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/server/schemas/example-book-anchor.schema.json",
+      "sha256": "78b07242804d237476785b0613b60a6a2c04f7e9a54825287c5539eb51f0319d",
+      "bytes": 453
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/server/schemas/gps-anchor.schema.json",
+      "sha256": "4091a7b438860ddf655e672f7ad137fdb06974270fce4a7bcf229053b3272b0a",
+      "bytes": 591
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/server/schemas/url-anchor.schema.json",
+      "sha256": "f431eb2d706e1341090cdc9ed8dcf9fc1b8efcf7f51281bf14a91e3de64b5186",
+      "bytes": 962
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/server/schemas/youtube-anchor.schema.json",
+      "sha256": "cc75f358c62b59b7346cdac34529cd8892a03e4c2ebd3aac8a904a21760d86ff",
+      "bytes": 559
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/start-server.bat",
+      "sha256": "09e6e8c6198debd24a6a5c4e576053dc0a6d76dd583ffa1d43cfb5b057ec75f4",
+      "bytes": 90
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/start-server.sh",
+      "sha256": "7b2aef9a34f4a6edbef853bba9c4fc75b4856ab0df317d662b0ea24d4a0c0e7b",
+      "bytes": 122
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/tests/README.md",
+      "sha256": "29f6a5e2695a0083915e935454130fb9dff8d1b0629f254f758c7cb1aa053ba0",
+      "bytes": 177
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/evidence/baseline/tests/anchors.mjs",
+      "sha256": "fda0d6d33a421edbef6b5194f0ad505fd2a15ccdc46938151bec3dc9a4457bc7",
+      "bytes": 1064
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/evidence/characterize.mjs",
+      "sha256": "8539a9b6dede4819e24172504e5de74cd684c687be8d2556392d8aed06b835d0",
+      "bytes": 3457
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/evidence/concerns.json",
+      "sha256": "b18d121e09a46ff1fb8abefae88d99b68a2f8229bba9abf62e2d8cdc3b0550d2",
+      "bytes": 20066
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/evidence/legacy-reference.md",
+      "sha256": "37620548333d4f656d0083a6860d513a704cc084d13f8ebb6b375e2dc4a24c62",
+      "bytes": 102787
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/evidence/legacy-reports/01_XtraType_Full_Feature_Rundown.md",
+      "sha256": "e9fbcfe5fcc6f9634f50320f772d37f35a032d4451d233eea1f041a55145c745",
+      "bytes": 26218
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/evidence/legacy-reports/02_XtraType_Deep_Technical_Snapshot.md",
+      "sha256": "69861048d3f73e2d2fa0cbf4a986baa3e274c45a028450712c607a05e98409ba",
+      "bytes": 51355
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/evidence/legacy-reports/03_XtraType_Concise_Summary.md",
+      "sha256": "b8fcafa3314ef46da724b4bd44453bc9af24eea8e54bf6d708b2e94bc2828b97",
+      "bytes": 6581
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/evidence/source-manifest.json",
+      "sha256": "e79344f8da8eef778c458e9eaa3f3d7205fc3e554e93b1680d5e9120a11f115b",
+      "bytes": 11401
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/evidence/symbols.json",
+      "sha256": "c4627ed6fc31ad88acabe9b0704e83987bee0e1d559b73e55e2bdedf876ba37d",
+      "bytes": 24848
+    },
+    {
+      "path": "reference/canon/XtraType_Canon_v1.0_candidate/evidence/verification.json",
+      "sha256": "94ad05bec35ea0af366a1b9cf1c80ad4a1b6efe797853542b24b5022564dc3b0",
+      "bytes": 5194
+    },
+    {
+      "path": "reference/legacy/XtraType_PortaShape_Expert_Session_Boot_Prompt_v1.md",
+      "sha256": "35fa5d1d9123256e38f4653623c1cee56340e72adcecf0a8baa3ba5226dbbead",
+      "bytes": 32705
+    },
+    {
+      "path": "reference/source-snapshot/XtraType-2.4.0/README.original.md",
+      "sha256": "c36ba7b8221f5b6a5303b4e854618246a56b977f792939400ae369571bff46a2",
+      "bytes": 4884
+    },
+    {
+      "path": "reference/source-snapshot/XtraType-2.4.0/SHA256SUMS.original.txt",
+      "sha256": "97b48c80682acc97570d46aef6a555d63885f5ba5f688a39af64ea3c52e7082f",
+      "bytes": 5696
+    },
+    {
+      "path": "reference/specs/V001_SPECIFICATION_HANDOFF_AND_PERPETUAL_LEGACY_STATUS.md",
+      "sha256": "3de57b389725f339c21a657a8c9de435893969f89c7baeffa3c3039c9b83cf56",
+      "bytes": 1014
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/00_READ_ME_AND_AUTHORITY.md",
+      "sha256": "19da5fea5a715393611a19cedba74031201d662b88c0fb6c7ee9cc7355782610",
+      "bytes": 7600
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/01_PORTASHAPE_SERVICE_ARCHITECTURE.md",
+      "sha256": "f93511cd0535d13171663c588c88b1c64b970b4c43c6e835aba90c6710d46b2d",
+      "bytes": 10196
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/02_PLUGIN_PACKAGE_LIFECYCLE.md",
+      "sha256": "53700cfb8adfdeb70d9696a47d81400c8f010e2eee276c7b589c622d42fc9981",
+      "bytes": 8201
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/03_SHARED_CONTRACTS_AND_OPERATIONS.md",
+      "sha256": "670fe4f9d6d60bbab94a53c30ae25714d74ad40319450e90559c96e7ae4a699f",
+      "bytes": 10814
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/04_XTRATYPE_CLIENT_INTEGRATION.md",
+      "sha256": "28df1137b981a36049841f200b79f8c79f54576890f3f9244b954c4506950e9d",
+      "bytes": 10260
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/05_SCRIPT_STUDIO_PLUGIN.md",
+      "sha256": "31d64835571c36cd43ea87ed209da497fd9d03186b1d4731dad43ff7353ce923",
+      "bytes": 9003
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/06_STAY_DRY_PLUGIN.md",
+      "sha256": "912f946e2bab65bf3b47e003c81ba17192145a5ab2c7b128f08ac952231512cd",
+      "bytes": 11317
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/07_BRIDGES_UNIVERSAL_PUBLISHER_CORE.md",
+      "sha256": "acfa41dd1a0d2cc222c9962983c49c4dc2211dc53b34ffb5d8f678c2c3ac6094",
+      "bytes": 11400
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/08_EXTERNAL_PLATFORM_PLUGIN_STANDARD.md",
+      "sha256": "a7e865829def9cdf60b86081f0670c1d11a612c75222f00497cdf60bdd7e6825",
+      "bytes": 7045
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/09_WEB_MOBILE_SURFACES.md",
+      "sha256": "af631f870f27a05a201fa5af6ac392579d99ff962e5968fdb0541d57d9417e27",
+      "bytes": 7458
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/10_LOCAL_DATA_AND_DEFERRED_SERVICES.md",
+      "sha256": "0d99bc47ee64b9c9af55576af398aafcfd7d12693dc7f39edf49c5da5da3b1ba",
+      "bytes": 7549
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/11_VERIFICATION_AND_IMPLEMENTATION_SEQUENCE.md",
+      "sha256": "b315671860897a4eb75cfb56bb16c7340e012e97dfa9d1e221ea43ebb66e95b4",
+      "bytes": 5979
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/12_GLOSSARY_REGISTRY_AND_CHANGE_CONTROL.md",
+      "sha256": "dff6902174511305069c9b3997f83de95d7a3949794eba3957b46bb3744d61f4",
+      "bytes": 7903
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/13_SOURCE_TRACEABILITY_AND_DECISIONS.md",
+      "sha256": "98838acc0b5e12e11dffb5458e1d48869a266905be4a8ddfc23f2cb65a642ed5",
+      "bytes": 7368
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/14_STRUCTURAL_CONTRACT_REFERENCE.md",
+      "sha256": "e817bf1e7a3c105aa46a14b1147d3eaaacd875287286ebf2ee27fd2918cb6d9e",
+      "bytes": 30343
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/PortaShape_Relational_Registry_v0.1.xlsx",
+      "sha256": "ee6fd1b3a098307ca1194384bd74e0773f644b07f71c95af9410234a96e6a096",
+      "bytes": 46051
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/READING_EDITION.md",
+      "sha256": "05989c68be7420ea2a13601b10beac1895e16782cecb47fdaf2398883b07b63d",
+      "bytes": 153387
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/READ_ME.md",
+      "sha256": "3df00aa27ede9bbdc2e59ae0516dbb01ef63075a18dd949bd4e8e5fa4c38e8bb",
+      "bytes": 2922
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/anchor-bundle.schema.json",
+      "sha256": "9cd851fd0a27608c0bcfced77bc1a11ee62cfa6f4dab7620ee2c3236b03cc2a7",
+      "bytes": 1999
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/annotation-extension.schema.json",
+      "sha256": "e2de3d2e8c9209d389f86b4cf95a4d22c897d6b0f39803956f8911fae86e2388",
+      "bytes": 1892
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/browser-context.schema.json",
+      "sha256": "3f94618b655c52c880b1b5d8fba85f120be1518b19a1fc17a68e413963cc3b65",
+      "bytes": 1745
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/common.schema.json",
+      "sha256": "95e86da555f8eb976e6ef5030aa5722c9acef7c47c7f3c99398d08f883996d32",
+      "bytes": 9786
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/connector-descriptor.schema.json",
+      "sha256": "80dd00f6bb6e60ddb01d26541e4ae9d79653ba44e32c08e47878f544bdd5ad3c",
+      "bytes": 4244
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/conversation.schema.json",
+      "sha256": "2ac15294d79979723561ad01cb902c94a2d2916441605fdd6100cb167afb6c2a",
+      "bytes": 1275
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/credential-reference.schema.json",
+      "sha256": "6c0bf317742fdddb67f97b9f0f910cf2fc2aeefe8a7db305ccf31cc9effacc80",
+      "bytes": 1518
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/destination.schema.json",
+      "sha256": "948c47333c42e87fe17794999953e55b529a576554bf231efcbabe3a1cf1e9c9",
+      "bytes": 1825
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/event.schema.json",
+      "sha256": "de9485da8255939ead31fa45ee86851689ce2f6c9dfca123f9aaa8fa541b39a4",
+      "bytes": 1914
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/fidelity.schema.json",
+      "sha256": "9f9ce3759962bed0934d92bcf8b4b2ba46903ab5339c824e103ea5684f051547",
+      "bytes": 4879
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/grant.schema.json",
+      "sha256": "047aff1de4e703679d5c874d68470cd6887305e5852b770ed623ada3758c5b30",
+      "bytes": 1977
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/handle.schema.json",
+      "sha256": "af91194ccf1b89802680425ef737dd7ab227011d6abbc7d37731b080a1bac81a",
+      "bytes": 1529
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/installation.schema.json",
+      "sha256": "5cf298d272d65c8d16ed4d00d629b31aa29ac78c5a89a2ebd60c0ab0ff327f09",
+      "bytes": 1764
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/invocation.schema.json",
+      "sha256": "d601c3c891c1893e4097488f12d96d9d156d0b5a1dac52dcb68d728764c283a4",
+      "bytes": 1743
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/message.schema.json",
+      "sha256": "7e30a6ceb44c43818e34972a620fd8a39fd2f46448646e89325eba2cf890845f",
+      "bytes": 1336
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/object.schema.json",
+      "sha256": "e22ca3fdcf22ab7e9936b169ffc5ed77472dc9617caf261b72dc9b8976b8e9a2",
+      "bytes": 1515
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/operation-payloads.schema.json",
+      "sha256": "f12aa048a30c271569fb104cceb65b440dbcad9e2eecc47a73f0affb4796be38",
+      "bytes": 38366
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/pattern.schema.json",
+      "sha256": "731bb7bf6d24f9e2a5c8d1d505ceb70de6dd4387b6764d7b690d454decc3664e",
+      "bytes": 1819
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/plugin-manifest.schema.json",
+      "sha256": "4c6be848fcc725fa1f3f4f273c06b823675e56c2437261cd407219c56a2c99f9",
+      "bytes": 6848
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/provenance.schema.json",
+      "sha256": "fb5319500b7dfd5ef4f182469968376e0ced75d9053f4ec4c1f3798cdb916493",
+      "bytes": 1987
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/publication.schema.json",
+      "sha256": "41fea0eeb905832ae5b4e19eda2a2be8d99117d5e801580a74f0759e794417e4",
+      "bytes": 3769
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/publish-plan.schema.json",
+      "sha256": "7c4a251ee6803b6ac2da87a6590b967207e343454ca8e4f2accd859bcff0876d",
+      "bytes": 3533
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/receipt.schema.json",
+      "sha256": "4adfd142079fe725e921ed443444cea64a8cfd6e0b8424c8eaf68cd34e330364",
+      "bytes": 3955
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/relationship.schema.json",
+      "sha256": "6990f872eae5a1a73be383a76785039f0c9a660f393cb900ee4049b23bb3760b",
+      "bytes": 1437
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/replica-set.schema.json",
+      "sha256": "e91b1a5d8fc6638653bb06f164e8ad99d6ea2f29110493c29761ef6a5683d5c5",
+      "bytes": 1262
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/representation.schema.json",
+      "sha256": "0b3fc853ba6130b1a4b4952ec71e6a2b1202f430db44d451a3dd2cccfb2c460f",
+      "bytes": 2272
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/routine-run.schema.json",
+      "sha256": "3abe9a77a0b1286d75098d2c74a96a399d8a7f6a44a70f48c74fb402dc0325c5",
+      "bytes": 2010
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/routine.schema.json",
+      "sha256": "74bdcc4d3fb631b9f6e16a3f3727c33de5ca455b5b2e511c9b422f8d302858c5",
+      "bytes": 5872
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/script-definition.schema.json",
+      "sha256": "a434ea25bd190b69eb67cf10a9e2b5edff7c6d55f77347149c96d12e5b71a7aa",
+      "bytes": 1247
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/script-revision.schema.json",
+      "sha256": "5a51f2e5fc7fdd51f125a17c4d12d4aa82535c531ff3ab5d9403cc510e3f7906",
+      "bytes": 2547
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/contracts/text-template.schema.json",
+      "sha256": "887736585ed0d0f2133b38a236c1bb4468512740846605f76eb83e496bb89cfd",
+      "bytes": 2114
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/examples/anchor-bundle.json",
+      "sha256": "74c4e2d087712947c1a5273a529062ca984052023803a1ec6d85905a51bc096c",
+      "bytes": 407
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/examples/annotation-extension.json",
+      "sha256": "02fea0da25c0873a97d2a4bc46fcb160241aee8de6df2a3b6cff7819c9386d95",
+      "bytes": 422
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/examples/browser-context.json",
+      "sha256": "b38b29a2c0ce8aaf1df4fefc169b26d6233e4672f0a6e7ad78ff4bb91d726c67",
+      "bytes": 444
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/examples/connector-descriptor.json",
+      "sha256": "a37e9bce47f9465e4ce31e168f87255e29f1ac8364fcc419df4ba64675f3cdce",
+      "bytes": 582
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/examples/conversation.json",
+      "sha256": "50900a40e993f0ae7d23b948ab04222a9127cc9a42bc60cbc2caebd23613834b",
+      "bytes": 276
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/examples/credential-reference.json",
+      "sha256": "aa73db7a4a3e15ec54f3a59c7af5f24d65e3863f9025b018306ae8bf7bc63eef",
+      "bytes": 386
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/examples/destination.json",
+      "sha256": "59c171e1ff4a1b471ef07d8f4f3c2cda77630cdc416722d954bf81a0232f394f",
+      "bytes": 402
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/examples/event.json",
+      "sha256": "9c61fcbbc7797101b60b0b4d51de8460e85c5a67fd504bb5b98a62bf06c5775c",
+      "bytes": 431
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/examples/fidelity.json",
+      "sha256": "280c24141210be5adcd4cd6dd266f6bd32e00d79ba02b59798271f348057ad97",
+      "bytes": 514
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/examples/grant.json",
+      "sha256": "3d846e181098609e8dafadb637357b08e4038fcee0728bf1169e3c6adfa16f13",
+      "bytes": 445
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/examples/handle.json",
+      "sha256": "e3a2301e609302e1ac96ffb94270ddbfbe186ebb4ebbfc860fa93344bcf3daa2",
+      "bytes": 315
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/examples/installation.json",
+      "sha256": "93bf421f1f296290809c12deb920ae9706fdb8a22a61c289b518574dfb996ea7",
+      "bytes": 406
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/examples/invocation.json",
+      "sha256": "5fbfca394ddff96f648a5551cd65f84f2f5f220a998723ca85eef91882353d1a",
+      "bytes": 420
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/examples/message.json",
+      "sha256": "56d3977c8ce1bf44dcc9ee38ded931f9e14a481cf5324db5702b160f4924b975",
+      "bytes": 277
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/examples/object.json",
+      "sha256": "b6ecfb8e2db3337777962cd491a03b46b1d646cdfe76b6029a0237f9a87150fc",
+      "bytes": 309
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/examples/pattern.json",
+      "sha256": "df4d691a8733805ab257df3239d582acd1aef0623808d64acea58ca71a992492",
+      "bytes": 526
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/examples/plugin-manifest.json",
+      "sha256": "f435ac6cc11d46f4921bbbf2a75dfca04ad0a3dc00e55d6250062e7fe3d282d3",
+      "bytes": 525
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/examples/provenance.json",
+      "sha256": "b345b5eff6ee17176390de4e2402956a46f2f844498716c4862c846e9dcfd77c",
+      "bytes": 452
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/examples/publication.json",
+      "sha256": "f4b77edfb7368473a5714053bbfb570d550544437278a20b973c06ff67fbb765",
+      "bytes": 437
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/examples/publish-plan.json",
+      "sha256": "65e211f710e98989f0f3eb73e231959131d006360268c59b12ea4d351fcea7f9",
+      "bytes": 498
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/examples/receipt.json",
+      "sha256": "62a55b8823a636e20ba909ef98e8b926364446efa9f829d00e0cdec4c375db75",
+      "bytes": 791
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/examples/relationship.json",
+      "sha256": "e4ff250d260c3cba54ef39749f6eca31fceaa966daa371c42880fc01f7e43928",
+      "bytes": 308
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/examples/replica-set.json",
+      "sha256": "6096993528f6602fb91fa88e408931abe99047f396d362ceff0b6bbdf96c716a",
+      "bytes": 285
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/examples/representation.json",
+      "sha256": "d34bf2cffccc78b66893f9ba8f5287378847dc602cb28396bfe43addc59b8ded",
+      "bytes": 540
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/examples/routine-run.json",
+      "sha256": "c0976bc9c4dde1470c0255c4fa40ac8aca35ad32dee4d438d4a7b87a94dd3954",
+      "bytes": 392
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/examples/routine.json",
+      "sha256": "d54d4081a0982808b2411e8a01a2c6d1380190b3fafa22e0f2dcaf961bf4a5ec",
+      "bytes": 698
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/examples/script-definition.json",
+      "sha256": "2032e6dbc57292900ac45e981377425531db195a2a4fdc79ca7fbae021e42971",
+      "bytes": 338
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/examples/script-revision.json",
+      "sha256": "d20daf2947cfeb5024bbb50093e4354fcf11e600c399d7f3560865f3b89d0dcf",
+      "bytes": 645
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/examples/text-template.json",
+      "sha256": "6c09ac8ebf1df4480b0189b3225b1bc3ec7625485acf8fc066201d7b28a687ae",
+      "bytes": 433
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/package-manifest.json",
+      "sha256": "478e70c49cbd3e8529e71d54b9f80eff3b3b578156f0ddda853f558f34d0fe12",
+      "bytes": 15623
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/registry/REGISTRY_INDEX.md",
+      "sha256": "843fe8f51cfd4595ac287be973c35047ca21fdd42e2df46159da2ed8c7f79695",
+      "bytes": 37440
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/registry/acceptance.csv",
+      "sha256": "7d3ff12d01d9925d25264469a82382cedc1f4b7cf594f0997988e6fa5c2d7776",
+      "bytes": 5281
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/registry/components.csv",
+      "sha256": "84d30b4e6f7d38cb6816d117948c02fa669da96c0b690b42438c5e02b2d5131f",
+      "bytes": 9397
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/registry/contracts.csv",
+      "sha256": "b5c6a17593c3636c392ede26379fcd4a46a81dbe2af5d2c95e01d20cfecb9367",
+      "bytes": 2769
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/registry/decisions.csv",
+      "sha256": "311e793adf895af75025250f581f77ce15f7091d836887d2ce3d9a76218055aa",
+      "bytes": 2196
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/registry/interactions.csv",
+      "sha256": "12c25d5c515f5e22c9e11dfb18024d11fc8b7ab0ae08fef7186447be4d3bd949",
+      "bytes": 1845
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/registry/modules.csv",
+      "sha256": "7d3b17f9e08007ab8156870bf9dd5875ed3bfb0bcb3a0eafd508252286d5b305",
+      "bytes": 1068
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/registry/operation-contracts.json",
+      "sha256": "2d4e80f63db4b4841db22c8b098f8ba097893b1b7baf26c1405ddd849cdf6df6",
+      "bytes": 9083
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/registry/operations.csv",
+      "sha256": "31dfb1a48b9cab2378a89c7ef8ad2bcb30bbbe927e38234294c9bf642d7da15d",
+      "bytes": 3961
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/registry/permissions.csv",
+      "sha256": "9552d9a531a88c8a0ced5028d3e9979b71bd237ae95548445c969ea827181e06",
+      "bytes": 1490
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/registry/registry.json",
+      "sha256": "44ff04068ef2756abb70d54cef7b7b612b0d13f200137f4a08a559ffebbe816d",
+      "bytes": 65566
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/registry/source-fingerprints.json",
+      "sha256": "755120a9b4c2b11f4d84c788e3ee74628d7ff0f2d2013101b7edc7ed363e4e3c",
+      "bytes": 298
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/registry/stages.csv",
+      "sha256": "a605b3dcf6456736908bbb723ac70f643d054e918d68180c8413e94782a4b9b7",
+      "bytes": 781
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/registry/surfaces.csv",
+      "sha256": "ad7f623fba0afd75bd7b9b8637571fc3aa91c571b8700c594b6c50f95265730a",
+      "bytes": 1249
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/registry/traceability.csv",
+      "sha256": "1efc88e1173f6dcbc9e5b8267af40e447f4f27a1408a41a39281c11d7f229f22",
+      "bytes": 2291
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/registry/validation.json",
+      "sha256": "58e527c06a595fecc3bd6e348d10cd21cd88d7769ac572bc661f42c4b91d9b98",
+      "bytes": 117833
+    },
+    {
+      "path": "reference/specs/XtraType_PortaShape_Companion_v0.1/registry/workbook-verification.json",
+      "sha256": "ba5229c51633a388fd720d14c5de1f20eff0d87b82c1611e749a45554573eb12",
+      "bytes": 572
+    },
+    {
+      "path": "release-manifest.json",
+      "sha256": "26ee1cf8ca9045c8a7d6c356425903201ff2a8069098f2ddcd91c765cc1f13e6",
+      "bytes": 2366
+    },
+    {
+      "path": "reports/XtraType_PortaShape_Coherency_Report_2026-10-01.md",
+      "sha256": "29590fef0bae68de3ab48c35d8149ce98985ed8468dea54135faf46fa55c56ef",
+      "bytes": 38257
+    },
+    {
+      "path": "scripts/sync-shared.mjs",
+      "sha256": "eb2f5d033069cb76604a3b7c7e56de3fb24daac8cf45424e06fb21d1e17b45e3",
+      "bytes": 233
+    },
+    {
+      "path": "server/.htaccess",
+      "sha256": "cf71adaf884982cbaba1caff9fba9beac1f3bbb60283478384aedde995078038",
+      "bytes": 193
+    },
+    {
+      "path": "server/api/admin.php",
+      "sha256": "27720d24f02bae73354cd1724889c847e5ff03b849e3a513579b03a6def6d6cb",
+      "bytes": 1393
+    },
+    {
+      "path": "server/api/annotations.php",
+      "sha256": "c1b04d8efb9e50779961e7d8e14e906ce6a75f336b64d1f4e81f77a1235a1dc5",
+      "bytes": 1965
+    },
+    {
+      "path": "server/api/auth.php",
+      "sha256": "ecf1b54608b69fab3f5a8f08ede73ac3e88458f27a4936e5439663ae6d348656",
+      "bytes": 3983
+    },
+    {
+      "path": "server/api/bootstrap.php",
+      "sha256": "ffe4067e4bbf16575d3dec38af3a063042b27b9ef40ad014a306baf732c2150d",
+      "bytes": 6741
+    },
+    {
+      "path": "server/api/contacts.php",
+      "sha256": "a5dca51ddf77b72a5149d6c3ce27b917fc7483eb36f6719f3bbde8cecf3868ee",
+      "bytes": 1637
+    },
+    {
+      "path": "server/api/events.php",
+      "sha256": "2a1f9305554c877243bb3a91c0789de8f8326b7962afb1da4604387e653a16b3",
+      "bytes": 518
+    },
+    {
+      "path": "server/api/group-chats.php",
+      "sha256": "46847488084089837f7bec7255968844d537ccc2bc2b012f055bfb67153ac230",
+      "bytes": 4304
+    },
+    {
+      "path": "server/api/health.php",
+      "sha256": "50b298d5d4af03f56dce58fe9fe3e3d501cb9578086d41e29c2f5a75dbc9a325",
+      "bytes": 397
+    },
+    {
+      "path": "server/api/invites.php",
+      "sha256": "a0c9643e3bdd257ce5cbd2ce6460974bd4fc191b459bbe824444b1868b751ef6",
+      "bytes": 1602
+    },
+    {
+      "path": "server/api/messages.php",
+      "sha256": "f7eb38c4aca07d5ff0a900d8682ea680d1b6bc661f220c1071c047a2eeb19744",
+      "bytes": 1488
+    },
+    {
+      "path": "server/api/schemas.php",
+      "sha256": "a38aea4799d4449dc751e8944dad3c7dbc871f913030d7a5b84438ad2c233be1",
+      "bytes": 675
+    },
+    {
+      "path": "server/api/snapshots.php",
+      "sha256": "552df45ab8b545919d78b52ce23717a3346965e9a73c5ef02761e764f6c4b23d",
+      "bytes": 1766
+    },
+    {
+      "path": "server/assets/app.js",
+      "sha256": "c4fd842902527d98032907a100fef8f7c9179843cb636ff25baa3b5d2a9920fd",
+      "bytes": 19728
+    },
+    {
+      "path": "server/assets/core/anchors.js",
+      "sha256": "c01e83966af495893545461860d136706eeb641a7576e93f1de38d8ab4b5752d",
+      "bytes": 7582
+    },
+    {
+      "path": "server/assets/core/schemas.js",
+      "sha256": "ad26a33f53334d79e54372a9ace947158caab27122bf1468469ecb830178a179",
+      "bytes": 7705
+    },
+    {
+      "path": "server/assets/style.css",
+      "sha256": "907117d378b081f04a82998f51e749a4b508960be02cca15e7a460d9ba860813",
+      "bytes": 4413
+    },
+    {
+      "path": "server/config.php",
+      "sha256": "235f71173975ff7b96fd4a83ef566a15834098a85847c06932b2e32b3719548f",
+      "bytes": 813
+    },
+    {
+      "path": "server/index.php",
+      "sha256": "4de6bbe79f767201a7229f6e4c417a88ce8333648d7a6be33834af6e08faf937",
+      "bytes": 4191
+    },
+    {
+      "path": "server/media.php",
+      "sha256": "56ad4a8648945de9d5c096319e81e00fc80f762068008e3a585d2d25bcd8c0ca",
+      "bytes": 517
+    },
+    {
+      "path": "server/router.php",
+      "sha256": "73c851806a0f3f94adcd9768f898252d93c4f7e34f0e5a1f62599b390c13fcc8",
+      "bytes": 689
+    },
+    {
+      "path": "server/schemas/example-book-anchor.schema.json",
+      "sha256": "78b07242804d237476785b0613b60a6a2c04f7e9a54825287c5539eb51f0319d",
+      "bytes": 453
+    },
+    {
+      "path": "server/schemas/gps-anchor.schema.json",
+      "sha256": "4091a7b438860ddf655e672f7ad137fdb06974270fce4a7bcf229053b3272b0a",
+      "bytes": 591
+    },
+    {
+      "path": "server/schemas/time-anchor.schema.json",
+      "sha256": "f9db99bd2cc831e5d035b35e49815348b3ed3b4f5dd79d02101a8cf2d0c532d4",
+      "bytes": 553
+    },
+    {
+      "path": "server/schemas/url-anchor.schema.json",
+      "sha256": "f431eb2d706e1341090cdc9ed8dcf9fc1b8efcf7f51281bf14a91e3de64b5186",
+      "bytes": 962
+    },
+    {
+      "path": "server/schemas/youtube-anchor.schema.json",
+      "sha256": "d5eb7db039246421721e35e687b9942f2dbef6f780c620386748b2c177b00b66",
+      "bytes": 565
+    },
+    {
+      "path": "src/server/Auth.php",
+      "sha256": "94d25b773ab2cc2d824eb8ee07a9af3b1adaab3e73db33040287fa5f5038b312",
+      "bytes": 7369
+    },
+    {
+      "path": "src/server/Repository.php",
+      "sha256": "63a94dd4c7c38b9bd5c80eafe93d80e37beefb9a2b5fbdc1b1e0906c2a0c6ca7",
+      "bytes": 3548
+    },
+    {
+      "path": "src/server/Validation.php",
+      "sha256": "d8c8504b1fecb732446efbe7f0f94a7214b610420e1202241848735fbdf64b7b",
+      "bytes": 10585
+    },
+    {
+      "path": "start-server.bat",
+      "sha256": "a6774ef3cf6d49d05bb5b5abdf50c9f88eb8391308eb101409c203cb108bfe09",
+      "bytes": 169
+    },
+    {
+      "path": "start-server.sh",
+      "sha256": "7dfbf192f02d41f3f82e0885a7ec9999f6bded88f0508026da51b03362b158c7",
+      "bytes": 183
+    },
+    {
+      "path": "tests/README.md",
+      "sha256": "9b07a114a72b9d967af8f8d1bf6ce58536a27d8d4058a5feab9b482aa1273622",
+      "bytes": 2212
+    },
+    {
+      "path": "tests/anchors.mjs",
+      "sha256": "647927166022e727912991f12021e8888526207f2c917f7364b7c25e50390fd7",
+      "bytes": 1550
+    },
+    {
+      "path": "tests/client-dom.test.mjs",
+      "sha256": "c79620d78ff3a96373afa160f566cf08b287b52983a59c89817589bd6b331c35",
+      "bytes": 12550
+    },
+    {
+      "path": "tests/core.test.mjs",
+      "sha256": "5be8b1af0d512321849b06d322c202ea45a171edc5d3ce00a7e81408e62f9fbc",
+      "bytes": 8892
+    },
+    {
+      "path": "tests/http.test.mjs",
+      "sha256": "a4647e36fcd9deddf10dc9f632347d1d9fa43b58016c103468cafa7fbf1a53a8",
+      "bytes": 17153
+    },
+    {
+      "path": "tests/manifest-ui.test.mjs",
+      "sha256": "ec47faebeda960b3370340e0e0a75702023a2c9b6c815ccf602232af2db4a686",
+      "bytes": 4647
+    },
+    {
+      "path": "tests/repository-worker.php",
+      "sha256": "cef7cfbfaccb03eac029ac6c8e50248a3986c1037f49167fc8fde5b16cb56521",
+      "bytes": 202
+    },
+    {
+      "path": "tests/repository.test.mjs",
+      "sha256": "203c308693991490a6ab3b673a9d5cbc8cd43c8bae2c780b052b06cd8b32a3c6",
+      "bytes": 1496
+    },
+    {
+      "path": "tests/worker.test.mjs",
+      "sha256": "db5c70529e869c77d741291b4f2ab2c61e6610c8ca16d5aed92aac3e0e97dfcc",
+      "bytes": 3126
+    },
+    {
+      "path": "var/data/annotations.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    {
+      "path": "var/data/events.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    {
+      "path": "var/data/schemas.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    {
+      "path": "var/data/snapshots.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    {
+      "path": "var/media/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "var/profiles/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  ]
+}

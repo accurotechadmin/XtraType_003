@@ -1,0 +1,25 @@
+import fs from 'node:fs';
+import vm from 'node:vm';
+import assert from 'node:assert/strict';
+import path from 'node:path';
+import {pathToFileURL} from 'node:url';
+const root=path.resolve(process.argv[2]||'evidence/baseline');
+const anchors=await import(pathToFileURL(path.join(root,'ext/core/anchors.js')));
+const schemas=await import(pathToFileURL(path.join(root,'ext/core/schemas.js')));
+let passed=0;
+function check(name,fn){fn();passed++;console.log('PASS '+name)}
+const worker=fs.readFileSync(path.join(root,'ext/service-worker.js'),'utf8');
+const start=worker.indexOf('function urlTargetMatchesPage('),end=worker.indexOf('\nfunction annotationMatchesPage',start);
+const box=vm.createContext({URL});vm.runInContext(worker.slice(start,end),box);
+check('URL all with zero stored pairs matches a page with additional query pairs (current defect)',()=>{let t=anchors.parseUrlTarget('https://example.com/a');t.value.queryMode='all';assert.equal(box.urlTargetMatchesPage(t,'https://example.com/a?x=1'),true)});
+check('Duplicate selected query pairs consume separate live pairs',()=>{let t=anchors.parseUrlTarget('https://example.com/a?x=1&x=1');t.value.queryMode='all';assert.equal(box.urlTargetMatchesPage(t,'https://example.com/a?x=1&y=1'),false)});
+check('Blank GPS coordinates coerce to zero (current defect)',()=>{const t=anchors.makeGpsTarget('','');assert.equal(t.value.latitude,0);assert.equal(t.value.longitude,0)});
+check('YouTube host recognition accepts lookalike host (current defect)',()=>assert.equal(anchors.youtubeInfo('https://notyoutube.com/watch?v=abc123XYZ_0').videoId,'abc123XYZ_0'));
+check('Whole-video nullable timestamp coerces to marker time zero (current defect)',()=>{let t=anchors.makeYoutubeTarget('https://www.youtube.com/watch?v=abc123XYZ_0');assert.equal(t.value.startSeconds,null);assert.equal(Number.isFinite(Number(t.value.startSeconds)),true);assert.equal(Number(t.value.startSeconds),0)});
+check('Custom metadata may override forced custom kind (current defect)',()=>{let s=schemas.normalizeCustomSchema({$id:'demo@1',type:'object',properties:{x:{type:'string'}},'x-xtratype':{kind:'gps'}});assert.equal(s['x-xtratype'].kind,'gps')});
+check('Mixed supported/unsupported union passes normalizer (current limitation)',()=>{assert.doesNotThrow(()=>schemas.normalizeCustomSchema({$id:'demo@1',type:'object',properties:{x:{type:['string','object']}}}))});
+check('Custom value validator enforces presence only (current limitation)',()=>assert.equal(schemas.validateCustomValue({required:['x'],properties:{x:{type:'integer',minimum:1}}},{x:-1.25}),true));
+check('Explicit fragment changes extension key',()=>{let t=anchors.parseUrlTarget('https://example.com/a#z');t.value.fragmentMode='include';assert.equal(anchors.targetKey(t),'url:https://example.com/a#z')});
+check('GPS label excluded and radius included in identity',()=>{assert.equal(anchors.targetKey(anchors.makeGpsTarget(1,2,null,'a')),anchors.targetKey(anchors.makeGpsTarget(1,2,null,'b')));assert.notEqual(anchors.targetKey(anchors.makeGpsTarget(1,2)),anchors.targetKey(anchors.makeGpsTarget(1,2,75)))});
+check('Query variants share snapshot default page key',()=>assert.equal(anchors.targetKey(anchors.parseUrlTarget('https://example.com/a?q=1')),anchors.targetKey(anchors.parseUrlTarget('https://example.com/a?q=2'))));
+console.log(`${passed} characterization checks passed; these describe current behavior, including defects, not desired acceptance behavior.`);

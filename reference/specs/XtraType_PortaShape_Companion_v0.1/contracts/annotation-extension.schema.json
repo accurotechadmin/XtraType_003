@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.portashape.invalid/companion/0.1/annotation-extension.schema.json",
+  "title": "Context.AnnotationExtension v1",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "recordType": {
+      "const": "Context.AnnotationExtension"
+    },
+    "schemaVersion": {
+      "const": 1
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "ownerId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "annotationId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "objectId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "anchorBundleRef": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 512
+      },
+      "maxItems": 50
+    },
+    "visibilityIntent": {
+      "enum": [
+        "local",
+        "shared",
+        "group",
+        "public"
+      ]
+    },
+    "relationshipRefs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 512
+      },
+      "maxItems": 100
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "authorRef": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    }
+  },
+  "required": [
+    "id",
+    "recordType",
+    "schemaVersion",
+    "createdAt",
+    "updatedAt",
+    "ownerId",
+    "annotationId",
+    "tags",
+    "visibilityIntent",
+    "relationshipRefs",
+    "revision",
+    "authorRef"
+  ],
+  "additionalProperties": false
+}

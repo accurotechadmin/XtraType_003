@@ -1,0 +1,198 @@
+{
+  "auditDate": "2026-10-01",
+  "nodeVersion": "v24.19.0",
+  "checks": [
+    {
+      "name": "Supplied anchor/schema assertions",
+      "status": "passed",
+      "command": [
+        "node",
+        "tests/anchors.mjs"
+      ],
+      "exitCode": 0,
+      "stdout": "anchor/schema tests passed\n",
+      "stderr": ""
+    },
+    {
+      "name": "Eleven baseline characterizations",
+      "status": "passed",
+      "command": [
+        "node",
+        "evidence/characterize.mjs",
+        "evidence/baseline"
+      ],
+      "exitCode": 0,
+      "stdout": "PASS URL all with zero stored pairs matches a page with additional query pairs (current defect)\nPASS Duplicate selected query pairs consume separate live pairs\nPASS Blank GPS coordinates coerce to zero (current defect)\nPASS YouTube host recognition accepts lookalike host (current defect)\nPASS Whole-video nullable timestamp coerces to marker time zero (current defect)\nPASS Custom metadata may override forced custom kind (current defect)\nPASS Mixed supported/unsupported union passes normalizer (current limitation)\nPASS Custom value validator enforces presence only (current limitation)\nPASS Explicit fragment changes extension key\nPASS GPS label excluded and radius included in identity\nPASS Query variants share snapshot default page key\n11 characterization checks passed; these describe current behavior, including defects, not desired acceptance behavior.\n",
+      "stderr": ""
+    },
+    {
+      "name": "Syntax ext/content/page-ui.js",
+      "status": "passed",
+      "command": [
+        "node",
+        "--input-type=module",
+        "--check"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "Syntax ext/content/youtube.js",
+      "status": "passed",
+      "command": [
+        "node",
+        "--input-type=module",
+        "--check"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "Syntax ext/core/anchors.js",
+      "status": "passed",
+      "command": [
+        "node",
+        "--input-type=module",
+        "--check"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "Syntax ext/core/api.js",
+      "status": "passed",
+      "command": [
+        "node",
+        "--input-type=module",
+        "--check"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "Syntax ext/core/db.js",
+      "status": "passed",
+      "command": [
+        "node",
+        "--input-type=module",
+        "--check"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "Syntax ext/core/schemas.js",
+      "status": "passed",
+      "command": [
+        "node",
+        "--input-type=module",
+        "--check"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "Syntax ext/service-worker.js",
+      "status": "passed",
+      "command": [
+        "node",
+        "--input-type=module",
+        "--check"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "Syntax ext/sidepanel/app.js",
+      "status": "passed",
+      "command": [
+        "node",
+        "--input-type=module",
+        "--check"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "Syntax server/assets/app.js",
+      "status": "passed",
+      "command": [
+        "node",
+        "--input-type=module",
+        "--check"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "JSON ext/manifest.json",
+      "status": "passed"
+    },
+    {
+      "name": "JSON server/data/annotations.json",
+      "status": "passed"
+    },
+    {
+      "name": "JSON server/data/events.json",
+      "status": "passed"
+    },
+    {
+      "name": "JSON server/data/schemas.json",
+      "status": "passed"
+    },
+    {
+      "name": "JSON server/data/snapshots.json",
+      "status": "passed"
+    },
+    {
+      "name": "JSON server/schemas/example-book-anchor.schema.json",
+      "status": "passed"
+    },
+    {
+      "name": "JSON server/schemas/gps-anchor.schema.json",
+      "status": "passed"
+    },
+    {
+      "name": "JSON server/schemas/url-anchor.schema.json",
+      "status": "passed"
+    },
+    {
+      "name": "JSON server/schemas/youtube-anchor.schema.json",
+      "status": "passed"
+    },
+    {
+      "name": "PHP lint and HTTP integration",
+      "status": "not-run",
+      "reason": "PHP executable unavailable"
+    },
+    {
+      "name": "Chrome extension and live-site/browser QA",
+      "status": "not-run",
+      "reason": "No loaded-extension runtime QA performed"
+    },
+    {
+      "name": "Unmodified baseline verified directly against supplied ZIP",
+      "status": "passed",
+      "fileCount": 38
+    },
+    {
+      "name": "Modular document links and fenced blocks",
+      "status": "passed",
+      "documentCount": 21
+    }
+  ],
+  "limitations": [
+    "No PHP lint/HTTP/upload execution",
+    "No live Chrome, YouTube, mobile, accessibility or load verification",
+    "Characterization assertions describe current defects, not desired acceptance tests"
+  ]
+}

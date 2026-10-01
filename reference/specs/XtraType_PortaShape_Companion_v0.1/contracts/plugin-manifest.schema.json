@@ -1,0 +1,318 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.portashape.invalid/companion/0.1/plugin-manifest.schema.json",
+  "title": "Plugin.Manifest v1",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "recordType": {
+      "const": "Plugin.Manifest"
+    },
+    "schemaVersion": {
+      "const": 1
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "ownerId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 80000
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)$"
+    },
+    "kind": {
+      "enum": [
+        "module",
+        "connector",
+        "userscript"
+      ]
+    },
+    "hostApiMajor": {
+      "const": 1
+    },
+    "implementation": {
+      "type": "object",
+      "properties": {
+        "catalogKey": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "sourcePath": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "sourceHash": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "executionProfile": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "requires": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "packageId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512
+          },
+          "version": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)$"
+          }
+        },
+        "required": [
+          "packageId",
+          "version"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 20
+    },
+    "operations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512
+          },
+          "major": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "inputContract": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512
+          },
+          "outputContract": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512
+          },
+          "permissions": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 512
+            },
+            "maxItems": 30
+          },
+          "sideEffect": {
+            "enum": [
+              "read",
+              "local-write",
+              "page-write",
+              "external-write"
+            ]
+          },
+          "locality": {
+            "enum": [
+              "browser-local",
+              "web-local",
+              "mobile-local"
+            ]
+          },
+          "maxDurationMs": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 120000
+          }
+        },
+        "required": [
+          "id",
+          "major",
+          "inputContract",
+          "outputContract",
+          "permissions",
+          "sideEffect",
+          "locality",
+          "maxDurationMs"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 100
+    },
+    "permissions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 512
+      },
+      "maxItems": 30
+    },
+    "uiContributions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "slot": {
+            "enum": [
+              "management.plugins",
+              "management.pluginDetail",
+              "composer.assist",
+              "context.actions",
+              "publisher.destination",
+              "diagnostics.provider"
+            ]
+          },
+          "label": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512
+          },
+          "actionId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512
+          },
+          "viewKey": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512
+          }
+        },
+        "required": [
+          "slot",
+          "label",
+          "actionId",
+          "viewKey"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 20
+    },
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200,
+            "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))[^\\\\]+$"
+          },
+          "hash": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "size": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "mediaType": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512
+          }
+        },
+        "required": [
+          "path",
+          "hash",
+          "size",
+          "mediaType"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 100
+    },
+    "tests": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 512
+      },
+      "maxItems": 100
+    }
+  },
+  "required": [
+    "id",
+    "recordType",
+    "schemaVersion",
+    "createdAt",
+    "updatedAt",
+    "ownerId",
+    "name",
+    "description",
+    "version",
+    "kind",
+    "hostApiMajor",
+    "implementation",
+    "requires",
+    "operations",
+    "permissions",
+    "uiContributions",
+    "files",
+    "tests"
+  ],
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "kind": {
+            "const": "userscript"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "implementation": {
+            "required": [
+              "sourcePath",
+              "sourceHash",
+              "executionProfile"
+            ]
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "implementation": {
+            "required": [
+              "catalogKey"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

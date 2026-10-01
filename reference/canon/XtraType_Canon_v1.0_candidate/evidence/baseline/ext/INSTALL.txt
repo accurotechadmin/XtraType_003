@@ -1,0 +1,33 @@
+XtraType Side-Panel MVP — Chrome install
+
+1. Start the PHP server from the project root:
+   php -S localhost:8787 -t server
+
+2. Open chrome://extensions
+3. Enable Developer mode
+4. Click Load unpacked
+5. Select the ext/ folder from this package
+6. Open a normal webpage and click the XT toolbar button
+
+Default behavior:
+- XT always opens the FULL CHROME SIDE PANEL using Chrome's native side-panel action behavior.
+- The floating quick bar does NOT open at the same time.
+- Highlighted page text is copied into the XtraType composer.
+
+Optional quick bar:
+- Use the quick-bar button in the panel header,
+- or the **Open XtraType quick comment bar** page context-menu item.
+
+The extension API defaults to http://localhost:8787/api
+
+
+SITE ACCESS (v2.3)
+------------------
+The extension now requests <all_urls> because XtraType's core features need to read
+and annotate whichever ordinary website is currently open. After reloading or
+reinstalling, Chrome may show a broad site-access warning; approve it and leave
+Extension details > Site access set to 'On all sites' for uninterrupted operation.
+
+Chrome-protected surfaces remain intentionally unavailable to every extension,
+including chrome:// pages and the Chrome Web Store. Local file:// pages also require
+the separate 'Allow access to file URLs' toggle on the extension details page.

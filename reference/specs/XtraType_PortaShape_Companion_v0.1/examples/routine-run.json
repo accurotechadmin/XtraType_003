@@ -1,0 +1,16 @@
+{
+  "id": "example:record",
+  "recordType": "Procedure.Run",
+  "schemaVersion": 1,
+  "createdAt": "2026-10-01T07:10:00.000Z",
+  "updatedAt": "2026-10-01T07:10:00.000Z",
+  "ownerId": "local:owner",
+  "routineId": "example",
+  "routineRevision": 1,
+  "status": "ready",
+  "currentStep": 1,
+  "state": {},
+  "checkpointRefs": [],
+  "receiptRefs": [],
+  "deadlineAt": "2026-10-01T07:10:00.000Z"
+}

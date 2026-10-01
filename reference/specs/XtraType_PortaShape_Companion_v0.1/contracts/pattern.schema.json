@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.portashape.invalid/companion/0.1/pattern.schema.json",
+  "title": "Procedure.PatternHypothesis v1",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "recordType": {
+      "const": "Procedure.PatternHypothesis"
+    },
+    "schemaVersion": {
+      "const": 1
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "ownerId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "siteKey": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "patternKey": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "algorithmVersion": {
+      "const": 1
+    },
+    "occurrences": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "windowStart": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "expiresAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "summary": {
+      "type": "string",
+      "maxLength": 80000
+    },
+    "status": {
+      "enum": [
+        "candidate",
+        "accepted",
+        "dismissed"
+      ]
+    },
+    "observationRefs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 512
+      },
+      "maxItems": 200
+    }
+  },
+  "required": [
+    "id",
+    "recordType",
+    "schemaVersion",
+    "createdAt",
+    "updatedAt",
+    "ownerId",
+    "siteKey",
+    "patternKey",
+    "algorithmVersion",
+    "occurrences",
+    "windowStart",
+    "expiresAt",
+    "summary",
+    "status",
+    "observationRefs"
+  ],
+  "additionalProperties": false
+}

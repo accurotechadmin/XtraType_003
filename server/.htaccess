@@ -1,0 +1,9 @@
+Options -Indexes
+RewriteEngine On
+RewriteRule ^media/ media.php [END]
+<FilesMatch "^(config|router)\.php$">
+Require all denied
+</FilesMatch>
+<Files "bootstrap.php">
+Require all denied
+</Files>

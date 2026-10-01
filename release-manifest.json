@@ -1,0 +1,85 @@
+{
+  "product": "XtraType",
+  "version": "2.5.1",
+  "releaseStatus": "local-first invitation multi-user prototype / stabilization candidate",
+  "baselineVersion": "2.3",
+  "extensionManifestVersion": 3,
+  "extensionVersion": "2.5.1",
+  "serverStorage": "JSON via Repository interface plus per-user JSON profile documents",
+  "sqlImplemented": false,
+  "indexedDB": {
+    "name": "portashape-xtratype",
+    "version": 1,
+    "stores": [
+      "annotations",
+      "blobs",
+      "schemas",
+      "snapshots",
+      "events"
+    ]
+  },
+  "retainedRecords": {
+    "Context.Annotation": 2,
+    "Revision.Snapshot": 1
+  },
+  "runtime": {
+    "phpMinimum": "8.2",
+    "phpExtensions": [
+      "json",
+      "fileinfo"
+    ],
+    "chromeDeclaredMinimum": "116",
+    "nodeRequiredForRuntime": false
+  },
+  "accountLayer": {
+    "implemented": true,
+    "firstRegisteredAdmin": true,
+    "singleUseInvitations": true,
+    "inviteCreationLimit": "1 per fixed-EST calendar day per enabled user",
+    "passwordStorage": "password_hash output only",
+    "sessionStorage": "SHA-256 hash of bearer token",
+    "profileStorage": "var/profiles/<user>/ JSON documents",
+    "contactGroups": true,
+    "directMessages": true,
+    "groupChats": "case-sensitive 5-character base62 codes with member ACLs"
+  },
+  "verification": {
+    "preservedBaseline": {
+      "version": "2.4.0",
+      "automatedTests": 32,
+      "passed": 32,
+      "failed": 0,
+      "skipped": 0
+    },
+    "currentPatch": {
+      "selectedRunnableNodeTests": 17,
+      "selectedRunnableNodeTestsPassed": 17,
+      "jsdomFakeIndexedDBFullSuite": "not freshly run; pinned dev dependencies unavailable in this environment",
+      "nativeChromeAcceptance": "not run",
+      "realYouTubeAcceptance": "not run",
+      "publicMultiuserReady": false
+    },
+    "reports": [
+      "docs/VERIFICATION.md",
+      "docs/evidence/test-results.txt",
+      "docs/evidence/static-checks.json"
+    ],
+    "v003ToggleRepair": {
+      "staticRegressionTestAdded": true,
+      "nativeChromeAcceptance": "pending owner-side Chrome verification",
+      "note": "Ctrl+Q uses reserved _execute_action and shares Chrome native openPanelOnActionClick behavior with the toolbar action; manual command/context/close path removed.",
+      "selectedRunnableTests": 17,
+      "selectedRunnableTestsPassed": 17,
+      "evidence": "docs/evidence/v003-native-ctrlq-test-results.txt"
+    }
+  },
+  "scope": "XtraType core plus owner-directed bounded account, invitation, contact-group, direct-message and XT Group Chat services. PortaShape host/plugins remain unimplemented.",
+  "sourceIdentity": "docs/SOURCE_BASELINE.json",
+  "compatibilityAndChanges": "docs/FEATURE_PARITY.md",
+  "upgradeInstructions": "docs/UPGRADE_AND_RECOVERY.md",
+  "canonConcerns": "docs/CONCERN_DISPOSITION.md",
+  "checksums": "SHA256SUMS.txt",
+  "canonicalProjectVersion": "v.003",
+  "checksumStatus": "Current v.003 package resealed after native-action repair; checksum manifest files are excluded from recursive checksum coverage.",
+  "minimumChromeForNativeActionToggle": "116"
+}

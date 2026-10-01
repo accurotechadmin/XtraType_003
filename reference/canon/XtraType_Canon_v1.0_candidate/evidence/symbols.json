@@ -1,0 +1,821 @@
+[
+  {
+    "file": "ext/content/page-ui.js",
+    "name": "formatTime",
+    "parameters": "seconds",
+    "line": 117,
+    "behavior": "Format numeric seconds as minutes:seconds; null/invalid handling differs among surfaces."
+  },
+  {
+    "file": "ext/content/page-ui.js",
+    "name": "timeLabel",
+    "parameters": "iso",
+    "line": 122,
+    "behavior": "Relative age under minute/hour/day then locale date; invalid timestamp empty."
+  },
+  {
+    "file": "ext/content/page-ui.js",
+    "name": "setStatus",
+    "parameters": "message, kind = ''",
+    "line": 132,
+    "behavior": "Set status text and error/success class; DOM-only helper, signature varies by surface."
+  },
+  {
+    "file": "ext/content/page-ui.js",
+    "name": "targetSuffix",
+    "parameters": "item",
+    "line": 137,
+    "behavior": "Quick card target label; video/bare/point/range formatted text."
+  },
+  {
+    "file": "ext/content/page-ui.js",
+    "name": "renderRecent",
+    "parameters": "items",
+    "line": 145,
+    "behavior": "Replace quick cards using safe DOM text nodes; hide section if empty."
+  },
+  {
+    "file": "ext/content/page-ui.js",
+    "name": "loadRecent",
+    "parameters": "",
+    "line": 174,
+    "behavior": "Request four current-page annotations from worker; ignore failure."
+  },
+  {
+    "file": "ext/content/youtube.js",
+    "name": "ensureUi",
+    "parameters": "",
+    "line": 5,
+    "behavior": "Find YouTube progress DOM, attach marker host and toast; return false if no progress."
+  },
+  {
+    "file": "ext/content/youtube.js",
+    "name": "render",
+    "parameters": "",
+    "line": 19,
+    "behavior": "Clear/recreate markers using time percentages; null numeric coercion and observer feedback risk."
+  },
+  {
+    "file": "ext/content/youtube.js",
+    "name": "showCard",
+    "parameters": "a, marker, interactive",
+    "line": 30,
+    "behavior": "Create hover/interactive YouTube card with reply/open controls; only hover has mouseleave dismissal."
+  },
+  {
+    "file": "ext/content/youtube.js",
+    "name": "formatTime",
+    "parameters": "sec",
+    "line": 46,
+    "behavior": "Format numeric seconds as minutes:seconds; null/invalid handling differs among surfaces."
+  },
+  {
+    "file": "ext/content/youtube.js",
+    "name": "refresh",
+    "parameters": "",
+    "line": 47,
+    "behavior": "Request current video records asynchronously, assign annotation/video state and render."
+  },
+  {
+    "file": "ext/core/anchors.js",
+    "name": "parseUrlTarget",
+    "parameters": "rawUrl",
+    "line": 3,
+    "behavior": "Require HTTP(S), split origin/path/query/fragment, default policies ignore."
+  },
+  {
+    "file": "ext/core/anchors.js",
+    "name": "youtubeInfo",
+    "parameters": "rawUrl",
+    "line": 14,
+    "behavior": "Parse short/watch/Shorts identity using permissive hostname substrings; return null on parse/no-ID."
+  },
+  {
+    "file": "ext/core/anchors.js",
+    "name": "makeYoutubeTarget",
+    "parameters": "rawUrl, startSeconds = null, endSeconds = null",
+    "line": 25,
+    "behavior": "Validate nullable nonnegative times and order, produce canonical video target."
+  },
+  {
+    "file": "ext/core/anchors.js",
+    "name": "makeGpsTarget",
+    "parameters": "latitude, longitude, radiusMeters = null, label = ''",
+    "line": 34,
+    "behavior": "Coerce and validate bounds/radius; blank coordinates become zero; return structured target."
+  },
+  {
+    "file": "ext/core/anchors.js",
+    "name": "numberOrNull",
+    "parameters": "value",
+    "line": 42,
+    "behavior": "Map blank/null/undefined to null; otherwise require finite nonnegative numeric coercion."
+  },
+  {
+    "file": "ext/core/anchors.js",
+    "name": "stable",
+    "parameters": "value",
+    "line": 47,
+    "behavior": "Recursively sort object keys, preserve array order; return canonicalizable value."
+  },
+  {
+    "file": "ext/core/anchors.js",
+    "name": "targetKey",
+    "parameters": "target",
+    "line": 53,
+    "behavior": "Derive kind-specific identity; web duplicate omits URL fragment support."
+  },
+  {
+    "file": "ext/core/anchors.js",
+    "name": "haversineMeters",
+    "parameters": "aLat, aLon, bLat, bLon",
+    "line": 72,
+    "behavior": "Spherical great-circle distance with Earth radius6371000m."
+  },
+  {
+    "file": "ext/core/anchors.js",
+    "name": "gpsMatches",
+    "parameters": "target, latitude, longitude, defaultRadius = DEFAULT_RADIUS",
+    "line": 79,
+    "behavior": "Require GPS kind and test distance <= explicit/default radius."
+  },
+  {
+    "file": "ext/core/api.js",
+    "name": "settings",
+    "parameters": "",
+    "line": 3,
+    "behavior": "Overlay xtratypeSettings on defaults from Chrome local storage."
+  },
+  {
+    "file": "ext/core/api.js",
+    "name": "saveSettings",
+    "parameters": "next",
+    "line": 9,
+    "behavior": "Replace xtratypeSettings value and return supplied next object."
+  },
+  {
+    "file": "ext/core/api.js",
+    "name": "api",
+    "parameters": "path, options = {}",
+    "line": 11,
+    "behavior": "Extension private Fetch wrapper resolves saved base, parses JSON, throws for HTTP failure."
+  },
+  {
+    "file": "ext/core/api.js",
+    "name": "syncAnnotation",
+    "parameters": "annotation, blobs = []",
+    "line": 20,
+    "behavior": "Transform local attachments to multipart; POST; merge returned item and persist synced locally."
+  },
+  {
+    "file": "ext/core/api.js",
+    "name": "pullAnnotations",
+    "parameters": "",
+    "line": 31,
+    "behavior": "GET full annotation collection, return items or empty array."
+  },
+  {
+    "file": "ext/core/api.js",
+    "name": "pullSchemas",
+    "parameters": "",
+    "line": 32,
+    "behavior": "GET catalog, return items or empty array."
+  },
+  {
+    "file": "ext/core/api.js",
+    "name": "pushSchema",
+    "parameters": "schema",
+    "line": 33,
+    "behavior": "POST wrapped schema JSON, return response schema."
+  },
+  {
+    "file": "ext/core/api.js",
+    "name": "syncSnapshot",
+    "parameters": "snapshot, screenshotBlobRecord",
+    "line": 35,
+    "behavior": "Remove local screenshotBlobId from wire; POST optional screenshot; return server item without local persistence."
+  },
+  {
+    "file": "ext/core/api.js",
+    "name": "serverHealth",
+    "parameters": "",
+    "line": 43,
+    "behavior": "GET health endpoint through saved API base."
+  },
+  {
+    "file": "ext/core/db.js",
+    "name": "openDb",
+    "parameters": "",
+    "line": 6,
+    "behavior": "Memoize IDB open request; initialize stores/indexes at version1."
+  },
+  {
+    "file": "ext/core/db.js",
+    "name": "request",
+    "parameters": "req",
+    "line": 29,
+    "behavior": "Wrap IDBRequest success/error in Promise; does not wait for a larger transaction."
+  },
+  {
+    "file": "ext/core/db.js",
+    "name": "put",
+    "parameters": "storeName, value",
+    "line": 36,
+    "behavior": "Write record in one-store transaction and wait for transaction completion/error/abort."
+  },
+  {
+    "file": "ext/core/db.js",
+    "name": "get",
+    "parameters": "storeName, id",
+    "line": 44,
+    "behavior": "Read one record by ID."
+  },
+  {
+    "file": "ext/core/db.js",
+    "name": "all",
+    "parameters": "storeName",
+    "line": 49,
+    "behavior": "Read all records in a store; unbounded."
+  },
+  {
+    "file": "ext/core/db.js",
+    "name": "remove",
+    "parameters": "storeName, id",
+    "line": 54,
+    "behavior": "Delete one ID in transaction; no explicit abort handler."
+  },
+  {
+    "file": "ext/core/db.js",
+    "name": "byIndex",
+    "parameters": "storeName, indexName, key",
+    "line": 61,
+    "behavior": "Read all records for one index key."
+  },
+  {
+    "file": "ext/core/db.js",
+    "name": "id",
+    "parameters": "prefix",
+    "line": 66,
+    "behavior": "Generate prefix:crypto.randomUUID() string."
+  },
+  {
+    "file": "ext/core/db.js",
+    "name": "addBlob",
+    "parameters": "blob, meta = {}",
+    "line": 68,
+    "behavior": "Create Blob record with type/size/time/metadata then persist."
+  },
+  {
+    "file": "ext/core/db.js",
+    "name": "logEvent",
+    "parameters": "type, data = {}",
+    "line": 74,
+    "behavior": "Create local event ID/type/data/time then persist."
+  },
+  {
+    "file": "ext/core/schemas.js",
+    "name": "normalizeCustomSchema",
+    "parameters": "schema",
+    "line": 34,
+    "behavior": "Validate shallow object/ID/type support, reserve prefix, merge metadata; override/union gaps remain."
+  },
+  {
+    "file": "ext/core/schemas.js",
+    "name": "validateCustomValue",
+    "parameters": "schema, value",
+    "line": 47,
+    "behavior": "Reject only missing/null/empty required values; return true otherwise."
+  },
+  {
+    "file": "ext/service-worker.js",
+    "name": "activeTab",
+    "parameters": "",
+    "line": 20,
+    "behavior": "Query active tab in current window; return first tab or null; browser side effect is read only."
+  },
+  {
+    "file": "ext/service-worker.js",
+    "name": "pageScriptability",
+    "parameters": "rawUrl=''",
+    "line": 27,
+    "behavior": "Parse URL and reject known browser/Web Store surfaces; return capability reason, not a complete permission grant."
+  },
+  {
+    "file": "ext/service-worker.js",
+    "name": "requireScriptableTab",
+    "parameters": "tab",
+    "line": 38,
+    "behavior": "Require tab ID and successful URL preflight; throw otherwise."
+  },
+  {
+    "file": "ext/service-worker.js",
+    "name": "tabContext",
+    "parameters": "tabId, tabUrl=''",
+    "line": 45,
+    "behavior": "Inject top-frame function and return URL/title/selection/video/viewport/page data; browser operation can reject."
+  },
+  {
+    "file": "ext/service-worker.js",
+    "name": "rememberContext",
+    "parameters": "tab",
+    "line": 63,
+    "behavior": "Capture or construct access-failure fallback, then write Chrome session context."
+  },
+  {
+    "file": "ext/service-worker.js",
+    "name": "openPanelForTab",
+    "parameters": "tab",
+    "line": 77,
+    "behavior": "Remember context, configure per-tab panel and call native open; return ok."
+  },
+  {
+    "file": "ext/service-worker.js",
+    "name": "openQuickBarForTab",
+    "parameters": "tab",
+    "line": 85,
+    "behavior": "Require scriptable tab, remember context and inject quick IIFE."
+  },
+  {
+    "file": "ext/service-worker.js",
+    "name": "quickCreate",
+    "parameters": "payload",
+    "line": 100,
+    "behavior": "Build URL/video target; commit pending note and event; optionally sync; return local record on sync failure."
+  },
+  {
+    "file": "ext/service-worker.js",
+    "name": "urlTargetMatchesPage",
+    "parameters": "target, rawPageUrl",
+    "line": 120,
+    "behavior": "Apply origin/path/fragment/query multiset applicability; current empty-all-query defect."
+  },
+  {
+    "file": "ext/service-worker.js",
+    "name": "annotationMatchesPage",
+    "parameters": "annotation, rawPageUrl",
+    "line": 140,
+    "behavior": "Use same-video predicate when applicable, else URL page predicate."
+  },
+  {
+    "file": "ext/service-worker.js",
+    "name": "recentAnnotationsForPage",
+    "parameters": "rawPageUrl, limit = 4",
+    "line": 146,
+    "behavior": "Optionally pull all remote notes into DB, filter context, sort newest and bound limit."
+  },
+  {
+    "file": "ext/service-worker.js",
+    "name": "youtubeAnnotations",
+    "parameters": "videoId",
+    "line": 161,
+    "behavior": "Optionally full-pull remote notes and return local same-video records."
+  },
+  {
+    "file": "ext/sidepanel/app.js",
+    "name": "setStatus",
+    "parameters": "el, message, error=false",
+    "line": 10,
+    "behavior": "Set status text and error/success class; DOM-only helper, signature varies by surface."
+  },
+  {
+    "file": "ext/sidepanel/app.js",
+    "name": "safe",
+    "parameters": "s",
+    "line": 11,
+    "behavior": "HTML-escape &, <, >, quotes and apostrophe; does not validate URLs or record shape."
+  },
+  {
+    "file": "ext/sidepanel/app.js",
+    "name": "formatTime",
+    "parameters": "sec",
+    "line": 12,
+    "behavior": "Format numeric seconds as minutes:seconds; null/invalid handling differs among surfaces."
+  },
+  {
+    "file": "ext/sidepanel/app.js",
+    "name": "schemaLabel",
+    "parameters": "s",
+    "line": 13,
+    "behavior": "Resolve metadata label, title, then ID for panel catalog."
+  },
+  {
+    "file": "ext/sidepanel/app.js",
+    "name": "schemaKind",
+    "parameters": "s",
+    "line": 14,
+    "behavior": "Resolve metadata kind or custom; currently trusts supplied dispatch metadata."
+  },
+  {
+    "file": "ext/sidepanel/app.js",
+    "name": "loadSchemas",
+    "parameters": "",
+    "line": 16,
+    "behavior": "Fetch/merge/populate schema catalog and rerender target fields; panel additionally caches custom entries."
+  },
+  {
+    "file": "ext/sidepanel/app.js",
+    "name": "refreshContext",
+    "parameters": "",
+    "line": 24,
+    "behavior": "Read session/live context, update strip/quote and rebuild schema form/feed/timeline."
+  },
+  {
+    "file": "ext/sidepanel/app.js",
+    "name": "renderTargetFields",
+    "parameters": "",
+    "line": 36,
+    "behavior": "Dispatch current schema kind to URL/GPS/YouTube/custom panel form."
+  },
+  {
+    "file": "ext/sidepanel/app.js",
+    "name": "renderUrl",
+    "parameters": "host",
+    "line": 44,
+    "behavior": "Build URL/query/fragment policy controls and extraction handler; fallback URL can be example.com."
+  },
+  {
+    "file": "ext/sidepanel/app.js",
+    "name": "renderGps",
+    "parameters": "host",
+    "line": 52,
+    "behavior": "Build coordinate/radius/label controls and geolocation handler."
+  },
+  {
+    "file": "ext/sidepanel/app.js",
+    "name": "renderYoutube",
+    "parameters": "host",
+    "line": 57,
+    "behavior": "Build ID/URL/time controls with current time and bare-video actions."
+  },
+  {
+    "file": "ext/sidepanel/app.js",
+    "name": "renderCustom",
+    "parameters": "host,schema",
+    "line": 64,
+    "behavior": "Build enum/boolean/numeric/text controls from schema properties, with some native bounds."
+  },
+  {
+    "file": "ext/sidepanel/app.js",
+    "name": "buildTarget",
+    "parameters": "",
+    "line": 75,
+    "behavior": "Read panel controls, invoke constructors or custom presence validator, return structured target."
+  },
+  {
+    "file": "ext/sidepanel/app.js",
+    "name": "validateFiles",
+    "parameters": "files",
+    "line": 89,
+    "behavior": "Reject excessive count, MIME string mismatch or >8MiB per file; different signature in web."
+  },
+  {
+    "file": "ext/sidepanel/app.js",
+    "name": "saveAnnotation",
+    "parameters": "",
+    "line": 91,
+    "behavior": "Panel local Blob/note/event sequence then optional sync; reset body/files and rerender."
+  },
+  {
+    "file": "ext/sidepanel/app.js",
+    "name": "renderFeed",
+    "parameters": "",
+    "line": 102,
+    "behavior": "Panel filters local current target and caps50; web renders supplied full list into chosen host."
+  },
+  {
+    "file": "ext/sidepanel/app.js",
+    "name": "renderPreviews",
+    "parameters": "",
+    "line": 110,
+    "behavior": "Create image object URLs for selected files; panel adds remove buttons; no full disposal."
+  },
+  {
+    "file": "ext/sidepanel/app.js",
+    "name": "pull",
+    "parameters": "",
+    "line": 112,
+    "behavior": "Panel best-effort manual sync: annotations, schemas, snapshots pushes then annotations/schema pulls."
+  },
+  {
+    "file": "ext/sidepanel/app.js",
+    "name": "makeVisibleSnapshot",
+    "parameters": "",
+    "line": 120,
+    "behavior": "Read tab/context, capture visible window, extract tab, convert pixels and persist."
+  },
+  {
+    "file": "ext/sidepanel/app.js",
+    "name": "makeFullSnapshot",
+    "parameters": "",
+    "line": 124,
+    "behavior": "Compute capped tile grid, scroll/wait/capture/decode, restore on success, stitch and persist."
+  },
+  {
+    "file": "ext/sidepanel/app.js",
+    "name": "persistSnapshot",
+    "parameters": "c,extract,blob,mode",
+    "line": 130,
+    "behavior": "Write screenshot Blob then snapshot metadata, optionally upload and update local state."
+  },
+  {
+    "file": "ext/sidepanel/app.js",
+    "name": "dataUrlToBlob",
+    "parameters": "dataUrl",
+    "line": 134,
+    "behavior": "Decode base64 data URL into typed bytes and Blob."
+  },
+  {
+    "file": "ext/sidepanel/app.js",
+    "name": "renderSnapshots",
+    "parameters": "",
+    "line": 136,
+    "behavior": "Query local pageKey index, sort, create timeline/thumbs and latest image."
+  },
+  {
+    "file": "ext/sidepanel/app.js",
+    "name": "showSnapshot",
+    "parameters": "s",
+    "line": 141,
+    "behavior": "Read selected snapshot Blob, revoke prior selected URL, update large preview."
+  },
+  {
+    "file": "ext/sidepanel/app.js",
+    "name": "compareLatest",
+    "parameters": "",
+    "line": 143,
+    "behavior": "Load newest two local screenshots, resample, threshold RGB, draw diff and score."
+  },
+  {
+    "file": "ext/sidepanel/app.js",
+    "name": "renderSchemaList",
+    "parameters": "",
+    "line": 147,
+    "behavior": "Render panel schema label/ID/property-name cards."
+  },
+  {
+    "file": "ext/sidepanel/app.js",
+    "name": "installSchema",
+    "parameters": "file",
+    "line": 149,
+    "behavior": "Parse selected JSON and validate available subset; panel saves locally then pushes; web only posts."
+  },
+  {
+    "file": "ext/sidepanel/app.js",
+    "name": "loadSettingsForm",
+    "parameters": "",
+    "line": 151,
+    "behavior": "Populate panel settings controls from merged Chrome local settings."
+  },
+  {
+    "file": "ext/sidepanel/app.js",
+    "name": "exportMetadata",
+    "parameters": "items",
+    "line": 153,
+    "behavior": "Create JSON download Blob and object URL; revoke download URL after1s."
+  },
+  {
+    "file": "server/api/bootstrap.php",
+    "name": "cors",
+    "parameters": "",
+    "line": 9,
+    "behavior": "Set CORS/cache headers and terminate OPTIONS204."
+  },
+  {
+    "file": "server/api/bootstrap.php",
+    "name": "respond",
+    "parameters": "$data, int $status = 200",
+    "line": 18,
+    "behavior": "Set status/content type, JSON encode response and exit."
+  },
+  {
+    "file": "server/api/bootstrap.php",
+    "name": "fail",
+    "parameters": "string $message, int $status = 400, string $code = 'invalidRequest'",
+    "line": 25,
+    "behavior": "Build standardized error envelope and delegate to respond."
+  },
+  {
+    "file": "server/api/bootstrap.php",
+    "name": "ensure_dirs",
+    "parameters": "",
+    "line": 29,
+    "behavior": "Ensure data/media directories exist or fail500."
+  },
+  {
+    "file": "server/api/bootstrap.php",
+    "name": "collection_path",
+    "parameters": "string $name",
+    "line": 33,
+    "behavior": "Validate safe collection name and derive JSON pathname."
+  },
+  {
+    "file": "server/api/bootstrap.php",
+    "name": "read_collection",
+    "parameters": "string $name",
+    "line": 38,
+    "behavior": "Read/decode array or return empty for missing/invalid input."
+  },
+  {
+    "file": "server/api/bootstrap.php",
+    "name": "write_collection",
+    "parameters": "string $name, array $items",
+    "line": 48,
+    "behavior": "Lock and serialize supplied full collection to temp then rename; unused by endpoints."
+  },
+  {
+    "file": "server/api/bootstrap.php",
+    "name": "mutate_collection",
+    "parameters": "string $name, callable $mutator",
+    "line": 62,
+    "behavior": "Lock-read-mutate-write-rename one collection; callback returns next array and result."
+  },
+  {
+    "file": "server/api/bootstrap.php",
+    "name": "upsert_item",
+    "parameters": "string $collection, array $item",
+    "line": 81,
+    "behavior": "Require ID string; replace same-ID first match or append under mutation lock."
+  },
+  {
+    "file": "server/api/bootstrap.php",
+    "name": "delete_item",
+    "parameters": "string $collection, string $id",
+    "line": 93,
+    "behavior": "Filter all matching IDs and report whether count changed."
+  },
+  {
+    "file": "server/api/bootstrap.php",
+    "name": "json_body",
+    "parameters": "",
+    "line": 101,
+    "behavior": "Read php input, decode associative JSON, require array-like value."
+  },
+  {
+    "file": "server/api/bootstrap.php",
+    "name": "uuid_like",
+    "parameters": "string $prefix",
+    "line": 108,
+    "behavior": "Prefix random_bytes(16) hexadecimal ID."
+  },
+  {
+    "file": "server/api/bootstrap.php",
+    "name": "sanitize_filename",
+    "parameters": "string $name",
+    "line": 110,
+    "behavior": "Basename, replace unsupported chars, trim punctuation, fallback upload."
+  },
+  {
+    "file": "server/api/bootstrap.php",
+    "name": "save_uploaded_images",
+    "parameters": "array $files",
+    "line": 115,
+    "behavior": "Validate PHP upload status/count/size/detected MIME, write generated media files, return descriptors."
+  },
+  {
+    "file": "server/api/bootstrap.php",
+    "name": "flattened_uploads",
+    "parameters": "",
+    "line": 144,
+    "behavior": "Flatten every file field into upload entries; field names not constrained."
+  },
+  {
+    "file": "server/api/schemas.php",
+    "name": "builtins",
+    "parameters": "",
+    "line": 4,
+    "behavior": "Read every server disk *.schema.json with nonempty $id into catalog array."
+  },
+  {
+    "file": "server/assets/app.js",
+    "name": "status",
+    "parameters": "el,msg,error=false",
+    "line": 3,
+    "behavior": "Web status text/class helper."
+  },
+  {
+    "file": "server/assets/app.js",
+    "name": "kind",
+    "parameters": "s",
+    "line": 4,
+    "behavior": "Read schema kind metadata or custom (optional chaining)."
+  },
+  {
+    "file": "server/assets/app.js",
+    "name": "label",
+    "parameters": "s",
+    "line": 4,
+    "behavior": "Read schema label/title/ID; no schema validation."
+  },
+  {
+    "file": "server/assets/app.js",
+    "name": "stable",
+    "parameters": "v",
+    "line": 5,
+    "behavior": "Recursively sort object keys, preserve array order; return canonicalizable value."
+  },
+  {
+    "file": "server/assets/app.js",
+    "name": "targetKey",
+    "parameters": "t",
+    "line": 6,
+    "behavior": "Derive kind-specific identity; web duplicate omits URL fragment support."
+  },
+  {
+    "file": "server/assets/app.js",
+    "name": "hav",
+    "parameters": "a,b,c,d",
+    "line": 7,
+    "behavior": "Web duplicate Haversine distance helper."
+  },
+  {
+    "file": "server/assets/app.js",
+    "name": "loadSchemas",
+    "parameters": "",
+    "line": 9,
+    "behavior": "Fetch/merge/populate schema catalog and rerender target fields; panel additionally caches custom entries."
+  },
+  {
+    "file": "server/assets/app.js",
+    "name": "renderTarget",
+    "parameters": "",
+    "line": 10,
+    "behavior": "Generate web URL/GPS/YouTube/custom controls and bind extraction/location actions."
+  },
+  {
+    "file": "server/assets/app.js",
+    "name": "getTarget",
+    "parameters": "",
+    "line": 11,
+    "behavior": "Read web fields and construct target; weaker validation and enum type drift versus extension."
+  },
+  {
+    "file": "server/assets/app.js",
+    "name": "validateFiles",
+    "parameters": "",
+    "line": 12,
+    "behavior": "Reject excessive count, MIME string mismatch or >8MiB per file; different signature in web."
+  },
+  {
+    "file": "server/assets/app.js",
+    "name": "post",
+    "parameters": "",
+    "line": 13,
+    "behavior": "Create Web user annotation, POST multipart, clear body/files and reload feed on success."
+  },
+  {
+    "file": "server/assets/app.js",
+    "name": "loadFeed",
+    "parameters": "",
+    "line": 14,
+    "behavior": "GET all server annotations then render all-context and Nearby."
+  },
+  {
+    "file": "server/assets/app.js",
+    "name": "renderFeed",
+    "parameters": "host,items",
+    "line": 15,
+    "behavior": "Panel filters local current target and caps50; web renders supplied full list into chosen host."
+  },
+  {
+    "file": "server/assets/app.js",
+    "name": "renderNearby",
+    "parameters": "items",
+    "line": 16,
+    "behavior": "Filter supplied GPS records against in-memory position/effective radius and render."
+  },
+  {
+    "file": "server/assets/app.js",
+    "name": "locate",
+    "parameters": "",
+    "line": 17,
+    "behavior": "Acquire position, reload feed, rebuild GPS form if selected."
+  },
+  {
+    "file": "server/assets/app.js",
+    "name": "locateIntoForm",
+    "parameters": "",
+    "line": 17,
+    "behavior": "Acquire position and fill GPS lat/lon; does not reload feed."
+  },
+  {
+    "file": "server/assets/app.js",
+    "name": "renderPreviews",
+    "parameters": "",
+    "line": 18,
+    "behavior": "Create image object URLs for selected files; panel adds remove buttons; no full disposal."
+  },
+  {
+    "file": "server/assets/app.js",
+    "name": "renderSchemas",
+    "parameters": "",
+    "line": 19,
+    "behavior": "Render web schema label/ID/property names."
+  },
+  {
+    "file": "server/assets/app.js",
+    "name": "installSchema",
+    "parameters": "f",
+    "line": 20,
+    "behavior": "Parse selected JSON and validate available subset; panel saves locally then pushes; web only posts."
+  }
+]

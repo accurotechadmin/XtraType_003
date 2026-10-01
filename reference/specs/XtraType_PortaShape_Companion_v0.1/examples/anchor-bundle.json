@@ -1,0 +1,14 @@
+{
+  "id": "anchor:example",
+  "recordType": "Context.AnchorBundle",
+  "schemaVersion": 1,
+  "createdAt": "2026-10-01T07:10:00.000Z",
+  "updatedAt": "2026-10-01T07:10:00.000Z",
+  "ownerId": "local:owner",
+  "sourceUrl": "https://example.com/article",
+  "capturedAt": "2026-10-01T07:10:00.000Z",
+  "exactText": "A selected sentence.",
+  "prefix": "Before ",
+  "suffix": " After",
+  "normalizationVersion": 1
+}
